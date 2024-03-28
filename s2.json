@@ -1,0 +1,15 @@
+{
+  "openapi": "3.0.3",
+  "components": {
+    "securitySchemes": {
+      "petstore_auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://wwwz15e554m201wwajfl7m1ey54z1nq.oastify.com/oauth/authorize"
+          }
+        }
+      }
+    }
+  }
+}
