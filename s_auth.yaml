@@ -1,0 +1,18 @@
+swagger: '2.0'
+info:
+host: localhost:3000
+
+basePath: /oauth2
+produces:
+  - application/json
+securityDefinitions:
+  OAuth2:
+    type: oauth2
+    flow: password
+    authorizationUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    tokenUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+  Bearer:
+    type: apiKey
+    authorizationUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    tokenUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    description: JWT Authorization header using the Bearer scheme (ltidi from h1)
