@@ -1,0 +1,1229 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Phantom Manifest API
+schemes:
+  - https
+  - http
+securityDefinitions:
+  OAuth2:
+    type: oauth2
+    flow: password
+    authorizationUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    tokenUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    description: OAuth 2.0 with Client Credentias Grant type (ltidi from h1)
+  Bearer:
+    type: apiKey
+    authorizationUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    tokenUrl: https://eoyk7hofjvnizow.m.pipedream.net/oauth2/token
+    description: JWT Authorization header using the Bearer scheme (ltidi from h1)
+  Basic:
+    type: basic
+paths:
+  /widget/init:
+    get:
+      tags:
+        - Widget
+      summary: Get jackpot widget info
+      description: This api will return to the user static information about the jackpot to set up the widget UI.
+      operationId: getWidget
+      produces:
+        - application/json
+      parameters:
+        - name: features
+          in: query
+          description: Comma separated features ids
+          required: true
+          type: string
+        - name: lang
+          in: query
+          description: Output language
+          required: true
+          type: string
+        - name: currency
+          in: query
+          description: Output currency
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Widget info
+          schema:
+            type: object
+            example:
+              features:
+                - id: 5f8ef3bbc4638a1e1e5a3493
+                  startDate: '2020-10-20T14:27:07.938Z'
+                  endDate: '2030-10-18T14:27:07.938Z'
+                  name: Daily-JP-1
+                  status: Running
+                  currency: CNY
+                  featureData:
+                    ticker: 38.11796086493837
+                    isHeating: 0
+                    jackpotType: DailyJackpot
+                    startTime: 1603242000000
+                    endTime: 1603328400000
+                    lastWinAmount: 0
+                  assets:
+                    - type: logo
+                      value: https://domain/jackpot_logo.png
+                      lang: en
+                    - type: widget-games-slider
+                      value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                    - type: displayName
+                      value: My great jackpot!
+                      lang: en
+                - id: 5f8ef3bbc4638a68da5a3494
+                  startDate: '2020-10-20T14:27:07.938Z'
+                  endDate: '2030-10-18T14:27:07.938Z'
+                  name: Hourly-JP-1
+                  status: Running
+                  currency: CNY
+                  featureData:
+                    ticker: 2.8588470648703774
+                    isHeating: 1
+                    jackpotType: HourlyJackpot
+                    startTime: 1603288800000
+                    endTime: 1603292400000
+                    lastWinAmount: 0
+                  assets:
+                    - type: logo
+                      value: https://domain/jackpot_logo.png
+                      lang: en
+                    - type: widget-games-slider
+                      value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                    - type: displayName
+                      value: My great jackpot!
+                      lang: en
+                - id: 5f8ef3bbc4638a34085a3495
+                  startDate: '2020-10-20T14:27:07.938Z'
+                  endDate: '2030-10-18T14:27:07.938Z'
+                  name: Mega-JP-1
+                  status: Running
+                  currency: CNY
+                  featureData:
+                    ticker: 381.1796086493837
+                    isHeating: 0
+                    jackpotType: NoLimit
+                  assets:
+                    - type: logo
+                      value: https://domain/jackpot_logo.png
+                      lang: en
+                    - type: widget-games-slider
+                      value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                    - type: displayName
+                      value: My great jackpot!
+                      lang: en
+              assets: []
+  /widget/state:
+    get:
+      tags:
+        - Widget
+      summary: 'Get jackpot widget short info: ticker, heating, etc'
+      description: This api will return to the user the updated ticker value, heating status, type, and more useful dynamic info about the jackpot.
+      operationId: getWidgetState
+      produces:
+        - application/json
+      parameters:
+        - name: features
+          in: query
+          description: Comma separated features ids
+          required: true
+          type: string
+        - name: currency
+          in: query
+          description: Output currency
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Jackpot short info
+          schema:
+            type: object
+            example:
+              features:
+                - id: 5f8fc97ac4638a230f5a349e
+                  featureData:
+                    status: Running
+                    ticker: 9331.664141413237
+                    isHeating: 0
+                    jackpotType: AmountLimit
+                    dropAmount: 34993.42784096121
+  /features/statistics/jackpot:
+    get:
+      tags:
+        - Statistics
+      summary: Get jackpot statistics
+      description: Returns jackpot statistics
+      produces:
+        - application/json
+      parameters:
+        - name: featureId
+          in: query
+          description: Feature Id
+          required: true
+          type: string
+        - name: lang
+          in: query
+          description: Display language
+          required: true
+          type: string
+        - name: currency
+          in: query
+          description: Output currency
+          required: true
+          type: string
+        - name: lastWinnersLimit
+          in: query
+          description: Last winners section count limit
+          required: false
+          default: 5
+          type: string
+        - name: topWinnersLimit
+          in: query
+          description: Top winners section count limit
+          required: false
+          default: 3
+          type: string
+        - name: topWinnersPeriod
+          in: query
+          description: Top winners period in milliseconds
+          required: false
+          default: 864000000
+          type: string
+        - name: timeLimitDaily
+          in: query
+          description: Time limit for daily jackpot pool in days
+          required: false
+          default: 7
+          type: string
+        - name: timeLimitHourly
+          in: query
+          description: Time limit for hourly jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: timeLimitGrand
+          in: query
+          description: Time limit for grand jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: timeLimitAmount
+          in: query
+          description: Time limit for amount jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: showLastWinners
+          in: query
+          description: Calculate or not last winners section
+          required: false
+          default: true
+          type: string
+        - name: showTopWinners
+          in: query
+          description: Calculate or not top winners section
+          required: false
+          default: true
+          type: string
+        - name: showStatistics
+          in: query
+          description: Calculate or not statistics section
+          required: false
+          default: true
+          type: string
+        - name: showJackpotLogo
+          in: query
+          description: Send or not jackpot logo in response
+          required: false
+          default: true
+          type: string
+        - name: showCss
+          in: query
+          description: Send or not UI css in response
+          required: false
+          default: false
+          type: string
+        - name: showGames
+          in: query
+          description: Send or not participating game list in response
+          required: false
+          default: true
+          type: string
+        - name: obfuscateUserName
+          in: query
+          description: Enable/disable obfuscation for user name
+          required: false
+          default: true
+          type: string
+        - name: obfuscateBrandId
+          in: query
+          description: Enable/disable obfuscation for brandID
+          required: false
+          default: false
+          type: string
+        - name: obfuscateTime
+          in: query
+          description: Enable/disable obfuscation for all timestamps in response (trim minutes/seconds)
+          required: false
+          default: true
+          type: string
+      responses:
+        '200':
+          description: Aggregated statistics
+          schema:
+            type: object
+            example:
+              lastWinners:
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.203302916508196
+                  currency: EUR
+                  winTime: '2020-12-01T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 7.294185122654517
+                  currency: EUR
+                  winTime: '2020-11-26T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.019535577019514
+                  currency: EUR
+                  winTime: '2020-11-26T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+              topWinners:
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.203302916508196
+                  currency: EUR
+                  winTime: '2020-12-01T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+              statistics:
+                poolsDistributions:
+                  - poolInfo:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                    timeDistribution:
+                      - time: '2020-12-01T13:00:00.000Z'
+                        value: 17.203302916508196
+                        normalizedValue: 1
+                        currency: EUR
+                      - time: '2020-11-26T13:00:00.000Z'
+                        value: 7.294185122654517
+                        normalizedValue: 0.4239991098253032
+                        currency: EUR
+                      - time: '2020-11-26T13:00:00.000Z'
+                        value: 17.019535577019514
+                        normalizedValue: 0.9893179036385891
+                        currency: EUR
+              jackpotLogo: https://loine-sa.com/wp-content/uploads/2017/04/malanga-ecuatoriana-300x238.jpg
+              games:
+                - code: sw_csi_ct
+                  title: sw_csi_ct
+                  imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi_ct.jpg
+                - code: sw_sl
+                  title: sw_sl
+                  imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg
+  /features/statistics/jackpot-user:
+    get:
+      tags:
+        - Statistics
+      summary: Get jackpot statistics
+      description: Returns jackpot statistics
+      produces:
+        - application/json
+      parameters:
+        - name: customerId
+          in: query
+          description: Customer Id
+          required: true
+          type: string
+        - name: brandId
+          in: query
+          description: Brand Id
+          required: true
+          type: string
+        - name: userId
+          in: query
+          description: User Id
+          required: true
+          type: string
+        - name: gameId
+          in: query
+          description: Game Id
+          required: true
+          type: string
+        - name: lang
+          in: query
+          description: Display language
+          required: true
+          type: string
+        - name: currency
+          in: query
+          description: Output currency
+          required: true
+          type: string
+        - name: lastWinnersLimit
+          in: query
+          description: Last winners section count limit
+          required: false
+          default: 5
+          type: string
+        - name: topWinnersLimit
+          in: query
+          description: Top winners section count limit
+          required: false
+          default: 3
+          type: string
+        - name: topWinnersPeriod
+          in: query
+          description: Top winners period in milliseconds
+          required: false
+          default: 864000000
+          type: string
+        - name: timeLimitDaily
+          in: query
+          description: Time limit for daily jackpot pool in days
+          required: false
+          default: 7
+          type: string
+        - name: timeLimitHourly
+          in: query
+          description: Time limit for hourly jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: timeLimitGrand
+          in: query
+          description: Time limit for grand jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: timeLimitAmount
+          in: query
+          description: Time limit for amount jackpot pool in days
+          required: false
+          default: 1
+          type: string
+        - name: showLastWinners
+          in: query
+          description: Calculate or not last winners section
+          required: false
+          default: true
+          type: string
+        - name: showTopWinners
+          in: query
+          description: Calculate or not top winners section
+          required: false
+          default: true
+          type: string
+        - name: showStatistics
+          in: query
+          description: Calculate or not statistics section
+          required: false
+          default: true
+          type: string
+        - name: showJackpotLogo
+          in: query
+          description: Send or not jackpot logo in response
+          required: false
+          default: true
+          type: string
+        - name: showCss
+          in: query
+          description: Send or not UI css in response
+          required: false
+          default: false
+          type: string
+        - name: showGames
+          in: query
+          description: Send or not participating game list in response
+          required: false
+          default: true
+          type: string
+        - name: obfuscateUserName
+          in: query
+          description: Enable/disable obfuscation for user name
+          required: false
+          default: true
+          type: string
+        - name: obfuscateBrandId
+          in: query
+          description: Enable/disable obfuscation for brandID
+          required: false
+          default: false
+          type: string
+        - name: obfuscateTime
+          in: query
+          description: Enable/disable obfuscation for all timestamps in response (trim minutes/seconds)
+          required: false
+          default: true
+          type: string
+      responses:
+        '200':
+          description: Aggregated statistics
+          schema:
+            type: object
+            example:
+              lastWinners:
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.203302916508196
+                  currency: EUR
+                  winTime: '2020-12-01T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 7.294185122654517
+                  currency: EUR
+                  winTime: '2020-11-26T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.019535577019514
+                  currency: EUR
+                  winTime: '2020-11-26T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+              topWinners:
+                - player:
+                    playerName: Eg*********-1
+                    brandId: '4'
+                  winAmount: 17.203302916508196
+                  currency: EUR
+                  winTime: '2020-12-01T13:00:00.000Z'
+                  pool:
+                    poolType: amount
+                    poolName: Minor jackpot
+                    logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                    description: null
+              statistics:
+                poolsDistributions:
+                  - poolInfo:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                    timeDistribution:
+                      - time: '2020-12-01T13:00:00.000Z'
+                        value: 17.203302916508196
+                        normalizedValue: 1
+                        currency: EUR
+                      - time: '2020-11-26T13:00:00.000Z'
+                        value: 7.294185122654517
+                        normalizedValue: 0.4239991098253032
+                        currency: EUR
+                      - time: '2020-11-26T13:00:00.000Z'
+                        value: 17.019535577019514
+                        normalizedValue: 0.9893179036385891
+                        currency: EUR
+              jackpotLogo: https://loine-sa.com/wp-content/uploads/2017/04/malanga-ecuatoriana-300x238.jpg
+              games:
+                - code: sw_csi_ct
+                  title: sw_csi_ct
+                  imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi_ct.jpg
+                - code: sw_sl
+                  title: sw_sl
+                  imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg
+  /features/jackpots:
+    get:
+      tags:
+        - Jackpot Instances
+      summary: Get jackpot ids (feature.settings.jackpotId) and games
+      description: Returns jackpot ids and games
+      produces:
+        - application/json
+      parameters:
+        - name: brandId
+          in: query
+          description: Brand Id
+          required: true
+          type: string
+        - name: customerId
+          in: query
+          description: 'Customer Id. To get all customers: put ''*'' as a value'
+          required: false
+          type: string
+          default: skywindgroup
+        - name: currency
+          in: query
+          description: Output currency
+          required: false
+          type: string
+        - name: sign
+          in: query
+          description: Request hash signature
+          required: false
+          type: string
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/getJackpotIdsResponse'
+definitions:
+  getJackpotIdsResponseSingleItem:
+    type: object
+    properties:
+      jackpotId:
+        type: string
+        example: 871h218gdt13fdi1oos
+      games:
+        type: array
+        items:
+          type: string
+          example: sw_bb
+  getJackpotIdsResponse:
+    type: object
+    properties:
+      jackpots:
+        type: array
+        description: Jackpot ids and games container
+        items:
+          $ref: '#/definitions/getJackpotIdsResponseSingleItem'
+default:
+  swagger: '2.0'
+  info:
+    version: 1.0.0
+    title: Phantom Manifest API
+  schemes:
+    - https
+    - http
+  paths:
+    /widget/init:
+      get:
+        tags:
+          - Widget
+        summary: Get jackpot widget info
+        description: This api will return to the user static information about the jackpot to set up the widget UI.
+        operationId: getWidget
+        produces:
+          - application/json
+        parameters:
+          - name: features
+            in: query
+            description: Comma separated features ids
+            required: true
+            type: string
+          - name: lang
+            in: query
+            description: Output language
+            required: true
+            type: string
+          - name: currency
+            in: query
+            description: Output currency
+            required: true
+            type: string
+        responses:
+          '200':
+            description: Widget info
+            schema:
+              type: object
+              example:
+                features:
+                  - id: 5f8ef3bbc4638a1e1e5a3493
+                    startDate: '2020-10-20T14:27:07.938Z'
+                    endDate: '2030-10-18T14:27:07.938Z'
+                    name: Daily-JP-1
+                    status: Running
+                    currency: CNY
+                    featureData:
+                      ticker: 38.11796086493837
+                      isHeating: 0
+                      jackpotType: DailyJackpot
+                      startTime: 1603242000000
+                      endTime: 1603328400000
+                      lastWinAmount: 0
+                    assets:
+                      - type: logo
+                        value: https://domain/jackpot_logo.png
+                        lang: en
+                      - type: widget-games-slider
+                        value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                      - type: displayName
+                        value: My great jackpot!
+                        lang: en
+                  - id: 5f8ef3bbc4638a68da5a3494
+                    startDate: '2020-10-20T14:27:07.938Z'
+                    endDate: '2030-10-18T14:27:07.938Z'
+                    name: Hourly-JP-1
+                    status: Running
+                    currency: CNY
+                    featureData:
+                      ticker: 2.8588470648703774
+                      isHeating: 1
+                      jackpotType: HourlyJackpot
+                      startTime: 1603288800000
+                      endTime: 1603292400000
+                      lastWinAmount: 0
+                    assets:
+                      - type: logo
+                        value: https://domain/jackpot_logo.png
+                        lang: en
+                      - type: widget-games-slider
+                        value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                      - type: displayName
+                        value: My great jackpot!
+                        lang: en
+                  - id: 5f8ef3bbc4638a34085a3495
+                    startDate: '2020-10-20T14:27:07.938Z'
+                    endDate: '2030-10-18T14:27:07.938Z'
+                    name: Mega-JP-1
+                    status: Running
+                    currency: CNY
+                    featureData:
+                      ticker: 381.1796086493837
+                      isHeating: 0
+                      jackpotType: NoLimit
+                    assets:
+                      - type: logo
+                        value: https://domain/jackpot_logo.png
+                        lang: en
+                      - type: widget-games-slider
+                        value: '[{"game":"sw_sl","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg"},{"game":"sw_csi","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi.jpg"},{"game":"sw_roofsh","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_roofsh.jpg"},{"game":"sw_sland","image":"https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sland.jpg"}]'
+                      - type: displayName
+                        value: My great jackpot!
+                        lang: en
+                assets: []
+    /widget/state:
+      get:
+        tags:
+          - Widget
+        summary: 'Get jackpot widget short info: ticker, heating, etc'
+        description: This api will return to the user the updated ticker value, heating status, type, and more useful dynamic info about the jackpot.
+        operationId: getWidgetState
+        produces:
+          - application/json
+        parameters:
+          - name: features
+            in: query
+            description: Comma separated features ids
+            required: true
+            type: string
+          - name: currency
+            in: query
+            description: Output currency
+            required: true
+            type: string
+        responses:
+          '200':
+            description: Jackpot short info
+            schema:
+              type: object
+              example:
+                features:
+                  - id: 5f8fc97ac4638a230f5a349e
+                    featureData:
+                      status: Running
+                      ticker: 9331.664141413237
+                      isHeating: 0
+                      jackpotType: AmountLimit
+                      dropAmount: 34993.42784096121
+    /features/statistics/jackpot:
+      get:
+        tags:
+          - Statistics
+        summary: Get jackpot statistics
+        description: Returns jackpot statistics
+        produces:
+          - application/json
+        parameters:
+          - name: featureId
+            in: query
+            description: Feature Id
+            required: true
+            type: string
+          - name: lang
+            in: query
+            description: Display language
+            required: true
+            type: string
+          - name: currency
+            in: query
+            description: Output currency
+            required: true
+            type: string
+          - name: lastWinnersLimit
+            in: query
+            description: Last winners section count limit
+            required: false
+            default: 5
+            type: string
+          - name: topWinnersLimit
+            in: query
+            description: Top winners section count limit
+            required: false
+            default: 3
+            type: string
+          - name: topWinnersPeriod
+            in: query
+            description: Top winners period in milliseconds
+            required: false
+            default: 864000000
+            type: string
+          - name: timeLimitDaily
+            in: query
+            description: Time limit for daily jackpot pool in days
+            required: false
+            default: 7
+            type: string
+          - name: timeLimitHourly
+            in: query
+            description: Time limit for hourly jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: timeLimitGrand
+            in: query
+            description: Time limit for grand jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: timeLimitAmount
+            in: query
+            description: Time limit for amount jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: showLastWinners
+            in: query
+            description: Calculate or not last winners section
+            required: false
+            default: true
+            type: string
+          - name: showTopWinners
+            in: query
+            description: Calculate or not top winners section
+            required: false
+            default: true
+            type: string
+          - name: showStatistics
+            in: query
+            description: Calculate or not statistics section
+            required: false
+            default: true
+            type: string
+          - name: showJackpotLogo
+            in: query
+            description: Send or not jackpot logo in response
+            required: false
+            default: true
+            type: string
+          - name: showCss
+            in: query
+            description: Send or not UI css in response
+            required: false
+            default: false
+            type: string
+          - name: showGames
+            in: query
+            description: Send or not participating game list in response
+            required: false
+            default: true
+            type: string
+          - name: obfuscateUserName
+            in: query
+            description: Enable/disable obfuscation for user name
+            required: false
+            default: true
+            type: string
+          - name: obfuscateBrandId
+            in: query
+            description: Enable/disable obfuscation for brandID
+            required: false
+            default: false
+            type: string
+          - name: obfuscateTime
+            in: query
+            description: Enable/disable obfuscation for all timestamps in response (trim minutes/seconds)
+            required: false
+            default: true
+            type: string
+        responses:
+          '200':
+            description: Aggregated statistics
+            schema:
+              type: object
+              example:
+                lastWinners:
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.203302916508196
+                    currency: EUR
+                    winTime: '2020-12-01T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 7.294185122654517
+                    currency: EUR
+                    winTime: '2020-11-26T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.019535577019514
+                    currency: EUR
+                    winTime: '2020-11-26T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                topWinners:
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.203302916508196
+                    currency: EUR
+                    winTime: '2020-12-01T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                statistics:
+                  poolsDistributions:
+                    - poolInfo:
+                        poolType: amount
+                        poolName: Minor jackpot
+                        logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                        description: null
+                      timeDistribution:
+                        - time: '2020-12-01T13:00:00.000Z'
+                          value: 17.203302916508196
+                          normalizedValue: 1
+                          currency: EUR
+                        - time: '2020-11-26T13:00:00.000Z'
+                          value: 7.294185122654517
+                          normalizedValue: 0.4239991098253032
+                          currency: EUR
+                        - time: '2020-11-26T13:00:00.000Z'
+                          value: 17.019535577019514
+                          normalizedValue: 0.9893179036385891
+                          currency: EUR
+                jackpotLogo: https://loine-sa.com/wp-content/uploads/2017/04/malanga-ecuatoriana-300x238.jpg
+                games:
+                  - code: sw_csi_ct
+                    title: sw_csi_ct
+                    imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi_ct.jpg
+                  - code: sw_sl
+                    title: sw_sl
+                    imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg
+    /features/statistics/jackpot-user:
+      get:
+        tags:
+          - Statistics
+        summary: Get jackpot statistics
+        description: Returns jackpot statistics
+        produces:
+          - application/json
+        parameters:
+          - name: customerId
+            in: query
+            description: Customer Id
+            required: true
+            type: string
+          - name: brandId
+            in: query
+            description: Brand Id
+            required: true
+            type: string
+          - name: userId
+            in: query
+            description: User Id
+            required: true
+            type: string
+          - name: gameId
+            in: query
+            description: Game Id
+            required: true
+            type: string
+          - name: lang
+            in: query
+            description: Display language
+            required: true
+            type: string
+          - name: currency
+            in: query
+            description: Output currency
+            required: true
+            type: string
+          - name: lastWinnersLimit
+            in: query
+            description: Last winners section count limit
+            required: false
+            default: 5
+            type: string
+          - name: topWinnersLimit
+            in: query
+            description: Top winners section count limit
+            required: false
+            default: 3
+            type: string
+          - name: topWinnersPeriod
+            in: query
+            description: Top winners period in milliseconds
+            required: false
+            default: 864000000
+            type: string
+          - name: timeLimitDaily
+            in: query
+            description: Time limit for daily jackpot pool in days
+            required: false
+            default: 7
+            type: string
+          - name: timeLimitHourly
+            in: query
+            description: Time limit for hourly jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: timeLimitGrand
+            in: query
+            description: Time limit for grand jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: timeLimitAmount
+            in: query
+            description: Time limit for amount jackpot pool in days
+            required: false
+            default: 1
+            type: string
+          - name: showLastWinners
+            in: query
+            description: Calculate or not last winners section
+            required: false
+            default: true
+            type: string
+          - name: showTopWinners
+            in: query
+            description: Calculate or not top winners section
+            required: false
+            default: true
+            type: string
+          - name: showStatistics
+            in: query
+            description: Calculate or not statistics section
+            required: false
+            default: true
+            type: string
+          - name: showJackpotLogo
+            in: query
+            description: Send or not jackpot logo in response
+            required: false
+            default: true
+            type: string
+          - name: showCss
+            in: query
+            description: Send or not UI css in response
+            required: false
+            default: false
+            type: string
+          - name: showGames
+            in: query
+            description: Send or not participating game list in response
+            required: false
+            default: true
+            type: string
+          - name: obfuscateUserName
+            in: query
+            description: Enable/disable obfuscation for user name
+            required: false
+            default: true
+            type: string
+          - name: obfuscateBrandId
+            in: query
+            description: Enable/disable obfuscation for brandID
+            required: false
+            default: false
+            type: string
+          - name: obfuscateTime
+            in: query
+            description: Enable/disable obfuscation for all timestamps in response (trim minutes/seconds)
+            required: false
+            default: true
+            type: string
+        responses:
+          '200':
+            description: Aggregated statistics
+            schema:
+              type: object
+              example:
+                lastWinners:
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.203302916508196
+                    currency: EUR
+                    winTime: '2020-12-01T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 7.294185122654517
+                    currency: EUR
+                    winTime: '2020-11-26T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.019535577019514
+                    currency: EUR
+                    winTime: '2020-11-26T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                topWinners:
+                  - player:
+                      playerName: Eg*********-1
+                      brandId: '4'
+                    winAmount: 17.203302916508196
+                    currency: EUR
+                    winTime: '2020-12-01T13:00:00.000Z'
+                    pool:
+                      poolType: amount
+                      poolName: Minor jackpot
+                      logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                      description: null
+                statistics:
+                  poolsDistributions:
+                    - poolInfo:
+                        poolType: amount
+                        poolName: Minor jackpot
+                        logo: https://loine-sa.com/wp-content/uploads/2017/04/pina-costa-rica.jpg
+                        description: null
+                      timeDistribution:
+                        - time: '2020-12-01T13:00:00.000Z'
+                          value: 17.203302916508196
+                          normalizedValue: 1
+                          currency: EUR
+                        - time: '2020-11-26T13:00:00.000Z'
+                          value: 7.294185122654517
+                          normalizedValue: 0.4239991098253032
+                          currency: EUR
+                        - time: '2020-11-26T13:00:00.000Z'
+                          value: 17.019535577019514
+                          normalizedValue: 0.9893179036385891
+                          currency: EUR
+                jackpotLogo: https://loine-sa.com/wp-content/uploads/2017/04/malanga-ecuatoriana-300x238.jpg
+                games:
+                  - code: sw_csi_ct
+                    title: sw_csi_ct
+                    imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_csi_ct.jpg
+                  - code: sw_sl
+                    title: sw_sl
+                    imageUrl: https://static-cdntw.hep200512.com/sweh-assets/thumbnails/sw_sl.jpg
+    /features/jackpots:
+      get:
+        tags:
+          - Jackpot Instances
+        summary: Get jackpot ids (feature.settings.jackpotId) and games
+        description: Returns jackpot ids and games
+        produces:
+          - application/json
+        parameters:
+          - name: brandId
+            in: query
+            description: Brand Id
+            required: true
+            type: string
+          - name: customerId
+            in: query
+            description: 'Customer Id. To get all customers: put ''*'' as a value'
+            required: false
+            type: string
+            default: skywindgroup
+          - name: currency
+            in: query
+            description: Output currency
+            required: false
+            type: string
+          - name: sign
+            in: query
+            description: Request hash signature
+            required: false
+            type: string
+        responses:
+          '200':
+            schema:
+              $ref: '#/definitions/getJackpotIdsResponse'
+  definitions:
+    getJackpotIdsResponseSingleItem:
+      type: object
+      properties:
+        jackpotId:
+          type: string
+          example: 871h218gdt13fdi1oos
+        games:
+          type: array
+          items:
+            type: string
+            example: sw_bb
+    getJackpotIdsResponse:
+      type: object
+      properties:
+        jackpots:
+          type: array
+          description: Jackpot ids and games container
+          items:
+            $ref: '#/definitions/getJackpotIdsResponseSingleItem'
