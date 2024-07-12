@@ -359,8 +359,8 @@ h3 {
 
 @font-face {
   font-family: "Glyphicons Halflings";
-  src: url(/assets/bootstrap/glyphicons-halflings-regular-0805fb1fe24235f70a639f67514990e4bfb6d2cfb00ca563ad4b553c240ddc33.eot);
-  src: url(/assets/bootstrap/glyphicons-halflings-regular-0805fb1fe24235f70a639f67514990e4bfb6d2cfb00ca563ad4b553c240ddc33.eot?#iefix) format("embedded-opentype"), url(/assets/bootstrap/glyphicons-halflings-regular-403acfcf0cbaebd1c28b404eec442cea53642644b3a73f91c5a4ab46859af772.woff2) format("woff2"), url(/assets/bootstrap/glyphicons-halflings-regular-0703369a358a012c0011843ae337a8a20270c336948a8668df5cb89a8827299b.woff) format("woff"), url(/assets/bootstrap/glyphicons-halflings-regular-7c9caa5f4e16169b0129fdf93c84e85ad14d6c107eb1b0ad60b542daf01ee1f0.ttf) format("truetype"), url(/assets/bootstrap/glyphicons-halflings-regular-22d0c88a49d7d0ebe45627143a601061a32a46a9b9afd2dc7f457436f5f15f6e.svg#glyphicons_halflingsregular) format("svg");
+  src: url(https://accounts-sdet2.qasalesloft.com/assets/bootstrap/glyphicons-halflings-regular-0805fb1fe24235f70a639f67514990e4bfb6d2cfb00ca563ad4b553c240ddc33.eot);
+  src: url(https://accounts-sdet2.qasalesloft.com/assets/bootstrap/glyphicons-halflings-regular-0805fb1fe24235f70a639f67514990e4bfb6d2cfb00ca563ad4b553c240ddc33.eot?#iefix) format("embedded-opentype"), url(https://accounts-sdet2.qasalesloft.com//assets/bootstrap/glyphicons-halflings-regular-403acfcf0cbaebd1c28b404eec442cea53642644b3a73f91c5a4ab46859af772.woff2) format("woff2"), url(/assets/bootstrap/glyphicons-halflings-regular-0703369a358a012c0011843ae337a8a20270c336948a8668df5cb89a8827299b.woff) format("woff"), url(/assets/bootstrap/glyphicons-halflings-regular-7c9caa5f4e16169b0129fdf93c84e85ad14d6c107eb1b0ad60b542daf01ee1f0.ttf) format("truetype"), url(/assets/bootstrap/glyphicons-halflings-regular-22d0c88a49d7d0ebe45627143a601061a32a46a9b9afd2dc7f457436f5f15f6e.svg#glyphicons_halflingsregular) format("svg");
 }
 
 /* line 24, ../home/salesloft/.local/share/gem/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_glyphicons.scss */
@@ -9900,7 +9900,7 @@ div.sl-login__copy.last {
 /* line 687, app/assets/stylesheets/base.scss */
 .sl-logo {
   display: block;
-  background-image: url(/assets/sl-logo-2023-green-fc70571b915d8d49f0302cf8b08684805d7865bac26c71525c86416b46e6427e.svg);
+  background-image: url(https://accounts-sdet2.qasalesloft.com/assets/sl-logo-2023-green-fc70571b915d8d49f0302cf8b08684805d7865bac26c71525c86416b46e6427e.svg);
   background-repeat: no-repeat;
   background-size: 180px 40px;
   height: 40px;
@@ -12811,7 +12811,7 @@ footer a:focus {
 
 /* line 22, app/assets/stylesheets/marketing.scss */
 .sl-marketing .marketing-image {
-  background: url(/assets/login-image-2024-06-18-ea69f55372ebbe317fe6d4f0bea91f3110a7a896dc7d69b94fefc3d81b0df541.png);
+  background: url(https://accounts-sdet2.qasalesloft.com/assets/login-image-2024-06-18-ea69f55372ebbe317fe6d4f0bea91f3110a7a896dc7d69b94fefc3d81b0df541.png);
   width: 100%;
   min-height: 500px;
   height: 100%;
