@@ -9900,7 +9900,7 @@ div.sl-login__copy.last {
 /* line 687, app/assets/stylesheets/base.scss */
 .sl-logo {
   display: block;
-  background-image: url(/assets/sl-logo-2023-green-fc70571b915d8d49f0302cf8b08684805d7865bac26c71525c86416b46e6427e.svg);
+  background-image: url(https://app-sdet2.qasalesloft.com/assets/sl-logo-2023-green-fc70571b915d8d49f0302cf8b08684805d7865bac26c71525c86416b46e6427e.svg);
   background-repeat: no-repeat;
   background-size: 180px 40px;
   height: 40px;
