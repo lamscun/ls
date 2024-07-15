@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Dermaclub</title>
+
+    <link rel="icon" type="image/x-icon" href="https://clube.dermaclub.com.br/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://clube.dermaclub.com.br/favicon-32x32.png">
+
+    <link rel="stylesheet" href="./Dermaclub_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Dermaclub_files/site.css">
+
+    <link rel="stylesheet" href="./Dermaclub_files/materialize.min.css">
+    <link rel="stylesheet" href="./Dermaclub_files/bootstrap-icons.css">
+
+    <link href="./Dermaclub_files/css2" rel="stylesheet">
+
+<style type="text/css">@keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}@-moz-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}@-webkit-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}@-ms-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}@-o-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}div,iframe{ animation-duration: 0.01s; -o-animation-duration: 0.01s; -ms-animation-duration: 0.01s; -moz-animation-duration: 0.01s; -webkit-animation-duration: 0.01s; animation-name: nodeInserted; -o-animation-name: nodeInserted; -ms-animation-name: nodeInserted; -moz-animation-name: nodeInserted; -webkit-animation-name: nodeInserted;}</style><script async="" src="./Dermaclub_files/main.ea1c939c.js"></script><script src="./Dermaclub_files/142001870.js" type="text/javascript" async="" data-ueto="ueto_e4e1a1267c"></script><meta http-equiv="origin-trial" content="AwnOWg2dzaxHPelVjqOT/Y02cSxnG2FkjXO7DlX9VZF0eyD0In8IIJ9fbDFZGXvxNvn6HaF51qFHycDGLOkj1AUAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="></head>
+<body class="">
+    
+
+<div class="headerDeslogado">
+    <div class="content">
+        <div class="logoDermaClub"></div>
+        <div class="voltar">
+            <a href="https://dermaclub.com.br/">
+                <img src="./Dermaclub_files/left-arrow.png" style="margin-left: -15px; margin-top: -4px; max-height: 20px">
+                <span style="color: gray; margin-left: 4px;">
+                    Voltar
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+    <div>
+        
+
+<div class="containerPrincipalLogin">
+    <div class="bannerDeslogado">
+        <picture>
+                <source srcset="/images/banners/bemvindo.jpg" media="(min-width: 1024px)">
+                <img src="./Dermaclub_files/bemvindoMobile.jpg" alt="">
+        </picture>
+    </div>
+
+        <form action="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery" method="post">
+            <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=dermafront&amp;redirect_uri=https%3A%2F%2Fclube.dermaclub.com.br%2Fsignin-callback.html&amp;response_type=code&amp;scope=openid%20profile&amp;state=1b5a619519da4023a6225c9d82aada05&amp;code_challenge=9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU&amp;code_challenge_method=S256&amp;response_mode=query">
+            <input type="hidden" id="enc" name="enc" value="true">
+            <div class="formLogin">
+                <div class="column">
+                    <label class="active">CPF ou E-mail</label>
+                    <input class="form-control" id="login" placeholder="ex.: antonio.perez@gmail.com" autofocus="" type="text" name="Login" value="">
+                </div>
+                <div class="column input-password">
+                    <label>Senha </label>
+                    <input type="hidden" id="senha" name="Senha" value="">
+                    <input type="password" id="password" class="form-control" autocomplete="off">
+                    <button class="inside-icon" type="button" onclick="showPasswordMethod();">
+                        <i class="bi-eye" id="eye" style="display: none"></i>
+                        <i class="bi-eye-slash" id="eye-closed"></i>
+                    </button>
+                </div>
+
+                    <span style="width: 100%;" class="text-danger">
+                        <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+                    </span>
+
+                <div class="column">
+                        <label class="checkCustomMaterialize">
+                            <input type="checkbox" class="filled-in" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true">
+                            <span asp-for="RememberLogin">Lembrar CPF/E-mail</span>
+                        </label>
+                </div>
+
+                <div class="column">
+
+                    <a href="https://clube.dermaclub.com.br/recuperar-senha">Esqueci minha senha</a>
+                </div>
+
+                <div class="column" style="margin: 20px auto;">
+                    <button class="btn btn-primary" type="button" id="requestButton" onclick="post();">
+                        <div id="entrar">entrar</div>
+                        <div id="loading" class="loader"></div>
+                    </button>
+                    <button style="display: none" name="button" type="submit" id="submit" value="login"></button>
+                </div>
+
+                <div class="column">
+                    Não tem uma conta? <a href="https://clube.dermaclub.com.br/cadastro">Cadastre-se!</a><br>
+                    Primeiro acesso? <a href="https://clube.dermaclub.com.br/primeiro-acesso">Defina sua senha</a>
+                </div>
+
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8ME0zKD1Z4dNuBg8P7yZL-y4bQM1DQy4NlGB31nTHlSowMcqzNdmyoYpGYzM1YffY0egCKesA3gOHojiTjRDck2T0Go3mUrx0Ku4EYXwEFs5roCZuo0FmBmq2rdVuthlf7FUQLP-mx0ngGcQwAqz02g"><input name="RememberLogin" type="hidden" value="false"></form>
+
+    <div class="containerVantagens">
+        <h2 class="titulo">garanta vantagens exclusivas</h2>
+        <ul>
+            <li>
+                descontos<br>o ano todo
+            </li>
+            <li>
+                pontue nas suas<br> compras
+            </li>
+            <li>
+                troque pontos<br>por produtos
+            </li>
+        </ul>
+    </div>
+
+    <div class="containerNossasMarcas">
+        <h2 class="titulo">
+            O clube das marcas mais recomendadas*<br> pelos dermatologistas
+        </h2>
+
+        <p class="subTitulo">
+            Conheça as marcas que fazem parte do clube<br>
+            e aproveite todos os benefícios!
+        </p>
+
+        <div class="marcas">
+            <div>
+                <a href="https://www.laroche-posay.com.br/" rel="noopener noreferrer">
+                    <img src="./Dermaclub_files/la-roche-menu.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.vichy.com.br/" rel="noopener noreferrer">
+                    <img src="./Dermaclub_files/vichy-menu.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.skinceuticals.com.br/" rel="noopener noreferrer">
+                    <img src="./Dermaclub_files/skin-menu.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.cerave.com.br/" rel="noopener noreferrer">
+                    <img src="./Dermaclub_files/cerave-menu.jpg">
+                </a>
+            </div>
+        </div>
+        <p class="legendaContent">
+            *Referente à soma das marcas La Roche-Posay, Vichy, SkinCeuticals e CeraVe. Fonte: IQVIA, NPS, total Brasil, em quantidade de prescrições na especialidade Dermatologia."
+        </p>
+    </div>
+
+    <div class="containerTab" id="como-acumular">
+        <h2 class="titulo">como comprar e acumular pontos?</h2>
+        <ul class="tabs tabCustomStyle">
+            <li class="tab"><a href="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery#lojaFisica" class="active">loja física</a></li>
+            <li class="tab"><a href="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery#lojaOnline">loja online</a></li>
+        <li class="indicator" style="left: 597px; right: 762px;"></li></ul>
+
+        <div class="tab-content">
+            <div id="lojaFisica" class="active">
+                <div class="boxSteps desktop">
+                    <div>
+                        <span>1</span>
+                        <p>
+                            Vá até uma das <strong>
+                                farmácias<br>
+                                participantes
+                            </strong> e escolha seus<br>
+                            produtos das marcas participantes.
+                        </p>
+                    </div>
+                    <div>
+                        <span>2</span>
+                        <p>
+                            <strong>Informe seu CPF no caixa</strong> e avise <br>
+                            que faz parte do Dermaclub. <br>
+                            Se o produto estiver com desconto <br>
+                            o valor será ajustado.
+                        </p>
+                    </div>
+                    <div>
+                        <span>3</span>
+                        <p>
+                            Efetue o pagamento e seus <br>
+                            <strong>pontos serão contabilizados<br> automaticamente. </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="SliderBoxStepsMobile">
+                    <slider {...settings}="">
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>1</span>
+                                    <p>Vá até uma das <strong>farmácias participante</strong> e escolha seus produtos das marcas participantes. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>2</span>
+                                    <p> <strong>Informe seu CPF no caixa</strong> e avise que faz parte do Dermaclub. Se o produto estiver com desconto o valor será ajustado. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>3</span>
+                                    <p>Efetue o pagamento e seus <strong>pontos serão contabilizados automaticamente.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </slider>
+                </div>
+            </div>
+            <div id="lojaOnline" style="display: none;">
+                <div class="boxSteps desktop">
+                    <div>
+                        <span>1</span>
+                        <p>
+                            Entre no site da <strong>loja participante</strong><br>
+                            de sua preferência e escolha seus<br> produtos das marcas participantes.
+                        </p>
+                    </div>
+                    <div>
+                        <span>2</span>
+                        <p>
+                            Digite seu <strong>CPF no box DermaClub </strong><br>
+                            na página do produto.<br>
+                            Se o produto estiver com desconto<br>
+                            o valor será ajustado.
+                        </p>
+                    </div>
+                    <div>
+                        <span>3</span>
+                        <p>
+                            Efetue o pagamento, <br>
+                            e <strong>
+                                seus pontos serão <br>
+                                contabilizados automaticamente.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="SliderBoxStepsMobile">
+                    <slider {...settings}="">
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>1</span>
+                                    <p>
+                                        Entre no site da <strong>loja participante</strong><br>
+                                        de sua preferência e escolha seus<br> produtos das marcas participantes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>2</span>
+                                    <p>
+                                        Digite seu <strong>CPF no box DermaClub </strong><br>
+                                        na página do produto.<br>
+                                        Se o produto estiver com desconto<br>
+                                        o valor será ajustado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="boxSteps">
+                                <div>
+                                    <span>3</span>
+                                    <p>
+                                        Efetue o pagamento, <br>
+                                        e <strong>
+                                            seus pontos serão <br>
+                                            contabilizados automaticamente.
+                                        </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </slider>
+                </div>
+            </div>
+            <div class="menuTabBottom">
+                <a href="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery#lojas-participantes">veja as farmácias participantes</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerTab tabColorGrey" id="lojas-participantes">
+        <h2 class="titulo">farmácias participantes</h2>
+
+        <p class="subTitulo">
+            O Dermaclub está em todo o Brasil! Conheça as farmácias participantes. Através delas, você pontua e garante<br>os descontos exclusivos*. Na hora da compra, não esqueça de informar que você faz parte do clube!
+        </p>
+
+        <p class="legendaContent">
+            *Confira em quais redes o desconto é válido no menu Descontos Exclusivos.
+        </p>
+
+
+
+        <ul class="tabs tabCustomStyle">
+            <li class="tab"><a href="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery#tabsCompras1" class="active">loja física</a></li>
+            <li class="tab"><a href="https://sso.dermaclub.com.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Ddermafront%26redirect_uri%3Dhttps%253A%252F%252Fclube.dermaclub.com.br%252Fsignin-callback.html%26response_type%3Dcode%26scope%3Dopenid%2520profile%26state%3D1b5a619519da4023a6225c9d82aada05%26code_challenge%3D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%26code_challenge_method%3DS256%26response_mode%3Dquery#tabsCompras2">loja online</a></li>
+        <li class="indicator" style="left: 597px; right: 762px;"></li></ul>
+        <div class="container-tabs-lojas">
+            <div id="tabsCompras1" class="tab-content active" style="flex-direction: row; width: 100%; overflow: auto; white-space: nowrap; padding-bottom: 60px;">
+                <div style="flex-direction: column; margin-top: -20px">
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.acfarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/ac-farma.png" alt="" style="height: 50px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.araujo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/araujo-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciasbigfort.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/bigfort.png" alt="" style="height: 60px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariacatarinense.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/catarinense-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariaglobo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/drogaria-globo-prancheta.png" alt="" style="height: 70px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogal.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/drogal-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogasil.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/drogasil-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogasmil.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/mil-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.entrefarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/entre-farma.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.extrafarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/extrafarma-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmalife.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/life-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.redefarmavale.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farma-vale.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmarcas.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farmarcas.png" alt="" style="height: 70px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farma100.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farma-100.png" alt="" style="height: 70px">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciaindiana.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/indiana-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariasmaisfarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/mais-farma.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariasmaestra.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/maestra.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div style="flex-direction: column; margin-top: 50px">
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.maxipopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/maxi-popular.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://drogariasmegapopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/mega-popular.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciasnissei.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/nissei-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariaspacheco.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/pacheco-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogaraia.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/raia-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://drogariarosario.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/rosario-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariasaopaulo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/sao-paulo-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciapermanente.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/permanente-vermelho.png" alt="" style="height: 55px; width: 260px;">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.paguemenos.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/paguemenos-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.panvel.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/panvel-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.precopopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/popular-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.saojoaofarmacias.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/saojoao-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://redesuperpopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farmacia-super.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariasultrapopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/ultra-popular.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.farmagora.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/farmagora-cor.png" alt="" />
+                        </a>
+                    </div>
+                    -->
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.drogariastamoio.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/tamoio-cor.png" alt="" />
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariavenancio.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/venancio-cor.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <br class="none-desktop">
+            </div>
+        </div>
+
+        <div class="container-tabs-lojas">
+            <div id="tabsCompras2" class="tab-content" style="display: none; flex-direction: row; width: 100%; overflow: auto; white-space: nowrap; padding-bottom: 70px;">
+                <div style="flex-direction: column; margin-top: -20px">
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.acfarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/ac-farma.png" alt="" style="height: 50px"/>
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.araujo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/araujo-cor.png" alt="">
+                        </a>
+                    </div>
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.farmaciasbigfort.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/bigfort.png" alt="" style="height: 60px"/>
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariacatarinense.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/catarinense-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariaglobo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/drogaria-globo-prancheta.png" alt="" style="height: 70px">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://loja.dermaclub.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/dermaclub.png" style="width: 300px" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogaraia.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/raia-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogasil.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/drogasil-cor.png" alt="">
+                        </a>
+                    </div>
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.entrefarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/entre-farma.png" alt="" style="height: 100px"/>
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.epocacosmeticos.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/epoca-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmagora.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farmagora-cor.png" alt="">
+                        </a>
+                    </div>
+                    <!--
+                     <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.farmarcas.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/farmarcas.png" alt="" style="height: 70px"/>
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciaindiana.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/indiana-cor.png" alt="">
+                        </a>
+                    </div>
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.farma100.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/farma-100.png" alt="" style="height: 70px"/>
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.drogariasmaisfarma.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/mais-farma.png" alt="" style="height: 100px"/>
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.drogariasmaestra.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/maestra.png" alt="" style="height: 100px"/>
+                        </a>
+                    </div>
+                    -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciasnissei.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/nissei-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariaspacheco.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/pacheco-cor.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div style="flex-direction: column; margin-top: 50px">
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.maxipopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/maxi-popular.png" alt="" style="height: 100px"/>
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://drogariasmegapopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/mega-popular.png" alt="" style="height: 100px"/>
+                        </a>
+                    </div>
+                    -->
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.paguemenos.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/paguemenos-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.panvel.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/panvel-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.skinceuticals.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/skinceuticals.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.farmaciapermanente.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/permanente-vermelho.png" alt="" style="height: 55px; width: 260px;">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.precopopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/popular-cor.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://drogariarosario.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/rosario-cor.png" alt="">
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariasaopaulo.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/sao-paulo-cor.png" alt="">
+                        </a>
+                    </div>
+                    <!--
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://redesuperpopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="/images/farmarcias/farmacia-super.png" alt="" style="height: 100px" />
+                        </a>
+                    </div>
+
+                    <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.drogariasultrapopular.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="/images/farmarcias/ultra-popular.png" alt="" style="height: 100px" />
+                        </a>
+                    </div>
+
+                    <!-- <div id="tab-itens-lojas"  style="display: inline-block">
+                        <a href="https://www.drogariastamoio.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="~/images/farmarcias/tamoio-cor.png" alt="" />
+                        </a>
+                    </div> -->
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.redefarmavale.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/farma-vale.png" alt="" style="height: 100px">
+                        </a>
+                    </div>
+                    
+                    <div id="tab-itens-lojas" style="display: inline-block">
+                        <a href="https://www.drogariavenancio.com.br/" rel="noopener noreferrer">
+                            <img class="img-itens-lojas" src="./Dermaclub_files/venancio-cor.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <br classname="none-desktop">
+            </div>
+        </div>
+    </div>
+
+    <div class="containerFooter" style="">
+
+
+
+
+        <div class="content">
+            <div class="groupLogoSocialMedia">
+                <div class="image">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+                <div class="media">
+                    <a class="urlSocial1" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/dermaclub">Instagram</a>
+                    <a class="urlSocial2" rel="noopener noreferrer" target="_blank" href="https://www.tiktok.com/@dermaclub">TikTok</a>
+                    <a class="urlSocial3" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/dermaclub">Facebook</a>
+                    <a class="urlSocial4" rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/channel/UCrHpmmrMh1RqtIHg0aYiuug">YouTube</a>
+                    <a class="urlSocial5" rel="noopener noreferrer" target="_blank" href="https://twitter.com/dermaclub">Twitter</a>
+                </div>
+
+                <p><a rel="noopener noreferrer" href="https://www.vozdabeleza.com.br/">VOZ DA BELEZA</a></p>
+            </div>
+            <ul class="menuFooter">
+                <li><strong>Dermaclub</strong><a href="https://www.dermaclub.com.br/odermaclub.html" target="_blank" rel="noopener noreferrer">O Dermaclub</a><a href="https://www.dermaclub.com.br/customer-service/customer-service-faqs.html" target="_blank" rel="noopener noreferrer">FAQ</a><a href="https://www.dermaclub.com.br/customer-service/customer-service-regulamento-do-programa.html" target="_blank" rel="noopener noreferrer">Regulamento</a><a href="https://www.dermaclub.com.br/customer-service/customer-service-privacy-and-security-onetrust.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a><a href="https://www.dermaclub.com.br/customer-service/customer-service-terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
+                <li><strong>Blog</strong><a rel="noopener noreferrer" href="https://www.dermaclub.com.br/blog/peles-maduras" target="_blank">Peles Maduras</a><a rel="noopener noreferrer" href="https://www.dermaclub.com.br/blog/tratamentos" target="_blank">Tratamento</a><a rel="noopener noreferrer" href="https://www.dermaclub.com.br/blog/cabelo" target="_blank">Cabelo</a><a rel="noopener noreferrer" href="https://www.dermaclub.com.br/blog/todos-os-temas" target="_blank">Todos os temas</a></li>
+                <li><strong>Fale com a gente!</strong><a rel="noopener noreferrer" target="_blank" href="https://www.dermaclub.com.br/customer-service/customer-service-contact-us.html">Contato</a></li>
+            </ul>
+
+            <div class="downloadApp">
+            </div>
+
+            <div class="copyrightPrestadorServico">
+                <a rel="noopener noreferrer" href="https://www.zicard.com.br/"><img src="data:image/png;base64,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" alt="logo-zicard"></a>
+
+                <div class="selo">
+                    DERMACLUB FAZ PARTE DO
+
+                    <span>
+                        GRUPO L’ORÉAL BRASIL
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <script type="text/javascript" async="" src="./Dermaclub_files/linkid.js"></script><script type="text/javascript" async="" src="./Dermaclub_files/destination"></script><script type="text/javascript" async="" src="./Dermaclub_files/destination(1)"></script><script type="text/javascript" async="" src="./Dermaclub_files/js"></script><script type="text/javascript" async="" src="./Dermaclub_files/js(1)"></script><script type="text/javascript" async="" src="./Dermaclub_files/destination(2)"></script><script type="text/javascript" async="" src="./Dermaclub_files/destination(3)"></script><script async="" src="./Dermaclub_files/core.js"></script><script type="text/javascript" async="" src="./Dermaclub_files/analytics.js"></script><script src="./Dermaclub_files/246561385838512" async=""></script><script type="text/javascript" async="" src="./Dermaclub_files/fbevents.js"></script><script type="text/javascript" async="" src="./Dermaclub_files/tfa.js"></script><script async="" src="./Dermaclub_files/container_SnKrfRba.js"></script><script type="text/javascript" async="" src="./Dermaclub_files/124758.ct.js"></script><script type="text/javascript" async="" src="./Dermaclub_files/bat.js"></script><script src="./Dermaclub_files/amzn.js" id="amzn-pixel" async=""></script><script async="" src="./Dermaclub_files/gtm.js"></script><script src="./Dermaclub_files/jquery.min.js"></script>
+    <script src="./Dermaclub_files/bootstrap.bundle.min.js"></script>
+    <script src="./Dermaclub_files/materialize.min.js"></script>
+
+    <script src="./Dermaclub_files/toastr.js"></script>
+
+    <script>
+        function EnviarEmail(email) {
+            $.ajax({
+                url: '/Account/EnviarEmail?email=' + email
+            }).done(function (response) {
+                if (response != null && response != undefined) {
+                    toastr.success(response.mensagem, '', {
+                        newestOnTop: true,
+                        target: 'body',
+                        messageClass: 'toast-message-custom',
+                        positionClass: 'toast-top-right',
+                        timeOut: 5000,
+                        hideMethod: 'fadeOut',
+                    });
+                }
+            });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+
+    
+    <script src="./Dermaclub_files/crypto-js.js"></script>
+
+    <script type="text/javascript">
+        var showPassword = true;
+        
+        function encPass(string) {
+            const palavraArray = CryptoJS.enc.Utf8.parse(string);
+            const hashMD5 = CryptoJS.MD5(palavraArray);
+            return hashMD5.toString(CryptoJS.enc.Hex);
+        }
+
+        function showPasswordMethod() {
+            var input = document.getElementById('password');
+            var eye = document.getElementById('eye');
+            var eyeClosed = document.getElementById('eye-closed');
+
+            if (!showPassword) {
+                input.type = 'password';
+                showPassword = true;
+                eye.style = "display: none";
+                eyeClosed.style = "display: block";
+            } else {
+                input.type = 'text';
+                showPassword = false;
+                eye.style = "display: block";
+                eyeClosed.style = "display: none";
+            }
+        }
+
+        function showLoading(valor) {
+            var button = document.getElementById('requestButton');
+            var entrar = document.getElementById('entrar');
+            var loading = document.getElementById('loading');
+
+            if (valor) {
+                loading.style = "display: block";
+                entrar.style = "display: none";
+                setTimeout(function () { button.disabled = true; }, 200);
+            } else {
+                loading.style = "display: none";
+                entrar.style = "display: block";
+                button.disabled = false;
+
+                var password = document.getElementById('password');
+                var senha = document.getElementById('senha');
+                password.value = '';
+                senha.value = '';
+            }
+        }
+
+        function post() {
+            var enc = document.getElementById('enc');
+            var password = document.getElementById('password');
+            var senha = document.getElementById('senha');
+            senha.value = enc?.value === "true" ? encPass(password.value) : password.value;
+
+            showPassword = false;
+            showPasswordMethod();
+            showLoading(true)
+
+            $('#submit').click();
+        }
+    </script>
+
+
+    <script type="text/javascript" src="./Dermaclub_files/deployment.js"></script>
+    <script>
+        function liveAgentInviteButtonCallback(e) {
+            if (e == liveagent.BUTTON_EVENT.BUTTON_AVAILABLE) {
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.display = '';
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.position = 'absolute';
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.left = '50%';
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.top = '0';
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.zIndex = "10002";
+            }
+            if (e == liveagent.BUTTON_EVENT.BUTTON_UNAVAILABLE) {
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.display = 'none';
+            }
+            if (e == liveagent.BUTTON_EVENT.BUTTON_ACCEPTED) {
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.display = 'none';
+            }
+            if (e == liveagent.BUTTON_EVENT.BUTTON_REJECTED) {
+                document.getElementById('liveagent_invite_button_5735A0000002gRE').style.display = 'none';
+            }
+        }
+        // Live Agent Events
+        function startLiveAgentChat() {
+            liveagent.startChat('5735A0000002gRE');
+        }
+        function startLiveAgentInvitation() {
+            liveagent.startChat('5735A0000002gRE');
+        }
+        function rejectLiveAgentInvitation() {
+            liveagent.rejectChat('5735A0000002gRE');
+        }
+        // map chat fields
+        liveagent.addCustomDetail("Chat Request Page", location.href);
+        liveagent.setChatWindowWidth(900);
+        liveagent.setChatWindowHeight(675);
+    </script>
+    <script src="./Dermaclub_files/materialize.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                liveagent.addButtonEventHandler('5734D00000000Ji', liveAgentInviteButtonCallback);
+            }, 1500);
+        });
+
+        function onLogin(label) {
+            window.dataLayer = window.dataLayer || []
+            window.dataLayer.push({
+                'event': 'uaevent',
+                'event_name': 'log in',
+                'ecommerce': 'undefined',
+                'eventCategory': 'log in',
+                'eventAction': 'regular',
+                'method': 'regular',
+                'referral': 'loginPage',
+                'status': label, //'successful | error | denied'
+                'eventLabel': label //'successful | error | denied'
+            });
+        }
+    </script>
+
+
+
+    <script>
+        var webchatinit = document.createElement('script')
+        var inlineScript = document.createTextNode(`liveagent.init('https://d.la1-c2-ord.salesforceliveagent.com/chat', '5725A0000002d2b', '00DA0000000Y5FR');`)
+        webchatinit.appendChild(inlineScript)
+        var webchatConfig = document.createElement('script')
+        var inlineScript2 = document.createTextNode(`
+                                      if (!window._laq) {window._laq = []; }
+                                      window._laq.push(function(){
+                            liveagent.showWhenOnline('5735A0000002gR9', document.getElementById('liveagent_button_online_5735A0000002gR9'));
+                                        liveagent.showWhenOffline('5735A0000002gR9', document.getElementById('liveagent_button_offline_5735A0000002gR9'));
+                                      });`)
+        webchatConfig.appendChild(inlineScript2)
+        document.body.appendChild(webchatConfig)
+        document.body.appendChild(webchatinit)
+    </script><script>
+                                      if (!window._laq) {window._laq = []; }
+                                      window._laq.push(function(){
+                            liveagent.showWhenOnline('5735A0000002gR9', document.getElementById('liveagent_button_online_5735A0000002gR9'));
+                                        liveagent.showWhenOffline('5735A0000002gR9', document.getElementById('liveagent_button_offline_5735A0000002gR9'));
+                                      });</script><script>liveagent.init('https://d.la1-c2-ord.salesforceliveagent.com/chat', '5725A0000002d2b', '00DA0000000Y5FR');</script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KQ43XL5');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ43XL5"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" id="">!function(b,e,a,c,d){b.amzn||(b.amzn=d=function(){b.amzn.q.push([arguments,(new Date).getTime()])},d.q=[],d.version="0.0",a=e.createElement("script"),a.src="https://c.amazon-adsystem.com/aat/amzn.js",a.id="amzn-pixel",a.async=!0,c=e.getElementsByTagName("script")[0],c.parentNode.insertBefore(a,c))}(window,document);amzn("setRegion","NA");amzn("addTag","c0c5b2eb-14e2-4a82-b467-6240d1f46e3a");amzn("trackEvent","PageView",{pageUrl:document.location.href,pageTitle:document.title,pageDomain:document.location.hostname});</script>
+<noscript>
+<img src="https://s.amazon-adsystem.com/iu3?pid=c0c5b2eb-14e2-4a82-b467-6240d1f46e3a&amp;event=PageView" width="1" height="1" border="0">
+</noscript><script type="text/javascript" id="">function enableJsApi(){for(var a=!1,b=document.getElementsByTagName("iframe"),c=b.length;c--;)/youtube(-nocookie)?\.com\/embed/.test(b[c].src)&&(-1===b[c].src.indexOf("enablejsapi\x3d")&&(b[c].src+=(-1===b[c].src.indexOf("?")?"?":"\x26")+"enablejsapi\x3d1"),a=!0);return a}function parseElement(a){if("IFRAME"==a.tagName)playerOverrideDeclaration(a);else{a=a.getElementsByTagName("iframe");for(var b=a.length;b--;)playerOverrideDeclaration(a[b])}}
+function playerOverrideDeclaration(a){/youtube(-nocookie)?\.com\/embed/.test(a.src)&&(a=YT.get(a.id)||new YT.Player(a,{events:{}}),a.dataLayerTracking||(a.addEventListener("onStateChange",onPlayerStateChange),a.addEventListener("onError",onPlayerError),a.dataLayerTracking="done"),gtmYTListeners.push(a),YT.gtmLastAction="p")}
+(function(){"undefined"!==typeof window.onYouTubePlayerAPIReady&&("undefined"===typeof window.gambitOtherYTAPIReady&&(window.gambitOtherYTAPIReady=[]),window.gambitOtherYTAPIReady.push(window.onYouTubePlayerAPIReady));window.onYouTubePlayerAPIReady=function(){parseElement(document);"undefined"!==typeof window.gambitOtherYTAPIReady&&window.gambitOtherYTAPIReady.length&&window.gambitOtherYTAPIReady.pop()()}})();
+function onPlayerStateChange(a){a.data==YT.PlayerState.PLAYING&&setTimeout(onPlayerPercent,1E3,a.target);var b="undefined"!=typeof a.target.getVideoData?a.target.getVideoData():{title:a.target.getVideoUrl()};b="youTube:"+b.title;a.data==YT.PlayerState.PLAYING&&"p"==YT.gtmLastAction&&(dataLayer.push({event:"uaevent",eventCategory:"Video",eventAction:"Play",eventLabel:b,event_name:"youtube_video_interaction",video_title:b,video_action:"play"}),YT.gtmLastAction="");a.data==YT.PlayerState.PAUSED&&(dataLayer.push({event:"uaevent",
+eventCategory:"Video",eventAction:"Pause",eventLabel:b,event_name:"youtube_video_interaction",video_title:b,video_action:"pause"}),YT.gtmLastAction="p")}function onPlayerError(a){dataLayer.push({event:"uaevent",eventCategory:"Video",eventAction:"GTM",eventLabel:"Video: "+a,event_name:"youtube_video_interaction",video_title:"video: "+a})}
+function onPlayerPercent(a){if(a.getPlayerState()==YT.PlayerState.PLAYING){var b=1.5>=a.getDuration()-a.getCurrentTime()?1:(Math.floor(a.getCurrentTime()/a.getDuration()*10)/10).toFixed(2);.25>parseFloat(b)?b=0:.5>parseFloat(b)?b=.25:.75>parseFloat(b)?b=.5:.9>parseFloat(b)?b=.75:1>parseFloat(b)&&(b=.9);b=b.toFixed(2);if(!a.lastP||b>a.lastP){var c="undefined"!=typeof a.getVideoData?a.getVideoData():{title:a.getVideoUrl()};c="youTube:"+c.title;a.lastP=b;1==b?dataLayer.push({event:"uaevent",eventCategory:"Video",
+eventAction:"Video Completed",eventLabel:c,event_name:"youtube_video_interaction",video_title:c,video_action:"video completed"}):dataLayer.push({event:"uaevent",eventCategory:"Video",eventAction:100*b+"% Viewed",eventLabel:c,event_name:"youtube_video_interaction",video_title:c,video_action:100*b+"% viewed"})}1!=a.lastP&&setTimeout(onPlayerPercent,1E3,a)}}window.onbeforeunload=function(a){if(a=a||window.event)a.returnValue="na";return"na"};window.onbeforeunload=trackYTUnload;
+function trackYTUnload(){if("undefined"!=typeof gtmYTplayers)for(var a=0;a<gtmYTplayers.length;a++)switch(gtmYTlisteners[a].getPlayerState()){case 1:case 2:var b="undefined"!=typeof gtmYTlisteners[a].getVideoData?gtmYTlisteners[a].getVideoData():{title:gtmYTlisteners[a].getVideoUrl()};b="youTube:"+b.title;dataLayer.push({event:"uaevent",eventCategory:"Video",eventAction:"Exit",eventLabel:b,event_name:"youtube_video_interaction",video_title:b,video_action:"exit"})}}
+function insertYoutubeJsApi(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src="//www.youtube.com/iframe_api";a.async=!0;b.parentNode.insertBefore(a,b)}
+function styleToBeAddedInJs(){var a="",b=document.head||document.getElementsByTagName("head")[0],c=document.createElement("style");c.type="text/css";a+="@keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}";a+="@-moz-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}";a+="@-webkit-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}";a+="@-ms-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}";
+a+="@-o-keyframes nodeInserted { from { outline-color: #fff; } to { outline-color: #000;}}";a+="div,iframe{ animation-duration: 0.01s; -o-animation-duration: 0.01s; -ms-animation-duration: 0.01s; -moz-animation-duration: 0.01s; -webkit-animation-duration: 0.01s; animation-name: nodeInserted; -o-animation-name: nodeInserted; -ms-animation-name: nodeInserted; -moz-animation-name: nodeInserted; -webkit-animation-name: nodeInserted;}";c.styleSheet?c.styleSheet.cssText=a:c.appendChild(document.createTextNode(a));
+b.appendChild(c)}function listenerDomChangeWithCSSEvent(){var a=function(b){"nodeInserted"==b.animationName&&(0<b.target.getElementsByTagName("iframe").length||"IFRAME"==b.target.tagName)&&launchYoutubeIframeApiTraking()};document.addEventListener("animationstart",a,!1);document.addEventListener("MSAnimationStart",a,!1);document.addEventListener("webkitAnimationStart",a,!1)}function checkResource(a,b){var c=null;0<=a.name.indexOf(b)&&(c=a.name);return c}
+function checkYT(a){return checkResource(a,"//www.youtube.com/iframe_api")}function launchYoutubeIframeApiTraking(){var a=enableJsApi();a&&(window.YT?parseElement(document):window.performance?window.performance.getEntriesByType?0<window.performance.getEntriesByType("resource").filter(checkYT).length||insertYoutubeJsApi():insertYoutubeJsApi():insertYoutubeJsApi())}var gtmYTListeners=[];launchYoutubeIframeApiTraking();styleToBeAddedInJs();listenerDomChangeWithCSSEvent();</script>
+
+  <script type="text/javascript" id="">(function(a){window.DataLayer||(window.DataLayer={});DataLayer.events||(DataLayer.events={});DataLayer.events.SPIVersion=DataLayer.events.SPIVersion||"3.4.1";DataLayer.events.SiteSection="1";var b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})(document.location.protocol+"//tag.rmp.rakuten.com/124758.ct.js");</script>
+
+<script type="text/javascript" id="">(function(){function c(a){a=a.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");a=new RegExp("[\\?\x26]"+a+"\x3d([^\x26#]*)");a=a.exec(location.search);return null===a?null:decodeURIComponent(a[1].replace(/\+/g," "))}var d=".dermaclub.com.br";["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(a){if(null!=c(a)){var e=a;a=c(a);var b=new Date;b.setTime(b.getTime()+2592E6);b="expires\x3d"+b.toUTCString();document.cookie=e+"\x3d"+a+";"+b+";domain\x3d"+d+";path\x3d/"}})})();</script><script type="text/javascript" id="">var visitCount=sessionStorage.getItem("counter-visits")||0;visitCount++;sessionStorage.setItem("counter-visits",visitCount);4==visitCount&&null==sessionStorage.getItem("session-visits")&&(dataLayer.push({event:"nievent",event_name:"session-visits"}),sessionStorage.setItem("session-visits","T"));</script>
+<script type="text/javascript" id="">function a(){dataLayer.push({event:"nievent",event_name:"time_per_session"});sessionStorage.setItem("time_per_session","T")}var timeWait=12E4,timeActual=(new Date).getTime(),timeLoadedPage=parseInt(sessionStorage.getItem("timeLoadedPage"))||timeActual;timeActual-timeLoadedPage>=timeWait&&null===sessionStorage.getItem("time_per_session")?a():setTimeout(function(){a()},timeWait-(timeActual-timeLoadedPage));null===sessionStorage.getItem("time_per_session")&&sessionStorage.setItem("timeLoadedPage",timeLoadedPage);</script>
+<script type="text/javascript" id="">var visitCount=sessionStorage.getItem("counter-visits")||0;visitCount++;sessionStorage.setItem("counter-visits",visitCount);4==visitCount&&null==sessionStorage.getItem("session-visits")&&(dataLayer.push({event:"session-visits",event_name:"session-visits"}),sessionStorage.setItem("session-visits","T"));</script>
+<script type="text/javascript" id="">var _mtm=window._mtm=window._mtm||[];_mtm.push({"mtm.startTime":(new Date).getTime(),event:"mtm.Start"});(function(){var a=document,b=a.createElement("script");a=a.getElementsByTagName("script")[0];b.async=!0;b.src="https://indexa-matomo.up.railway.app/js/container_SnKrfRba.js";a.parentNode.insertBefore(b,a)})();</script><script type="text/javascript" id="">!function(b){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var a=window.pintrk;a.queue=[];a.version="3.0";a=document.createElement("script");a.async=!0;a.src=b;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}("https://s.pinimg.com/ct/core.js");pintrk("load","2614122064140",{em:"\x3cuser_email_address\x3e"});pintrk("page");</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&amp;tid=2614122064140&amp;pd[em]=&lt;hashed_email_address&gt;&amp;noscript=1">
+</noscript><script type="text/javascript" id="">pintrk("track","pagevisit",{line_items:google_tag_manager["rm"]["10473582"](188)});</script>
+<script type="text/javascript" id="">"true"!=google_tag_manager["rm"]["10473582"](189)&&(window.cdo={},window.cdo.qualifiedVisit=!1,window.cdo.scroll=!1,window.cdo.timeSpent=!1,window.cdo.navigation=!1,window.cdo._qualifiedVisit=function(a){(window.cdo.timeSpent&window.cdo.scroll||window.cdo.navigation)&!window.cdo.qualifiedVisit&&(window.dataLayer=window.dataLayer||[],dataLayer.push({event:"nievent",eventCategory:"Precision Advertising",eventAction:"Last Action : "+a,eventLabel:"Qualified Visit",qualifiedVisit:!0,ecommerce:void 0,event_name:"qualified_visit",
+last_action:"last action: "+a}),window.cdo.qualifiedVisit=!0,window.cdo._cleanHandler())},window.cdo._cleanHandler=function(){window.removeEventListener("click",window.cdo._clickHandler);window.removeEventListener("scroll",window.cdo._scrollHandler)},window.cdo._scrollHandler=function(a){window.cdo.scroll=!0;window.cdo._qualifiedVisit("scroll");window.removeEventListener("scroll",window.cdo._scrollHandler)},window.cdo._timeSpentCondition=function(a){setTimeout(function(){window.cdo.timeSpent=!0;window.cdo._qualifiedVisit(a/
+1E3+"seconds spent")},a)},window.cdo._navigation=function(){window.cdo.navigation=!0;window.cdo._qualifiedVisit("navigation")},window.cdo._beforeunloadHandler=function(a){"undefined"!=typeof a.target&&"undefined"!=typeof a.target.activeElement&&document.location.href!=a.target.activeElement.href&&(window.cdo._navigation(),window.removeEventListener("click",window.cdo._beforeunloadHandler))},window.cdo._timeSpentCondition(google_tag_manager["rm"]["10473582"](190)),window.addEventListener("scroll",window.cdo._scrollHandler),
+window.addEventListener("location-changed",window.cdo._navigation),window.addEventListener("popstate",window.cdo._navigation),window.addEventListener("beforeunload",window.cdo._beforeunloadHandler));google_tag_manager["rm"]["10473582"](191)("_aqv","true",18E5,"/");</script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","588578503145644");fbq("track","PageView");</script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=588578503145644&amp;ev=PageView&amp;noscript=1">
+  </noscript>
+  
+
+<script type="text/javascript" id="" src="./Dermaclub_files/ld.js"></script>
+
+<div id="criteo-tags-div" style="display: none;"><iframe src="./Dermaclub_files/syncframe.html" id="criteo-syncframe-onetag" width="0" height="0" frameborder="0" style="border-width:0px; margin:0px; display:none" sandbox="allow-scripts allow-same-origin" title="Criteo GUM iframe"></iframe><script async="true" type="text/javascript" src="https://sslwidget.criteo.com/event?a=86909&amp;v=5.26.1&amp;otl=1&amp;p0=e%3Dvpg&amp;p1=e%3Dexd%26ref%3Dhttps%253A%252F%252Fclube.dermaclub.com.br&amp;adce=1&amp;bundle=a58AmF8yZzI3dWE1bmFIdXBncE52WmhneWVjTnEyekxtbXp5TFElMkJkMG5iTVZWd3YyeXFjZGtyTkQlMkI0SXhMVklkbzRKd1dmQVN3cmhsancwcHVsdCUyRlJZV2ZKRjVmcm1McnpLZlB3cXZpZ05tZEZ4akk5cktBSGQwMkRCMVhRWUxxT3VDQzZHYVlTbjNPdSUyRmV2MlpIblRiV0lkU3dNZWtyZHhDdWJaM2lnOHk1S1FKMVdBb1BveTA2JTJCemliR2VUaG5Ta3ZUY0I2TktYUWNTRlAlMkZBeENHZm1ibVhnJTNEJTNE&amp;tld=dermaclub.com.br&amp;dy=1&amp;fu=https%253A%252F%252Fsso.dermaclub.com.br%252FAccount%252FLogin%253FReturnUrl%253D%25252Fconnect%25252Fauthorize%25252Fcallback%25253Fclient_id%25253Ddermafront%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fclube.dermaclub.com.br%2525252Fsignin-callback.html%252526response_type%25253Dcode%252526scope%25253Dopenid%25252520profile%252526state%25253D1b5a619519da4023a6225c9d82aada05%252526code_challenge%25253D9eJP5b7_LRbDiuA6Zpn2jc5HEQdsBWEHwjLWrK-4LuU%252526code_challenge_method%25253DS256%252526response_mode%25253Dquery&amp;pu=https%253A%252F%252Fclube.dermaclub.com.br%252F&amp;ceid=e874ff65-311d-4c06-9564-a156f0aa778a"></script></div><script>
+(function persistIndexaClickId() {
+    // Get the value of a specific query parameter
+    const getQueryParam = function(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    };
+
+    // Set a cookie
+    const setCookie = function(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    };
+
+    // Get the indexaclickid from the URL
+    const indexaClickId = getQueryParam('indexaclickid');
+
+    // Check if indexaclickid has content and set it as a cookie
+    if (indexaClickId) {
+        setCookie('indexaclickid', indexaClickId, 7); // Stores the cookie for 7 days
+    }
+})();
+</script><div id="batBeacon553993231474" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon145750344818" width="0" height="0" alt="" src="./Dermaclub_files/0" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><iframe allow="join-ad-interest-group *; run-ad-auction *" height="0" width="0" title="Criteo Fledge iframe" src="https://fledge.us.criteo.com/interest-group?data=JqHMTnxENkc2RUxaRm40bEhWTE1OYWhXUHlJcENYUUdGRjlaVDJlU01obUN5NmsyczFMNHJtaWwrNzVSUHQ2b2M0VXBaNkR3Tm5md1dxTThCNkZMbUw3MlgvSnFRWXlXUFd1Z0FBTDJDQlBzd3l4RlpMV3VJNy8waWVpbVE4NlJHUHdrREJMVlRsNm54aTB0SXRhLytuT1NPcjdWQnpJTm9raXRBRUxyT2NrUTFvQ1B2djd5ZVlRSHViVW1vUnVQcXlKS2Z8" style="display: none;"></iframe></body></html>
