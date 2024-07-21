@@ -1,0 +1,4863 @@
+﻿/*  =============================================================================  */
+/*  =============================================================================  */
+
+/*  Product Design System - Version 2.5.8 - Nov 17, 2021                           */
+/*  For more information, visit www.github.com/OutSystems/Product-Design-System    */
+
+/*  For more release information and changelog visit 
+    https://outsystemsrd.atlassian.net/wiki/spaces/UXD/pages/2498068992/Product+Design+System+Releases   
+*/
+         
+/*  $0 - Imports - Fonts                                                           */
+/*  $1 - Abstract - Root & CSS Variables                                           */
+/*  $2 - Base - HTML, Body and Resets                                              */
+/*  $3 - Layout                                                                    */
+/*       $3.1 - Layout - Screen                                                    */
+/*              $3.1.1 - Layout - Screen - Header                                  */
+/*              $3.1.2 - Layout - Screen - Main                                    */
+/*              $3.1.3 - Layout - Screen - Theme Grid                              */
+/*              $3.1.4 - Layout - Screen - Footer                                  */
+/*              $3.1.5 - Layout - Screen - Sidebar                                 */
+/*              $3.1.6 - Layout - Screen - Above Main Content                      */
+/*       $3.2 - Layout - Login                                                     */
+/*              $3.2.1 - Layout - Login - Interaction for SSO                      */
+/*              $3.2.2 - Layout - Login - Tablet Landscape                         */
+/*              $3.2.3 - Layout - Login - Tablet Portrait & Phone                  */
+/*              $3.2.4 - Layout - Login - Phone                                    */
+/*              $3.2.5 - Layout - Login - OutSystems UI Overrides                  */
+/*  $4 - Components                                                                */
+/*       $4.1 - Components - Button                                                */
+/*              $4.1.1 - Components - Button - Sizes                               */
+/*              $4.1.2 - Components - Button - Icon                                */
+/*              $4.1.3 - Components - Button - With Icon                           */
+/*              $4.1.4 - Components - Button - Dark Theme                          */
+/*              $4.1.5 - Components - Button - OutSystems UI Overrides             */
+/*       $4.2 - Components - Checkbox                                              */
+/*       $4.3 - Components - Dropdown                                              */
+/*              $4.3.1 - Components - Dropdown - List                              */
+/*              $4.3.2 - Components - Dropdown - Arrow                             */
+/*              $4.3.3 - Components - Dropdown - Sizes                             */
+/*              $4.3.4 - Components - Dropdown - Scrollbar                         */
+/*       $4.4 - Components - Inputs & Textarea                                     */
+/*              $4.4.1 - Components - Inputs & Textarea - Sizes                    */
+/*              $4.4.2 - Components - Inputs & Textarea - Label                    */
+/*              $4.4.3 - Components - Inputs & Textarea - Validation Message       */
+/*              $4.4.5 - Components - Inputs & Textarea - OutSystems UI Overrides  */
+/*       $4.5 - Components - Link                                                  */
+/*              $4.5.1 - Components - Link - Sizes                                 */
+/*       $4.6 - Components - Radio Button                                          */
+/*              $4.6.1 - Components - Radio Button - OutSystems UI Overrides       */
+/*       $4.7 - Components - Switch                                                */
+/*  $5 - Patterns                                                                  */
+/*       $5.1 - Patterns - 1 CP                                                    */
+/*              $5.1.1 - Patterms - 1 CP  - Open in Browser                        */
+/*              $5.1.2 - Patterms - 1 CP  - Error                                  */
+/*       $5.2 - Patterns - Accordion                                               */
+/*       $5.3 - Patterns - Alert                                                   */
+/*              $5.3.1 - Patterms - Alert  - Inline                                */
+/*              $5.3.2 - Patterms - Alert  - Icons                                 */
+/*              $5.3.3 - Patterms - Alert  - Dismissible                           */
+/*       $5.4 - Patterns - App Representation                                      */
+/*              $5.4.1 - Patterms - App Representation - Status                    */
+/*              $5.4.2 - Patterms - App Representation - Type                      */
+/*              $5.4.3 - Patterms - App Representation - Icon                      */
+/*              $5.4.4 - Patterms - App Representation - Structure                 */
+/*              $5.4.5 - Patterms - App Representation - Card                      */
+/*              $5.4.5 - Patterms - App Representation - New App                   */
+/*       $5.5 - Patterns - Avatar                                                  */
+/*       $5.6 - Patterns - Breadcrumbs                                             */
+/*       $5.7 - Patterns - Button Group                                            */
+/*       $5.8 - Patterns - Button Loading                                          */
+/*       $5.9 - Patterns - Canvas Navigator (PROTOTYPE)                            */
+/*       $5.10 - Patterns - Cards                                                  */
+/*               $5.10.1 - Patterms - Cards - Disabled                             */
+/*               $5.10.2 - Patterms - Cards - Selectable                           */
+/*       $5.11 - Patterns - Carousel                                               */
+/*               $5.11.1 - Patterms - Carousel - Popup                             */
+/*       $5.12 - Patterns - Coach Mark                                             */
+/*       $5.13 - Patterns - CSAT Emoji                                             */
+/*       $5.14 - Patterns - Dropdown MultiSelect                                   */
+/*       $5.15 - Patterns - File Upload                                            */
+/*       $5.16 - Patterns - Input Search                                           */
+/*       $5.17 - Patterns - Loading                                                */
+/*       $5.18 - Patterns - Multi level Menu                                       */
+/*       $5.19 - Patterns - Pagination                                             */
+/*       $5.20 - Patterns - Popover                                                */
+/*       $5.21 - Patterns - Popup                                                  */
+/*               $5.21.1 -  Patterns - Popup - Sizes                               */
+/*               $5.21.2 -  Patterns - Popup - Scrollable                          */
+/*               $5.21.3 -  Patterns - Popup - Animations                          */
+/*       $5.22 - Patterns - Scroll Content                                         */
+/*       $5.23 - Patterns - SVG                                                    */
+/*       $5.24 - Patterns - Table                                                  */
+/*               $5.24.1 -  Patterns - Table - Sortable Icons                      */
+/*               $5.24.2 -  Patterns - Table - Sizes                               */
+/*               $5.24.3 -  Patterns - Table - OutSystems UI Overrides             */
+/*       $5.25 - Patterns - Tabs                                                   */
+/*               $5.25.1 -  Patterns - Tabs - Tab Line                             */
+/*               $5.25.2 -  Patterns - Tabs - Tab Box                              */
+/*               $5.25.3 -  Patterns - Tabs - Sizes                                */
+/*       $5.26 - Patterns - Tags                                                   */
+/*       $5.27 - Patterns - Toast                                                  */
+/*       $5.28 - Patterns - Toggle Password                                        */
+/*       $5.29 - Patterns - Tooltip                                                */
+/*       $5.30 - Patterns - Wizard                                                 */
+/*               $5.30.1 -  Patterns - Wizard - Vertical                           */
+/*  $6 - Styles                                                                    */
+/*       $6.1 - Styles - Border                                                    */
+/*       $6.2 - Styles - Color                                                     */
+/*              $6.2.1 - Styles - Color - Brand                                    */
+/*              $6.2.2 - Styles - Color - Neutral                                  */
+/*              $6.2.3 - Styles - Color - Selection                                */
+/*              $6.2.4 - Styles - Color - Error                                    */
+/*              $6.2.5 - Styles - Color - Success                                  */
+/*              $6.2.6 - Styles - Color - Warning                                  */
+/*       $6.3 - Styles - Shadow                                                    */
+/*       $6.4 - Styles - Space                                                     */
+/*              $6.4.1 - Styles - Space - Margin                                   */
+/*              $6.4.2 - Styles - Space - Margin Top                               */
+/*              $6.4.3 - Styles - Space - Margin Right                             */
+/*              $6.4.4 - Styles - Space - Margin Bottom                            */
+/*              $6.4.5 - Styles - Space - Margin Left                              */
+/*              $6.4.6 - Styles - Space - Margin Vertical                          */
+/*              $6.4.7 - Styles - Space - Margin Horizontal                        */
+/*              $6.4.8 - Styles - Space - Padding                                  */
+/*              $6.4.9 - Styles - Space - Padding Top                              */
+/*              $6.4.10 - Styles - Space - Padding Right                           */
+/*              $6.4.11 - Styles - Space - Padding Bottom                          */
+/*              $6.4.12 - Styles - Space - Padding Left                            */
+/*              $6.4.13 - Styles - Space - Padding Vertical                        */
+/*              $6.4.14 - Styles - Space - Padding Horizontal                      */
+/*       $6.5 - Styles - Typography                                                */
+/*              $6.5.1 - Styles - Typography - Sizes                               */
+/*              $6.5.2 - Styles - Typography - Weight                              */
+/*  $7 - Service Studio Preview                                                    */
+
+/*  =============================================================================  */
+/*  =============================================================================  */
+
+/*  =============================================================================  */
+/*  $0 - Imports - Fonts                                                           */
+/*  =============================================================================  */
+
+@font-face {
+    font-family: 'noto-sans';
+    src: url('../fonts/NotoSans-Regular.ttf?+Uk7qYZpkGgKWaxCg1sBuw') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'noto-sans';
+    src: url('../fonts/NotoSans-SemiBold.ttf?OQdxyg9dxW_8SbKDj68YlQ') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Noto Sans JP'; 
+    src: url('../fonts/NotoSansJP-Regular.otf?tfjvDLEM9Ppt_FhNKZCEIQ') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Noto Sans JP'; 
+    src: url('../fonts/NotoSansJP-Medium.otf?NmEgybQCkGYwLKbXWvtviw') format('opentype');
+    font-weight: 500;
+}
+
+
+/*  =============================================================================  */
+/*  $1 - Abstract - Root & CSS Variables                                           */
+/*  =============================================================================  */
+
+:root {
+    
+    /* Border */
+    --border-radius: 4px;  
+    --border-radius-rounded: 100px;
+    --border-radius-circle: 100%;
+    
+    /* Color Brand */
+    --color-brand-light: #dc988a;
+    --color-brand: #cc2200; 
+    --color-brand-dark: #aa1100; 
+    
+    /* Color - Neutral */
+    --color-neutral-0: #fff;
+    --color-neutral-1: #f7f8fa;
+    --color-neutral-2: #f1f2f4;
+    --color-neutral-3: #e0e2e4;
+    --color-neutral-4: #cccdd0;
+    --color-neutral-5: #a2a4a7;
+    --color-neutral-6: #87898d;
+    --color-neutral-7: #626568;
+    --color-neutral-8: #3b3d41;
+    --color-neutral-9: #2c2f32;
+    --color-neutral-10: #202327;
+    --color-neutral-11: #101214;
+    
+    /* Color - Selection */
+    --color-selection-0: #dcecfd;
+    --color-selection-1: #add1fb;
+    --color-selection-2: #66aaf7;
+    --color-selection-3: #157df3;
+    --color-selection-4: #006de9;
+    --color-selection-5: #0066db;
+    --color-selection-6: #19487f;
+    --color-selection-7: #123661;
+    
+    /* Color - Error */
+    --color-error-0: #ffe9e5;
+    --color-error-1: #ffa99d;
+    --color-error-2: #ff5b40;
+    --color-error-3: #f44224;
+    --color-error-4: #e53518;
+    --color-error-5: #cb371f;
+    --color-error-6: #7e2314;
+    --color-error-7: #43130b;
+  
+    /* Color - Success */
+    --color-success-0: #e1f8d1;
+    --color-success-1: #a0e869;
+    --color-success-2: #75d625;
+    --color-success-3: #60b21f;
+    --color-success-4: #4e921a;
+    --color-success-5: #448016;
+    --color-success-6: #2f5c10;
+    --color-success-7: #203e0b;
+  
+    /* Color - Warning */
+    --color-warning-0: #fff1dc;
+    --color-warning-1: #ffcc80;
+    --color-warning-2: #ff9f0f;
+    --color-warning-3: #ee8f00;
+    --color-warning-4: #e58b00;
+    --color-warning-5: #cb7b00;
+    --color-warning-6: #6a4200;
+    --color-warning-7: #432b00;    
+    
+    /* Typography */
+    --font-size-display: 36px;   
+  
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 26px;
+    --font-size-h4: 22px;
+    --font-size-h5: 20px;
+    --font-size-h6: 18px;
+  
+    --font-size-base: 14px;  
+    --font-size-s: 12px;     
+                             
+    --font-size-xs: 9px;     
+
+    /* Typography - Weight */
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    
+    /* Space */
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-base: 16px;
+    --space-m: 24px;
+    --space-l: 32px;
+    --space-xl: 40px;
+    --space-xxl: 48px;
+    
+    /* Shadow */
+    --shadow-level-0: 0px 0.2px 0.5px rgba(32, 35, 39, 0.08), 0px 0.6px 2.5px rgba(32, 35, 39, 0.17); 
+    --shadow-level-1: 0px 0.45px 1.35px rgba(32, 35, 39, 0.11), 0px 1.8px 5.4px rgba(32, 35, 39, 0.13);
+    --shadow-level-2: 0px 0.6px 1.8px rgba(32, 35, 39, 0.11), 0px 3.2px 7.2px rgba(32, 35, 39, 0.13);
+    --shadow-level-3: 0px 1.2px 3.6px rgba(32, 35, 39, 0.11), 0px 6.4px 14.4px rgba(32, 35, 39, 0.13);
+  
+    /* Transition Time */
+    --time-s: 110ms;
+    --time-m: 150ms;
+    --time-l: 200ms;
+    --time-xl: 300ms;
+  
+    /* Transition Eases */
+    --ease-in: ease-in;
+    --ease-out: cubic-bezier(0, 0, 0.3, 1);
+    --linear: linear;  
+
+    /* Layout */
+    --header-size: 56px;
+    --footer-size: 72px;
+
+    --left-sidebar-width: 260px;
+
+    --right-sidebar-width: 332px;
+    --right-sidebar-width-closed: 64px;
+}
+
+
+/*  =============================================================================  */
+/*  $2 - Base - HTML, Body and Resets                                              */
+/*  =============================================================================  */
+
+html {
+    color: var(--color-neutral-10);
+    font-family: 'noto-sans', sans-serif;
+    height: auto;
+    overflow-y: scroll; 
+}
+
+.popup-disable-scroll {
+    overflow-y: scroll;
+}
+
+.screen-container {
+    overflow-y: hidden;
+}
+
+html[lang="ja"] {
+    font-family: 'Noto Sans JP', sans-serif;
+    --font-semi-bold: 500;
+}
+
+body {
+    font-size: var(--font-size-base);
+    background-color: var(--color-neutral-1);
+}
+
+
+/*  =============================================================================  */
+/*  $3 - Layout                                                                    */
+/*  =============================================================================  */
+
+/*  =============================================================================  */
+/*  $3.1 - Layout - Screen                                                         */
+/*  =============================================================================  */
+
+/* $3.1.1 - Layout - Screen - Header  */
+
+.pds-layout .header {
+    background-color: var(--color-neutral-0);
+    box-shadow: var(--shadow-level-1);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.pds-layout .pds-header {
+    align-items: center;
+    display: flex;
+    height: var(--header-size);
+    justify-content: space-between;
+}
+
+.pds-header-left,
+.pds-header-right {
+    flex: 1;
+}
+
+.pds-header-right {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-label {
+    font-size: var(--font-size-s);
+    color: var(--color-neutral-7);
+}
+
+.pds-header-right .avatar,
+.pds-header-right .avatar.background-primary {
+    background-color: var(--color-neutral-7);
+}
+
+.pds-header-right .tooltip-content:hover .avatar  {
+    background-color: var(--color-neutral-9);    
+}
+
+.pds-header-right .tooltip-content:hover .header-label  {
+    color: var(--color-neutral-9);    
+}
+
+.pds-header-right .svg-code path {
+    fill: var(--color-neutral-7);
+} 
+
+.pds-header-right .tooltip-content:hover .svg-code path {
+    fill: var(--color-neutral-9);
+} 
+
+.pds-icon {
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.pds-icon:hover {
+    background-color: var(--color-neutral-3);    
+}
+
+.pds-icon:hover .svg-code path {
+    fill: var(--color-neutral-9);
+}
+
+.pds-header-right .tooltip {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+/*  $3.1.2 - Layout - Screen - Main  */
+
+.pds-layout .main {
+    padding-top: var(--header-size);
+    transition: padding 290ms cubic-bezier(0.15, 0.85, 1, 1);
+}
+
+.pds-layout .content-breadcrumbs {
+    margin-bottom: var(--space-s);
+}
+
+.pds-layout-has-footer .main {
+    padding-bottom: var(--footer-size);
+}
+
+.pds-layout-left-sidebar .main {
+    padding-left: var(--left-sidebar-width);
+}
+
+.pds-layout-left-sidebar.pds-layout-sidebar-visible .main {
+    padding-left: 0;
+}
+
+.pds-layout-right-sidebar .main {
+    padding-right: var(--right-sidebar-width-closed);
+}
+
+.pds-layout-right-sidebar.pds-layout-sidebar-visible .main {
+    padding-right: var(--right-sidebar-width);
+}
+
+
+/* $3.1.3 - Layout - Screen - Theme Grid  */
+
+.pds-layout .ThemeGrid_Container {
+    max-width: 1366px;    
+}
+
+.header .ThemeGrid_Container {
+    max-width: 100%;
+}
+
+.pds-layout-full-width .ThemeGrid_Container {
+    max-width: 100%;    
+}
+
+
+.pds-layout-footer .footer.ThemeGrid_Container {
+    padding: 0 var(--space-xl);    
+}
+
+
+/* $3.1.4 - Layout - Screen - Footer  */
+
+.pds-layout-footer {
+    align-items: center;
+    background-color: var(--color-neutral-1);
+    border-top: 1px solid var(--color-neutral-3);
+    bottom: 0;
+    display: flex;
+    left: 0;
+    height: var( --footer-size);
+    position: fixed;
+    right: 0;
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+    z-index: 10;
+}
+
+.pds-layout-left-sidebar .pds-layout-footer {
+    left: var(--left-sidebar-width);
+}
+
+.pds-layout-left-sidebar.pds-layout-sidebar-visible .pds-layout-footer {
+    left: 0;
+}
+
+.pds-layout-right-sidebar .pds-layout-footer {
+    right: var(--right-sidebar-width-closed);
+}
+
+.pds-layout-right-sidebar.pds-layout-sidebar-visible .pds-layout-footer {
+    right: var(--right-sidebar-width);
+}
+
+.pds-layout-footer .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pds-layout-footer .footer > .btn:last-child {
+    margin-left: auto;
+}
+
+
+/* $3.1.5 - Layout - Screen - Sidebar  */
+
+.pds-layout-sidebar {
+    background-color: var(--color-neutral-0);
+    box-shadow: var(--shadow-level-1);
+    height: calc(100vh - var(--header-size));
+    position: fixed;
+    top: var(--header-size);
+    z-index: 10;
+}
+
+.pds-layout-left-sidebar .pds-layout-sidebar {
+    left: calc(var(--left-sidebar-width) * -1);
+    padding: calc(var(--space-xl) + var(--space-base) ) var(--space-xl) var(--space-xl);
+    transform: translateX(var(--left-sidebar-width));
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+    width: var(--left-sidebar-width);
+}
+
+.pds-layout-left-sidebar.pds-layout-sidebar-visible .pds-layout-sidebar {
+    transform: translateX(0);
+}
+
+.pds-layout-right-sidebar .pds-layout-sidebar {
+    padding: calc(var(--space-xl) + var(--space-base)) var(--space-base) var(--space-xl);
+    right: calc(var(--right-sidebar-width-closed) * -1);
+    transform: translateX(-64px);
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+    width: var(--right-sidebar-width-closed);
+}
+
+.pds-layout-right-sidebar .sidebar-right-always-visible {
+    padding: var(--space-xl) var(--space-base) ;   
+}
+
+.pds-layout-right-sidebar.pds-layout-sidebar-visible .pds-layout-sidebar {
+    transform: translateX(calc(var(--right-sidebar-width-closed) * -1));
+    width: var(--right-sidebar-width);
+}
+
+.pds-layout-sidebar-icon {
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-level-1);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+    width: 32px;
+    z-index: -1;
+}
+
+.pds-layout-sidebar-icon:hover {
+    background-color: var(--color-neutral-3);
+}
+
+.pds-layout-sidebar-icon svg {
+    display: block;
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+}
+
+.pds-layout-sidebar-icon svg:hover path {
+    fill: var(--color-neutral-9);
+}
+
+.pds-layout-left-sidebar .pds-layout-sidebar-icon {
+    right: 8px;
+    box-shadow: none;
+}
+
+.pds-layout-sidebar-visible .pds-layout-sidebar-icon {
+    right: -48px;
+    box-shadow: var(--shadow-level-1);
+}
+
+.pds-layout-right-sidebar .pds-layout-sidebar-icon {
+    box-shadow: none;
+    left: 16px;
+}
+
+.pds-layout-left-sidebar .pds-layout-sidebar-icon svg {
+    transform: rotate(0deg) translateZ(0);
+}
+
+.pds-layout-left-sidebar.pds-layout-sidebar-visible .pds-layout-sidebar-icon svg {
+    transform: rotate(180deg) translateZ(0);
+}
+
+.pds-layout-right-sidebar .pds-layout-sidebar-icon svg {
+    transform: rotate(0deg) translateZ(0);
+}
+
+.pds-layout-right-sidebar.pds-layout-sidebar-visible .pds-layout-sidebar-icon svg {
+    transform: rotate(180deg) translateZ(0);
+}
+
+.pds-layout-left-sidebar.pds-layout-full-width.pds-layout-sidebar-visible .main-content {
+    padding: var(--space-xl) var(--space-xl) var(--space-xl) calc(var(--space-xl) + var(--space-l));
+}
+
+/* $3.1.6 - Layout - Screen - Above Main Content  */
+
+.pds-layout-above-main-content {
+    align-items: flex-end;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: var(--space-l) var(--space-xl);
+    position: fixed;
+    right: 0;
+    transition: all 290ms cubic-bezier(0.15, 0.85, 1, 1);
+}
+
+.pds-layout-left-sidebar.pds-layout-sidebar-visible .pds-layout-above-main-content {
+    left: 0;
+}
+
+.pds-layout-left-sidebar .pds-layout-above-main-content {
+    left: var(--left-sidebar-width);
+}
+
+.pds-layout-right-sidebar .pds-layout-above-main-content {
+    right: var(--right-sidebar-width-closed);
+}
+
+.pds-layout-right-sidebar.pds-layout-sidebar-visible .pds-layout-above-main-content {
+    right: var(--right-sidebar-width);
+}
+
+
+/*  =============================================================================  */
+/*  $3.2 - Layout - Login                                                          */
+/*  =============================================================================  */
+
+.pds-login {
+    background-color: var(--color-neutral-0);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pds-login-left {
+    animation: pdsLoginLeft 900ms ease-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    padding-bottom: calc(var(--space-xl) + var(--space-xl));
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    padding-top: calc(var(--space-xl) + var(--space-xl));
+    position: relative;
+    width: 60%;
+}
+
+.pds-login-left-title {
+    animation: pdsLoginLeft 1000ms ease-out 300ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 1;   
+}
+
+.pds-login-left-sub-title {
+    animation: pdsLoginLeft 1000ms ease-out 600ms;
+    animation-fill-mode: forwards;
+    margin-top: var(--space-base);
+    opacity: 0;
+    position: relative;
+    width: 60%;
+    z-index: 1;
+}
+
+.pds-login-left-illustration {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.pds-login-left-illustration img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.pds-login-right {
+    animation: pdsLoginRight 600ms ease-out 200ms;
+    animation-fill-mode: forwards;
+    background-color: var(--color-neutral-0);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    padding-bottom: calc(var(--space-xl) +  var(--space-base));
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    padding-top: calc(var(--space-xl) + var(--space-xl));
+    width: 40%;
+}
+
+.pds-login-right-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.pds-login-right-logo {
+    margin-bottom: calc(var(--space-xl) + var(--space-l));
+    width: 100%;
+}
+
+.pds-login-right-logo img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 24px;
+}
+
+.pds-login-right-account {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    width: 100%;
+}
+
+.pds-login-right-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pds-login-right-inputs-input {
+    margin-bottom: var(--space-base);    
+}
+
+.pds-login-right-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-m);
+}
+
+.pds-login-right-remember-me {
+    align-items: center;
+    display: flex;
+}
+
+.pds-login-right-remember-me .checkbox {
+    display: block;
+}
+
+.pds-login-right-forgot-password {
+    text-align: right;
+}
+
+.pds-login-right-button {
+   margin-bottom: var(--space-base);   
+}
+
+.pds-login-right-button,
+.pds-login-right-button > div,
+.pds-login-right-button > div > div {
+    width: 100%;
+}
+
+.pds-login-right-signup-account {
+    text-align: center;
+    width: 100%;
+}
+
+.pds-login-right-additional-account {
+    text-align: center;
+}
+
+@keyframes pdsLoginLeft {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pdsLoginRight {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* $3.2.1 - Layout - Login - Interaction for SSO  */
+
+.hide-for-sso {
+    transition: opacity 200ms cubic-bezier(0.15, 0.85, 1, 1);
+}
+
+.login-form-sso .hide-for-sso {
+    opacity: 0;
+    pointer-events: none;
+} 
+
+.animate-on-sso {
+    transform: translateY(var(--move-y));
+    transition: transform 290ms cubic-bezier(0.15, 0.85, 1, 1);
+}
+
+
+/* $3.2.2 - Layout - Login - Tablet Landscape  */
+
+.tablet.landscape .pds-login-left,
+.tablet.landscape .pds-login-right {
+    width: 50%;
+}
+
+.tablet.landscape .pds-login-left-sub-title {
+    width: 100%;
+}
+
+
+/* $3.2.3 - Layout - Login - Tablet Portrait & Phone  */
+
+.tablet.portrait .pds-login-left-title,
+.tablet.portrait .pds-login-left-sub-title,
+.phone .pds-login-left-title,
+.phone .pds-login-left-sub-title {
+    display: none;
+}
+
+.tablet.portrait .pds-login-left,
+.phone .pds-login-left {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.tablet.portrait .pds-login-right,
+.phone .pds-login-right  {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-level-3);
+    margin: 24px;
+    max-width: 600px;
+    padding-bottom: var(--space-l);
+    padding-top: var(--space-l);
+    position: absolute;
+    width: auto;
+}
+
+.tablet.portrait .pds-login,
+.phone .pds-login {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tablet.portrait .pds-login-right-logo,
+.phone .pds-login-right-logo {
+    margin-bottom: var(--space-xxl);
+}
+
+.tablet.portrait .pds-login-right-account,
+.phone  .pds-login-right-account {
+    margin-bottom: var(--space-l);
+}
+
+.tablet.portrait .pds-login-right-signup-account,
+.tablet.portrait .pds-login-right-additional-account,
+.phone .pds-login-right-signup-account,
+.phone .pds-login-right-additional-account {
+    display: none;
+}
+
+
+/* $3.2.4 - Layout - Login - Phone  */
+
+.phone .pds-login-right-links {
+    flex-direction: column;
+}
+
+.phone .pds-login-right-forgot-password {
+    text-align: left;
+    margin-top: var(--space-base);
+}
+
+
+/* $3.2.5 - Layout - Login - OutSystems UI Overrides  */
+
+
+.tablet .btn-large, 
+.phone .btn-large {
+    height: 40px;
+}
+
+.tablet [data-checkbox], 
+.phone [data-checkbox] {
+    height: 24px;
+    width: 24px;
+}
+
+.tablet [data-checkbox]:before, 
+.phone [data-checkbox]:before {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*  =============================================================================  */
+/*  $4 - Components                                                                */
+/*  =============================================================================  */
+
+/*  =============================================================================  */
+/*  $4.1 - Components - Button                                                     */
+/*  =============================================================================  */
+
+.btn {
+    background: linear-gradient(180deg, var(--color-neutral-0) 0%, var(--color-neutral-1) 100%);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-4);
+    box-shadow: var(--shadow-level-0);
+    color: var(--color-neutral-10);
+    height: 32px;
+    min-width: 70px;
+    -webkit-transition: all var(--time-m) var(--linear);
+            transition: all var(--time-m) var(--linear);
+}
+
+.btn:hover {
+    background: linear-gradient(180deg, #F6F6F6 0%, #EEEFF1 100%);  
+}
+
+.btn:active {
+    background: linear-gradient(180deg, #ECEDED 0%, #E5E6E8 100%);
+    box-shadow: none;
+}
+
+.btn[disabled] {
+    border-color: var(--color-neutral-3);
+    box-shadow: none;
+    color: var(--color-neutral-5);  
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, var(--color-brand) 0%, #BC1F00 100%);
+    border-color: var(--color-brand-dark);
+    color: var(--color-neutral-0);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(180deg, #B62307 0%, #AA2007 100%);
+    border-color: #991406;
+}
+
+.btn-primary:active {
+    background: linear-gradient(180deg, #A9230A 0%, #9E210A 100%);
+    border-color: #8E1509;  
+}
+
+.btn-primary[disabled] {
+    background: linear-gradient(180deg, #E59080 0%, #DE8F80 100%);
+    border-color: #D48880;
+    color: var(--color-neutral-0);
+}
+
+.btn:focus {
+    box-shadow: 0px 0px 0px 2px var(--color-selection-3);
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 0;
+    color: var(--color-neutral-10);
+    box-shadow: none;
+}
+
+.btn-cancel:hover {
+    background: var(--color-neutral-3);
+    border: 0;
+    color: var(--color-neutral-10);
+    box-shadow: none;
+}
+
+.btn-cancel:active {
+    background: var(--color-neutral-4);
+    border: 0;
+    box-shadow: none;
+}
+
+.btn-cancel[disabled] {
+    background: transparent;
+    border: 0;
+    color: var(--color-neutral-5);
+}
+
+
+/* $4.1.1 - Components - Button - Sizes  */
+.btn-small {
+    font-size: var(--font-size-s);
+    height: 24px;
+    min-width: auto;
+    padding: 0 var(--space-s);
+}
+
+.btn-large {
+    height: 40px;
+}
+
+
+/* $4.1.2 - Components - Button - Icon  */
+.btn i {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    height: 16px;
+    justify-content: center;
+    margin-right: var(--space-s);
+    width: 16px;
+    color: var(--color-neutral-7);
+}
+
+.btn .svg-code svg {
+    display: block;
+}
+
+.btn i:last-child {
+    margin-left: var(--space-s);
+    margin-right: 0;
+}
+
+.btn .svg-code svg path {
+    fill: var(--color-neutral-7);
+}
+
+.btn-primary .svg-code svg path {
+    fill: var(--color-neutral-0);
+}
+
+.btn-primary i {
+    color: var(--color-neutral-0);
+}
+
+.btn[disabled] .svg-code svg path {
+    fill: currentColor;
+}
+
+.btn[disabled] i {
+    color: currentColor;
+}
+
+.btn-small i {
+    font-size: 12px;
+    margin-right: var(--space-xs);
+}
+
+.btn-small i:last-child {
+    font-size: 12px;
+    margin-left: var(--space-xs);
+    margin-right: 0;
+}
+
+/* $4.1.3 - Components - Button - With Icon */
+.btn-icon {
+    min-width: auto;
+    padding: 0;
+    width: 32px;
+}
+
+.btn-icon i:last-child {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.btn-icon.btn-small {
+    width: 24px;
+}
+
+.btn-icon.btn-large {
+    width: 40px;
+}
+
+
+/* $4.1.4 - Components - Button - Dark Theme  */
+/* .dark-theme .btn {
+    background: linear-gradient(180deg, #2C2F32 0%, #22262A 100%);
+    border-color: var(--color-neutral-7);
+    color: var(--color-neutral-2);
+}
+
+.dark-theme .btn[disabled] {
+    background: linear-gradient(180deg, #2C2F32 0%, #22262A 100%);
+    border: 1px solid var(--color-neutral-8);  
+    color: var(--color-neutral-7);  
+} 
+
+.dark-theme .btn-primary {
+    background: linear-gradient(180deg, var(--color-brand) 0%, #BC1F00 100%);
+    border-color: var(--color-brand-dark);
+    color: var(--color-neutral-2);
+}
+
+.dark-theme .btn-primary[disabled] {
+    background: linear-gradient(180deg, #6E1B0C 0%, #66180B 100%);
+    border: 1px solid #41120E;
+    color: #9F6A61;
+} 
+
+.dark-theme .btn i {
+    color: var(--color-neutral-5);
+}
+
+.dark-theme .btn-primary i {
+    color: var(--color-neutral-2);
+} */
+
+
+/* $4.1.5 - Components - Button - OutSystems UI Overrides  */
+.desktop .btn:hover {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+}
+
+.btn:hover:active {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+}
+
+
+/*  =============================================================================  */
+/*  $4.2 - Components - Checkbox                                                   */
+/*  =============================================================================  */
+
+.checkbox {
+    height: 16px;
+    width: 16px;
+}
+
+.checkbox:before {
+    border: 1px solid var(--color-neutral-4);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.checkbox:hover:before {
+    border-color: var(--color-neutral-5); 
+}
+
+.checkbox:disabled:before {
+    background-color: var(--color-neutral-2);
+    border-color: var(--color-neutral-3); 
+}
+
+.checkbox:checked:before {
+    background-color: var(--color-selection-3);
+    border-color: var(--color-selection-4);
+}
+
+.checkbox:hover:checked:before {
+    background-color: var(--color-selection-5);
+    border-color: var(--color-selection-5);
+}
+
+.checkbox:checked:disabled:before {
+    background-color: var(--color-neutral-4);
+    border-color: var(--color-neutral-4);
+}
+
+.checkbox:after,
+[data-checkbox]:checked:after {
+    border-right: 0;
+    border-top: 0;
+    border: 2px solid var(--color-neutral-0);
+    box-sizing: border-box;
+    content: '';
+    height: 5px;
+    left: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    width: 8px;
+}
+
+.checkbox:checked:after {
+    opacity: 1;
+}
+
+.checkbox:checked:disabled:after {
+    border-color: var(--color-neutral-0);
+    border: 2px solid var(--color-neutral-0);
+    opacity: 1;
+}
+
+.checkbox:focus:before {
+    box-shadow: 0px 0px 0px 2px var(--color-selection-3);
+}
+
+
+/*  =============================================================================  */
+/*  $4.3 - Components - Dropdown                                                   */
+/*  =============================================================================  */
+
+[data-dropdown].dropdown .dropdown-display,
+[data-dropdown] .dropdown.dropdown-display {
+    border-color: var(--color-neutral-4);
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-base);
+    height: 32px;
+    padding: 0 var(--space-s);
+}
+
+[data-dropdown].dropdown .dropdown-display:hover,
+[data-dropdown] .dropdown.dropdown-display:hover {
+    border-color: var(--color-neutral-5);
+}
+
+[data-dropdown].dropdown.dropdown-expanded .dropdown-display,
+[data-dropdown] .dropdown.dropdown-display:focus {
+    border-color: var(--color-selection-3);
+}
+
+.dropdown .dropdown-display-content span {
+    font-size: var(--font-size-base);
+}
+
+.dropdown .dropdown-display.dropdown-disabled,
+[data-dropdown] .dropdown.dropdown-display.dropdown-disabled {
+    background-color: var(--color-neutral-2);
+    border-color: var(--color-neutral-3);
+    color: var(--color-neutral-5);
+}
+
+.dropdown.not-valid .dropdown-display,
+.dropdown.not-valid .dropdown-display:hover,
+.dropdown.not-valid.dropdown-display,
+.dropdown.not-valid.dropdown-display:hover,
+.dropdown.not-valid.dropdown-display:focus {
+    border-color: var(--color-error-5);
+}
+
+
+/* $4.3.1 - Components - Dropdown - List */
+.dropdown div.dropdown-list {
+    border-color: var(--color-neutral-3);
+    box-shadow: var(--shadow-level-1);
+    scrollbar-color: var(--color-neutral-4) var(--color-neutral-0); /* Firefox only */
+    scrollbar-width: thin; /* Firefox only */
+}
+
+.dropdown .scrollable-list-with-scroll {
+    padding: var(--space-xs) 0;
+}
+
+.dropdown .dropdown-popup-row {
+    height: 32px;    
+    color: var(--color-neutral-10);
+    padding: 0 var(--space-s);
+    cursor: pointer;
+}
+
+.dropdown div.dropdown-popup-row:hover {
+    background-color: var(--color-selection-0);
+}
+
+.dropdown div.dropdown-popup-row-selected,
+.dropdown div.dropdown-popup-row-selected:hover {
+    background-color: var(--color-selection-3);
+    color: var(--color-neutral-0);
+}
+
+
+/* $4.3.2 - Components - Dropdown - Arrow */
+.dropdown-container:after {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent !important;
+    border-top: 4px solid var(--color-neutral-7) !important;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: rotate(0deg) translateY(0) translateX(0);
+    transform: rotate(0deg) translateY(0) translateX(0);
+    right: 8px;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.dropdown-expanded.dropdown-container:after,
+.not-valid.dropdown-expanded.dropdown-container:after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent !important;
+    border-top: 4px solid var(--color-neutral-7) !important;
+    border-bottom: 4px solid transparent;
+    -webkit-transform: rotate(180deg) translateY(0) translateX(0);
+            transform: rotate(180deg) translateY(0) translateX(0);
+    margin-top: -4px;
+}
+
+/* $4.3.3 - Components - Dropdown - Sizes */
+.dropdown.dropdown-small .dropdown-display,
+.dropdown.dropdown-display.dropdown-small,
+.dropdown.dropdown-small .dropdown-popup-row {
+    height: 24px;
+    padding: 0 var(--space-xs);    
+}
+
+.dropdown.dropdown-large .dropdown-display,
+.dropdown.dropdown-display.dropdown-large,
+.dropdown.dropdown-large .dropdown-popup-row {
+    height: 40px;    
+}
+
+.dropdown.dropdown-small .dropdown-popup-row,
+.dropdown.dropdown-small .dropdown-display-content,
+.dropdown.dropdown-small .dropdown-display-content span,
+.dropdown.dropdown-display.dropdown-small {
+    font-size: var(--font-size-s);
+}
+
+
+/* $4.3.4 - Components - Dropdown - Scrollbar */
+.dropdown-list::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ 
+.dropdown-list::-webkit-scrollbar-track {
+    background-color: var(--color-neutral-2);
+}
+ 
+.dropdown-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-4);
+    border-radius: 6px;
+    border: 1px solid var(--color-neutral-2);
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-5);
+}
+
+
+/*  =============================================================================  */
+/*  $4.4 - Components - Inputs & Textarea                                          */
+/*  =============================================================================  */
+.form-control[data-input],
+.form-control[data-textarea] {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-4);
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-base);
+    height: 32px;
+    padding: 0 var(--space-s);
+    transition: all var(--time-m) var(--linear);
+}
+
+.form-control[data-textarea] {
+    height: auto;
+    padding: var(--space-s);
+    display: block;
+}
+
+.form-control[data-input]:hover,
+.form-control[data-textarea]:hover {
+    border-color: var(--color-neutral-5);
+}
+
+.form-control[data-input]:focus,
+.form-control[data-textarea]:focus {
+    border-color: var(--color-selection-3);
+}
+
+.form-control[data-input][disabled],
+.form-control[data-textarea][disabled] {
+    background-color: var(--color-neutral-2);
+    border-color: var(--color-neutral-3);
+    color: var(--color-neutral-5);    
+}
+
+.form-control[data-input][readonly],
+.form-control[data-textarea][readonly]  {
+    background-color: var(--color-neutral-2);
+    border-color: var(--color-neutral-3);
+    color: var(--color-neutral-7);       
+}
+
+.form-control.not-valid[data-input],
+.form-control.not-valid[data-textarea] {
+    border-color: var(--color-error-5);     
+}
+
+::-webkit-input-placeholder {
+    color: var(--color-neutral-6);
+}
+
+::-moz-placeholder {
+    color: var(--color-neutral-6);
+}
+
+:-ms-input-placeholder {
+    color: var(--color-neutral-6);
+}
+
+
+/* $4.4.1 - Components - Inputs & Textarea - Sizes  */
+
+.form-control.input-small[data-input] {
+    font-size: var(--font-size-s);
+    height: 24px;
+    padding: 0 var(--space-xs);
+}
+
+.form-control.input-large[data-input] {
+    height: 40px;
+}
+
+.form-control.input-small[data-textarea] {
+    font-size: var(--font-size-s);
+    padding: var(--space-xs);
+}
+
+
+/* $4.4.2 - Components - Inputs & Textarea - Label  */
+
+label {
+    color: var(--color-neutral-7);
+    margin-bottom: var(--space-xs);
+}
+
+.label-small {
+    font-size: var(--font-size-s);
+}
+
+
+/* $4.4.3 - Components - Inputs & Textarea - Validation Message */
+
+.validation-message {
+    color: var(--color-error-5); 
+    font-size: var(--font-size-s);
+    margin-top: var(--space-xs);    
+}
+
+[data-label].mandatory:after {
+    color: var(--color-error-5);
+}
+
+.form span.validation-message {
+    position: relative;
+    bottom: 0;
+}
+
+.form .dropdown,
+.form input[data-input],
+.form textarea[data-textarea],
+.form [data-switch] {
+    margin-bottom: 0;
+}
+
+
+/* $4.4.5 - Components - Inputs & Textarea - OutSystems UI Overrides */
+
+span.validation-message {
+    color: var(--color-error-5); 
+    font-size: var(--font-size-s);
+    margin-top: var(--space-xs);    
+}
+
+/*  =============================================================================  */
+/*  $4.5 - Components - Link                                                       */
+/*  =============================================================================  */
+
+a,
+a:visited {
+    color: var(--color-selection-5);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-selection-6);
+    text-decoration: underline;
+}
+
+a[disabled] {
+    color: var(--color-neutral-5);
+    pointer-events: none;
+}
+
+
+/* $4.5.1 - Components - Link - Sizes */
+
+.link-small {
+    font-size: var(--font-size-s)
+}
+
+
+/*  =============================================================================  */
+/*  $4.6 - Components - Radio Button                                               */
+/*  =============================================================================  */
+
+.radio-button {
+    height: 16px;
+    width: 16px;
+}
+
+.radio-button:before {
+    border-color: var(--color-neutral-4);
+}
+
+.radio-button:hover:before {
+    border-color: var(--color-neutral-5);
+}
+
+.radio-button:disabled:before {
+    background-color: var(--color-neutral-2);
+    border-color:  var(--color-neutral-3);
+}
+
+.radio-button:checked:before {
+    background-color: var(--color-selection-3);
+    border: 1px solid var(--color-selection-4);
+}
+
+.radio-button:hover:checked:before {
+    background-color: var(--color-selection-5);
+    border-color: var(--color-selection-5);
+}
+
+.radio-button:checked:disabled:before {
+    background-color: var(--color-neutral-4);
+    border: 1px solid var(--color-neutral-4);
+}
+
+.radio-button:after {
+    background-color: var(--color-neutral-0);
+    border-radius: 100%;
+    content: '';
+    height: 8px;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    width: 8px;
+}
+
+.radio-button:checked:after {
+    opacity: 1;
+}
+
+.radio-button:focus:before {
+    box-shadow: 0px 0px 0px 2px var(--color-selection-3);
+}
+
+
+/* $4.6.1 - Components - Radio Button - OutSystems UI Overrides */
+
+.radio-button:checked:hover:before {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+}
+
+
+/*  =============================================================================  */
+/*  $4.7 - Components - Switch                                                     */
+/*  =============================================================================  */
+
+.switch {
+    width: 32px;
+    height: 16px;
+}
+
+.switch:before,
+.switch:after {
+    box-sizing: border-box;
+}
+
+.switch:empty:before {
+    background-color: var(--color-neutral-5);
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.switch:hover:empty:before {
+    background-color: var(--color-neutral-6);
+}
+
+.switch[disabled]:empty:before {
+    background-color: var(--color-neutral-3);
+    border: 0;    
+}
+
+.switch:checked:before {
+    background-color: var(--color-selection-3);    
+}
+
+.switch:hover:checked:before {
+    background-color: var(--color-selection-5);
+}
+
+.switch:empty:after {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    -webkit-transform: translateX(2px) translateZ(0);
+            transform: translateX(2px) translateZ(0);
+}
+
+.switch:checked:after {
+    -webkit-transform: translateX(18px) translateZ(0);
+            transform: translateX(18px) translateZ(0);    
+}
+
+.switch[disabled]:empty:after {
+    background-color: var(--color-neutral-4);
+}
+
+.switch[disabled]:checked:before {
+    background-color: var(--color-neutral-4);
+}
+
+.switch[disabled]:checked:after {
+    background-color: var(--color-neutral-5);
+}
+
+.switch:focus:before {
+    box-shadow: 0px 0px 0px 2px var(--color-selection-3);
+}
+
+
+/*  =============================================================================  */
+/*  $5 - Patterns                                                                  */
+/*  =============================================================================  */
+
+/*  =============================================================================  */
+/*  $5.1 - Patterns - 1 CP                                                         */
+/*  =============================================================================  */
+
+
+.btn.btn-1cp {
+    background: linear-gradient(180deg, #4BA800 0%, #409100 100%);
+    border-color: #47831A;
+    border-radius: var(--border-radius-rounded);
+    color: var(--color-neutral-0);
+    padding-left: var(--space-xs);
+}
+
+.btn.btn-1cp:hover {
+    background: linear-gradient(180deg, #449604 0%, #47831A 100%);
+    border-color: #41761A;
+}
+
+.btn.btn-1cp:active {
+    background: linear-gradient(180deg, #3F8A05 0%, #427919 100%);
+    border-color: #3C6D19;
+}
+
+.btn.btn-1cp[disabled] {
+    background: linear-gradient(180deg, #A5D480 0%, #A7C88C 100%);
+    border-color: #A3C18C;
+    color: var(--color-neutral-0);
+}
+
+.btn-show-label .btn-1cp .btn-loading {
+    display: inline-flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+}
+
+.btn.btn-1cp .svg-code path {
+    fill: var(--color-neutral-0);
+}
+
+
+/* $5.1.1 - Patterms - 1 CP  - Open in Browser */
+
+.btn.btn-open-browser {
+    background: linear-gradient(180deg, #006DE9 0%, #0066DB 100%);
+    border-color: #025CC3;
+}
+
+.btn.btn-open-browser:hover {
+    background: linear-gradient(180deg, #0362D0 0%, #025CC3 100%);
+    border-color: #0453AE;
+}
+
+.btn.btn-open-browser:active {
+    background: linear-gradient(180deg, #045BBF 0%, #0356B4 100%);
+    border-color: #0356B4;
+}
+
+
+/* $5.1.2 - Patterms - 1 CP  - Error */
+
+.btn.btn-error {
+    background: linear-gradient(180deg, #E53518 0%, #CB371F 100%);
+    border-color: #B5331E;
+}
+
+.btn.btn-error:hover {
+    background: linear-gradient(180deg, #CB3219 0%, #B5331E 100%);
+    border-color: #A12F1D;
+}
+
+.btn.btn-error:active {
+    background: linear-gradient(180deg, #BA2F19 0%, #A6301D 100%);
+    border-color: #942D1D;
+}
+
+
+/*  =============================================================================  */
+/*  $5.2 - Patterns - Accordion                                                    */
+/*  =============================================================================  */
+
+.section-expandable {
+    border: 0;
+    border-bottom: 1px solid var(--color-neutral-4);
+}
+
+[data-block*="AccordionItem"]:first-child .section-expandable {
+    border-radius: 0;
+}
+
+[data-block*="AccordionItem"]:last-child .section-expandable {
+    border-bottom-width: var(--border-size-s);
+    border-radius: 0;
+}
+
+.section-expandable.is--open {
+    border-top: 0;
+}
+
+.section-expandable .section-expandable-title {
+    padding: var(--space-s) var(--space-base);
+    font-size: var(--font-size-base);
+}
+
+.section-expandable .section-expandable-title .dividers {
+    align-self: center;
+}
+
+.section-expandable.is--open .section-expandable-title {
+    font-weight: var(--font-regular)
+}
+
+.section-expandable .section-expandable-content {
+    color: var(--color-neutral-7);
+    font-size: var(--font-size-s);
+}
+
+.section-expandable .section-expandable-content,
+.section-expandable .section-expandable-content.is--collapsed {
+    padding: var(--space-none) var(--space-base);   
+}
+
+.section-expandable .section-expandable-content.is--expanded {    
+    padding: var(--space-none) var(--space-base) var(--space-base);
+}
+
+.section-expandable .section-expandable-icon {
+    color: var(--color-neutral-7);    
+    -webkit-transition: transform 300ms ease-in-out;
+            transition: transform 300ms ease-in-out;
+}
+
+.section-expandable .section-expandable-icon:hover {
+    color: var(--color-neutral-9);   
+}
+
+
+/*  =============================================================================  */
+/*  $5.3 - Patterns - Alert                                                        */
+/*  =============================================================================  */
+
+.alert {
+    border-radius: var(--border-radius);
+    color: var(--color-neutral-10);
+}
+
+.alert-info {
+    background-color: var(--color-selection-0);
+    border: 1px solid var(--color-selection-1);
+}
+
+.alert-success {
+    background-color: var(--color-success-0);
+    border: 1px solid var(--color-success-1);
+}
+
+.alert-warning {
+    background-color: var(--color-warning-0);
+    border: 1px solid var(--color-warning-1);
+}
+
+.alert-error {
+    background-color: var(--color-error-0);
+    border: 1px solid var(--color-error-1);
+}
+
+
+/* $5.3.1 - Patterms - Alert  - Inline */
+
+.alert-inline {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.alert-inline .alert-icon {
+    margin-right: var(--space-s);
+    margin-top: 2px;
+}
+
+/* $5.3.2 - Patterms - Alert  - Icons */
+
+.alert .alert-icon {
+    background-size: 100%;
+    height: 16px;
+    width: 16px;
+}
+
+.alert .alert-icon i {
+    display: none;
+}
+
+.alert-info .alert-icon {
+    background-image: url('../img/ProductDesignSystem.iconinfo.svg?kB5uDdsWvUZSs2nBQchVKQ');
+}
+
+.alert-success .alert-icon {
+    background-image: url('../img/ProductDesignSystem.iconsuccess.svg?dx6HQtIfaqLffrR9MRuFEQ');
+}
+
+.alert-warning .alert-icon {
+    background-image: url('../img/ProductDesignSystem.iconwarning.svg?ib4wpdOMJzy3bSRoDZH2yQ');
+}
+
+.alert-error .alert-icon {
+    background-image: url('../img/ProductDesignSystem.iconerror.svg?usoYthmbMN5IN57849+iAA');
+}
+
+/* $5.3.3 - Patterms - Alert  - Dismissible */
+
+.alert-dismissible .alert-message {
+    display: flex;
+}
+
+.alert-dismissible .alert-message-dismissible {
+    flex: 1;
+}
+
+.alert-dismissible .alert-close {
+    display: flex;
+    height: 16px;
+    margin-left: 16px;
+    width: 16px;
+}
+
+.alert-dismissible .alert-close a,
+.alert-dismissible .alert-close img {
+    height: 16px;    
+    width: 16px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.4 - Patterns - App Representation                                           */
+/*  =============================================================================  */
+
+/* $5.4.1 - Patterms - App Representation - Status */
+
+.app-representation-status {
+    align-items: center;
+    display: inline-flex;
+}
+
+.app-representation-status-indicator {
+    border-radius: var(--border-radius-circle);    
+    height: 8px;
+    margin-right: var(--space-s);
+    width: 8px;
+}
+
+.app-representation-status-indicator.draft{
+    background-color: var(--color-neutral-4);    
+}
+
+.app-representation-status-indicator.publishing,
+.app-representation-status-indicator.converting {
+    background-color: var(--color-warning-4);    
+}
+
+.app-representation-status-indicator.published {
+    background-color: var(--color-success-4);    
+}
+
+.app-representation-status-indicator.error,
+.app-representation-status-indicator.conversion-failed {
+    background-color: var(--color-error-4);    
+}
+
+.app-representation-status-indicator.converted {
+    background-color: var(--color-neutral-7);    
+}
+
+.app-representation-status-label {
+    color: var(--color-neutral-7);
+}
+
+.app-representation-status-small .app-representation-status-label {
+    font-size: var(--font-size-s);    
+}
+
+
+/* $5.4.2 - Patterms - App Representation - Type  */
+
+.app-representation-type {
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius-circle);
+    box-shadow: var(--shadow-level-1);
+    display: inline-flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+}
+
+.app-representation-type-large {
+    height: 32px;    
+    width: 32px;
+}
+
+.app-representation-type > div {
+    height: 14px;
+}
+
+.app-representation-type-large > div {
+    height: 18px;
+}
+
+.app-representation-type svg {
+    display: block;
+}
+
+
+/* $5.4.3 - Patterms - App Representation - Icon */
+
+.app-representation-icon {
+    position: relative;
+}
+
+.app-representation-icon-container img {
+    display: block;
+}
+
+.app-representation-extra-large img,
+.app-representation-extra-large .avatar {
+    border-radius: 20px;
+    font-size: var(--font-size-h3);
+    height: 96px;
+    width: 96px;
+}
+
+
+.app-representation-large img,
+.app-representation-large .avatar {
+    border-radius: 14px;
+    font-size: var(--font-size-h5);
+    height: 64px;
+    width: 64px;    
+}
+
+
+.app-representation-medium img,
+.app-representation-medium .avatar {
+    border-radius: 10px;
+    height: 48px;
+    width: 48px;
+}
+
+
+.app-representation-small img,
+.app-representation-small .avatar  {
+    border-radius: 8px;
+    height: 40px;
+    width: 40px;
+}
+
+
+.app-representation-icon-type {
+    bottom: -4px;
+    position: absolute;
+    right: -4px;
+}
+
+
+/* $5.4.4 - Patterms - App Representation - Structure */
+
+.app-representation-structure {
+    align-items: center;
+    display: flex;
+}
+
+.app-representation-structure.aligned-on-top {
+    align-items: flex-start;
+}
+
+.app-representation-structure-vertical {
+    flex-direction: column;
+}
+
+.app-representation-structure-icon {
+    padding-right: var(--space-m);
+}
+
+.app-representation-large .app-representation-structure-icon,
+.app-representation-medium .app-representation-structure-icon,
+.app-representation-small .app-representation-structure-icon {
+    padding-right: var(--space-base);
+}
+
+.app-representation-structure-vertical .app-representation-structure-icon {
+    padding-bottom: var(--space-s);
+    padding-right: 0;
+}
+
+.app-representation-structure-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.app-representation-structure-title {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-semi-bold);
+}
+
+.app-representation-large .app-representation-structure-title {
+    font-size: var(--font-size-h6);
+}
+
+.app-representation-medium .app-representation-structure-title,
+.app-representation-small .app-representation-structure-title {
+    font-size: var(--font-size-base);
+}
+
+.app-representation-structure-info {
+    color: var(--color-neutral-7);
+    margin-top: var(--space-s);
+}
+
+.app-representation-large .app-representation-structure-info,
+.app-representation-medium .app-representation-structure-info,
+.app-representation-small .app-representation-structure-info {
+    font-size: var(--font-size-s); 
+    margin-top: var(--space-xs);   
+}
+
+.app-representation-structure-vertical .app-representation-structure-title {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-regular);
+}
+
+
+/* Truncante Title and Info placeholders */
+.app-representation-structure-title,
+.app-representation-structure-info {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.app-representation-structure-title.truncate-on-second-line,
+.app-representation-structure-info.truncate-on-second-line {
+    -webkit-line-clamp: 2;    
+}
+
+.app-representation-structure-info {
+    word-break: break-all;
+}
+
+/* $5.4.5 - Patterms - App Representation - Card */
+
+.app-representation-card  {
+    background-color: var(--color-neutral-0);
+    border: 1px solid var(--color-neutral-3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-level-0);
+    padding: var(--space-m);
+    position: relative;
+    width: 100%;
+    -webkit-transition: all var(--time-m) var(--linear);
+            transition: all var(--time-m) var(--linear);
+}
+
+.app-representation-card:hover {
+     box-shadow: var(--shadow-level-1);   
+}
+
+.app-representation-options {
+    border-radius: var(--border-radius);
+    height: 24px;
+    margin-left: auto;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    -webkit-transition: all var(--time-s) linear;
+            transition: all var(--time-s) linear;
+}
+
+.app-representation-options svg {
+    display: block;
+}
+
+.app-representation-options:hover {
+    background-color: var(--color-neutral-3);
+}
+
+.app-representation-options svg path {
+    fill: var(--color-neutral-8);
+    -webkit-transition: all var(--time-m) linear;
+            transition: all var(--time-m) linear;
+}
+
+.app-representation-options:hover svg path {
+    fill: var(--color-neutral-8);
+}
+
+
+/* $5.4.5 - Patterms - App Representation - New App */
+
+.app-representation-card-new-app {
+    align-items: center;
+    background-color: var(--color-neutral-1);
+    border: 1px solid var(--color-neutral-4);
+    box-shadow: none;
+    display: flex;
+    cursor: pointer;
+}
+
+.app-representation-card-new-app:hover {
+    background-color: var(--color-selection-0);
+    border-color: var(--color-selection-0);
+}
+
+.app-representation-card-new-app .app-representation-icon-container {
+   align-items: center;
+   background-color: var(--color-neutral-3);
+   border-radius: 14px;
+   display: flex;
+   height: 64px;
+   justify-content: center;
+   position: relative;
+   width: 64px;
+}
+
+.app-representation-card-new-app .app-representation-icon-container:before,
+.app-representation-card-new-app .app-representation-icon-container:after {
+    background-color: var(--color-neutral-0);
+    content: '';
+    position: absolute;
+}
+
+.app-representation-card-new-app .app-representation-icon-container:before {
+    height: 4px;
+    width: 28px;
+}
+
+.app-representation-card-new-app .app-representation-icon-container:after {
+    height: 28px;
+    width: 4px;
+}
+
+.app-representation-card-new-app:hover {
+    background-color: var(--color-selection-0);
+    border-color: var(--color-selection-0);
+    box-shadow: none;
+}
+
+
+
+/*  =============================================================================  */
+/*  $5.5 - Patterns - Avatar                                                       */
+/*  =============================================================================  */
+
+.avatar {
+    font-weight: var(--font-semi-bold);
+    height: 32px;
+    width: 32px;
+}
+
+.avatar.background-primary {
+    background-color: var(--color-selection-5);
+}
+
+.avatar-small {
+    font-size: var(--font-size-s);
+    height: 24px;
+    width: 24px;
+}
+
+.avatar-medium {
+    height: 40px;
+    width: 40px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.6 - Patterns - Breadcrumbs                                                  */
+/*  =============================================================================  */
+
+.breadcrumbs-item {
+    font-size: var(--font-size-s);
+    color: var(--color-neutral-5);
+}
+
+.breadcrumbs-item .title {
+    color: var(--color-neutral-7);    
+}
+
+.breadcrumbs-item .icon {
+    font-size: 14px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.7 - Patterns - Button Group                                                 */
+/*  =============================================================================  */
+
+.button-group-item {
+    align-items: center;
+    border: var(--border-size-s) solid var(--color-neutral-4);
+    color: var(--color-neutral-10);
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    font-weight: var(--font-semi-bold);
+    height: 32px;
+    justify-content: center;
+    min-width: 48px;
+    padding: 0 var(--space-base);
+    white-space: nowrap;
+}
+
+.button-group-item:hover {
+    background-color: var(--color-selection-0);    
+}
+
+.button-group-item.button-group-selected-item {
+    background-color: var(--color-selection-3);
+}
+
+.button-group-item.button-group-selected-item:before {
+    border:1px solid var(--color-selection-3);
+    bottom: -1px;
+    content: '';     
+    left: -1px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.button-group-item.button-group-selected-item:first-child:before {
+    border-radius: 6px 0 0 6px;   
+}
+
+.button-group-item.button-group-selected-item:last-child:before {
+    border-radius: 0 6px 6px 0;   
+}
+
+.button-group-item.button-group-item-disabled {
+    color: var(--color-neutral-5);
+    pointer-events: none;
+}
+
+.button-group-large .button-group-item {
+    height: 40px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.8 - Patterns - Button Loading                                               */
+/*  =============================================================================  */
+
+/*
+.btn-loading {
+    display: block;
+    opacity: 0;
+}
+
+.is--loading .btn-loading {
+    opacity: 1;
+}
+
+.btn-show-label .btn-loading {
+    position: absolute;
+}
+
+.is--loading.btn-show-label .btn-loading {
+    position: relative;
+}
+
+.btn-loading .loading-spinner {
+    border: 0;
+    width: 24px;
+    height: 24px;
+    animation: rotate 1200ms linear infinite;
+}
+
+.btn-small .btn-loading .loading-spinner {
+    width: 16px;
+    height: 16px;
+}
+
+*/
+
+.osui-btn-loading:not(.btn-show-label).is--loading .btn .btn-loading {
+  position: absolute;
+}
+
+.osui-btn-loading:not(.btn-show-label).is--loading .btn .btn-label {
+  display: block;
+  font-size: var(--font-size-base);
+  opacity: 0;
+}
+
+.osui-btn-loading:not(.btn-show-label).is--loading .btn.btn-small .btn-label {
+  font-size: var(--font-size-s);
+}
+
+.osui-btn-loading.is--loading .btn .loading-spinner {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3ClinearGradient x1='-87.35' y1='-81.11' x2='-67.35' y2='-81.11' gradientTransform='rotate(180 -32.675 -34.555)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2387898d' stop-opacity='0'%3E%3C/stop%3E%3Cstop offset='.5' stop-color='%2387898d'%3E%3C/stop%3E%3Cstop offset='.71' stop-color='%2376787c'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23626568'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient id='loading-white-loading-small' x1='-87.35' y1='-81.11' x2='-67.35' y2='-81.11' gradientTransform='rotate(180 -32.675 -34.555)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='0'%3E%3C/stop%3E%3Cstop offset='.5' stop-color='%23fff'%3E%3C/stop%3E%3Cstop offset='.71' stop-color='%23fff'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23fff'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M21 12a9 9 0 11-9-9' fill='none' stroke-miterlimit='10' stroke-width='2' stroke='url(%23loading-white-loading-small)'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.osui-btn-loading.is--loading .btn.btn-small .loading-spinner {
+  width: 16px;
+  height: 16px;
+}
+
+.osui-btn-loading .btn-label {
+  font-size: 100%;
+}
+
+.osui-btn-loading .btn .loading-spinner {
+  border: none;
+  -webkit-animation: rotate 1200ms linear infinite;
+          animation: rotate 1200ms linear infinite;
+}
+
+/*  =============================================================================  */
+/*  $5.9 - Patterns - Canvas Navigator (PROTOTYPE)                                 */
+/*  =============================================================================  */
+
+.canvas-navigator {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.canvas-navigator-top {
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border: 1px solid var(--color-neutral-3);   
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-level-1);
+    display: flex;
+    padding: var(--space-xs) var(--space-s);
+}
+
+.canvas-navigator-top svg {
+    cursor: pointer;
+    display: block;
+}
+
+.canvas-navigator-top svg:hover path {
+    fill: var(--color-neutral-8);
+}
+
+.canvas-navigator-bottom {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-3);   
+    box-shadow: var(--shadow-level-1);
+    margin-top: var(--space-xs);
+    padding: var(--space-xs);
+    position: relative;
+}
+
+.canvas-navigator-bottom img {
+    background-size: cover;
+    display: block;
+    padding: var(--space-xs);
+    width: 100%;
+}
+
+.canvas-navigator-zoom {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-selection-3);
+    bottom: 4px;
+    left: 4px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.10 - Patterns - Cards                                                       */
+/*  =============================================================================  */
+
+.card {
+    border: 1px solid var(--color-neutral-3);   
+    text-decoration: none; 
+    transition: all var(--time-m) var(--linear);
+}
+
+.card-title {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h6);
+    text-align: center;
+}
+
+.card-content {
+    color: var(--color-neutral-7);
+    padding: var(--space-s) var(--space-m) var(--space-m) var(--space-m);        
+    text-align: center;
+}
+
+.card-sectioned.flex-direction-row .card-title {
+    text-align: left;
+}
+
+.card-sectioned.flex-direction-row .card-content {
+    text-align: left;
+}
+
+.card-image img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;     
+}
+
+
+/* $5.10.1 - Patterms - Cards - Disabled */
+
+.card.card-disabled {
+    background-color: var(--color-neutral-1);
+    border: 1px solid var(--color-neutral-3);    
+    pointer-events: none;    
+}
+
+.card-disabled .card-title,
+.card-disabled .card-content {
+    color: var(--color-neutral-5);   
+}
+
+.card-disabled .card-image {
+    opacity: .4;
+}
+
+
+/* $5.10.2 - Patterms - Cards - Selectable */
+
+.card-selectable {
+    border: 1px solid var(--color-neutral-4);       
+}
+
+.card-selectable:hover {
+    border-color: var(--color-selection-1);
+    box-shadow: 0px 0px 0px 1px var(--color-selection-1);
+}
+
+.card-selectable.card-is-selected,
+.card-selectable.card-is-selected:hover {
+    border-color: var(--color-selection-3);    
+    box-shadow: 0px 0px 0px 1px var(--color-selection-3);
+}
+
+.card-selectable-link:hover,
+.card-selectable-link:focus {
+    text-decoration: none;
+}
+
+
+/*  =============================================================================  */
+/*  $5.11 - Patterns - Carousel                                                    */
+/*  =============================================================================  */
+
+.carousel .carousel-dots-container {
+    margin-top: 0;
+}
+
+.carousel .carousel-dots-container .carousel-dot {
+    background-color: var(--color-neutral-4);
+}
+
+.carousel .carousel-dots-container .carousel-dot:hover {
+    background-color: var(--color-neutral-6);
+}
+
+.carousel .carousel-dots-container .carousel-dot.active {
+    background-color: var(--color-selection-3)
+}
+
+.carousel .carousel-navigation.carousel-navigation-left {
+    left: 0;
+}
+
+.carousel .carousel-navigation.carousel-navigation-right {
+    right: 0;
+}
+
+.carousel .carousel-navigation {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--color-neutral-7);
+}
+
+.carousel .carousel-navigation:hover {
+    color: var(--color-neutral-9);
+}
+
+.carousel .carousel-navigation.disabled {
+    opacity: 1;
+    color: var(--color-neutral-5);
+}
+
+
+/* $5.11.1 - Patterms - Carousel - Popup */
+
+.popup-carousel .popup-dialog-header {
+    padding-bottom: var(--space-s);
+    justify-content: center;
+}
+
+.popup-carousel .popup-dialog-header-title {
+    padding-right: 0;
+    text-align: center;
+} 
+
+
+/*  =============================================================================  */
+/*  $5.12 - Patterns - Coach Mark                                                  */
+/*  =============================================================================  */
+
+.coach-mark {
+    display: inline-flex;
+    position: relative;
+}
+
+.coach-mark-element {
+    position: relative;
+}
+
+.coach-mark-element.coach-mark-visible {
+    z-index: 140;
+}
+
+.coach-mark-popover {
+    z-index: 130;
+}
+
+.coach-mark-element.coach-mark-visible:before {
+    bottom: -8px;
+    content: '';
+    left: -8px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    z-index: -1;
+}
+
+.has-overlay .coach-mark-element.coach-mark-visible:before {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.coach-mark.bottom-left {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.coach-mark.bottom,
+.coach-mark.top {
+    align-items: center;
+    flex-direction: column;
+}
+
+.coach-mark.left ,
+.coach-mark.right {
+    align-items: center;
+    flex-direction: row;
+}
+
+.coach-mark.left-bottom,
+.coach-mark.right-bottom {
+    align-items: flex-end;
+}
+
+.coach-mark.bottom .coach-mark-popover,
+.coach-mark.bottom-left .coach-mark-popover,
+.coach-mark.bottom-right .coach-mark-popover {
+    margin-top: 40px;
+    top: 100%;
+}
+
+.coach-mark.top .coach-mark-popover,
+.coach-mark.top-left .coach-mark-popover,
+.coach-mark.top-right .coach-mark-popover {
+    bottom: 100%;
+    margin-bottom: 40px;  
+}
+
+.coach-mark.left .coach-mark-popover,
+.coach-mark.left-top .coach-mark-popover,
+.coach-mark.left-bottom .coach-mark-popover {
+    margin-right: 40px;
+    right: 100%;
+}
+
+.coach-mark.right .coach-mark-popover,
+.coach-mark.right-bottom .coach-mark-popover, 
+.coach-mark.right-top .coach-mark-popover  {
+    left: 100%;
+    margin-left: 40px;
+}
+
+.coach-mark .tooltip-wrapper {
+    line-height: 1;
+}
+
+.coach-mark-popover {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 0px 4px var(--color-warning-2), var(--shadow-level-3);
+    padding: var(--space-m);
+    position: absolute;
+    width: 432px;
+}
+
+.coach-mark-title {
+    padding-bottom: var(--space-m);
+}
+
+.coach-mark-content {
+    padding-bottom: var(--space-l);
+    white-space: initial;
+}
+
+.coach-mark-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coach-mark-close {
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+    color: var(--color-neutral-6);
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    transition: all var(--time-s) linear;
+    width: 24px;
+}
+
+.coach-mark-close:hover {
+    background-color: var(--color-neutral-3);
+    color: var(--color-neutral-8);
+}
+
+.coach-mark-image {
+    margin: -24px -24px 0;
+    padding-bottom: var(--space-m);
+}
+
+.coach-mark-image img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.coach-mark-steps {
+    color: var(--color-neutral-7);
+}
+
+.coach-mark-overlay {
+    background-color: rgba(98, 101, 104, .6);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+
+.coach-mark-indicator {
+    height: 24px;
+    pointer-events: none;
+    position: absolute;
+    width: 24px;
+}
+
+.coach-mark.bottom .coach-mark-element,
+.coach-mark.bottom-left .coach-mark-element,
+.coach-mark.bottom-right .coach-mark-element,
+.coach-mark.top .coach-mark-element,
+.coach-mark.top-left .coach-mark-element,
+.coach-mark.top-right .coach-mark-element {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.coach-mark.left .coach-mark-element,
+.coach-mark.left-bottom .coach-mark-element,
+.coach-mark.left-top .coach-mark-element,
+.coach-mark.right .coach-mark-element,
+.coach-mark.right-bottom .coach-mark-element,
+.coach-mark.right-top .coach-mark-element {
+    align-items: center;    
+    display: inline-flex;
+}
+
+.coach-mark.bottom .coach-mark-indicator,
+.coach-mark.bottom-left .coach-mark-indicator,
+.coach-mark.bottom-right .coach-mark-indicator {
+    top: 100%;    
+}
+
+.coach-mark.top .coach-mark-indicator,
+.coach-mark.top-left .coach-mark-indicator,
+.coach-mark.top-right .coach-mark-indicator {
+    bottom: 100%;
+}
+
+.coach-mark.left .coach-mark-indicator,
+.coach-mark.left-top .coach-mark-indicator,
+.coach-mark.left-bottom .coach-mark-indicator {
+    right: 100%;
+}
+
+.coach-mark.right .coach-mark-indicator,
+.coach-mark.right-top .coach-mark-indicator,
+.coach-mark.right-bottom .coach-mark-indicator {
+    left: 100%;
+}
+
+.coach-mark-indicator .coach-mark-indicator-item:first-child {
+    animation-delay: 1000ms;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-name: fazOpd;
+    animation-timing-function: ease-out;
+    background-color: var(--color-warning-0);
+    border-radius: 100%;
+    height: 32px;
+    left: 50%;
+    opacity: 0.75;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 32px;
+}
+
+.coach-mark-indicator .coach-mark-indicator-item:nth-child(2) {
+    animation-delay: 1250ms;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-name: fazOpd;
+    animation-timing-function: ease-out;
+    background-color: var(--color-warning-0);
+    border-radius: 100%;
+    height: 32px;
+    left: 50%;
+    opacity: 0.75;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 32px;
+}
+
+.coach-mark-indicator .coach-mark-indicator-item:nth-child(3) {
+    background-color: var(--color-neutral-0);
+    border-radius: 100%;
+    border: 2px solid var(--color-warning-2);
+    height: 24px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 24px;
+}
+
+.coach-mark-indicator .coach-mark-indicator-item:last-child {
+    background-color: var(--color-warning-2);
+    border-radius: 100%;
+    height: 16px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 16px;
+}
+
+@keyframes fazOpd {
+    0% {
+        transform: translateX(-50%) translateY(-50%) scale(0);
+        opacity: 0.75;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-50%) scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) scale(4);
+        opacity: 0;
+    }
+}
+
+
+/*  =============================================================================  */
+/*  $5.13 - Patterns - CSAT Emoji                                                  */
+/*  =============================================================================  */
+
+.csat-emoji {
+    margin-bottom: var(--space-m);
+    position: relative;
+}
+
+.csat-emoji:not(:first-child) {
+    margin-left: var(--space-base);
+}
+
+.csat-emoji-default-state {
+    opacity: 1;
+    transition: opacity var(--time-l) var(--linear);    
+}
+
+.csat-emoji-active .csat-emoji-default-state,
+.csat-emoji:hover .csat-emoji-default-state {
+    opacity: 0;    
+}
+
+.csat-emoji-active-state {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity var(--time-l) var(--linear);      
+}
+
+.csat-emoji-active .csat-emoji-active-state,
+.csat-emoji:hover .csat-emoji-active-state {
+    opacity: 1;
+}
+
+.csat-emoji svg {
+    display: block;
+}
+
+.csat-emoji-label {
+    font-size: 12px;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    -webkit-transform: translateX(-50%) translateY(16px) translateZ(0);
+            transform: translateX(-50%) translateY(16px) translateZ(0);
+    transition: all var(--time-s) var(--ease-out);
+    white-space: nowrap;
+}
+
+.csat-emoji-label span {    
+    white-space: inherit;
+}
+
+.csat-emoji-active .csat-emoji-label {
+    opacity: 1;
+    transition: all var(--time-l) var(--ease-out);
+    -webkit-transform: translateX(-50%) translateY(8px) translateZ(0);
+            transform: translateX(-50%) translateY(8px) translateZ(0);
+}
+
+.emoji-very-unsatisfied .csat-emoji-label {
+    color: var(--color-error-5);
+}
+
+.emoji-unsatisfied .csat-emoji-label,
+.emoji-neutral .csat-emoji-label {
+    color: var(--color-warning-5);
+}
+
+.emoji-satisfied .csat-emoji-label,
+.emoji-very-satisfied .csat-emoji-label {
+    color: var(--color-success-5);
+}
+
+
+/*  =============================================================================  */
+/*  $5.14 - Patterns - Dropdown MultiSelect                                        */
+/*  =============================================================================  */
+
+
+.multiselect {
+    position: relative;
+}
+
+.multiselect.is-opened {
+    z-index: 99;
+}
+
+.multiselect-label {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius-soft);
+    border: var(--border-size-s) solid var(--color-neutral-4);
+    color: var(--color-neutral-6);
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    height: 32px;
+    padding: 0 var(--space-s);
+}
+
+.multiselect-label.has-selected-opts {
+    color: var(--color-neutral-9);
+}
+
+.multiselect-small .multiselect-label  {
+    font-size: var(--font-size-s);
+    height: 24px;
+    padding: 0 var(--space-xs);
+}
+
+.multiselect-large .multiselect-label  {
+    height: 40px;
+}
+
+.multiselect-label:hover {
+    border-color: var(--color-neutral-5);
+}
+
+.multiselect-label.not-valid {
+    border-color: var(--color-error);
+}
+
+.multiselect.is-opened .multiselect-label {
+    border-color: var(--color-selection-3);
+}
+
+.multiselect-label span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 16px);
+}
+
+.multiselect-label:after {
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent !important;
+    border-top: 4px solid var(--color-neutral-7) !important;
+    content: "";
+    height: 0;
+    margin-top: -1px;
+    pointer-events: none;
+    position: absolute;
+    right: 8px;
+    -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;   
+    top: 50%; 
+}
+
+.multiselect.is-opened .multiselect-label:after {
+    -webkit-transform: rotate(180deg)  translateY(4px) translateX(0px);
+            transform: rotate(180deg)  translateY(4px) translateX(0px);
+}
+
+.multiselect-dropdown-wrapper {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);    
+    border: 1px solid var(--color-neutral-3);
+    box-shadow: var(--shadow-level-1);
+    margin-top: var(--space-xs);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;  
+}
+
+.multiselect.is-opened .multiselect-dropdown-wrapper {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.multiselect.show-at-top .multiselect-dropdown-wrapper {
+    bottom: 100%;
+    margin-bottom: var(--space-xs);
+    margin-top: 0;
+    top: auto;
+}
+
+.multiselect-dropdown-search {
+    padding: var(--space-s);
+}
+
+.multiselect-dropdown-search .input-hidden-label {
+    display: none;
+}
+
+.multiselect-small .multiselect-dropdown-search {
+    padding: var(--space-xs);
+}
+
+.multiselect-dropdown-search-noresults {
+    padding: 0 var(--space-s);
+}
+
+.multiselect-small .multiselect-dropdown-search-noresults {
+    font-size: var(--font-size-s);
+    padding: 0 var(--space-xs);
+}
+
+.multiselect-overlay {
+    display: none;
+}
+
+.multiselect.is-opened + .multiselect-overlay {
+    cursor: default !important;
+    display: block;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 98;
+    bottom: 0;
+    right: 0;
+}
+
+.multiselect-dropdown-items {
+    border-bottom: var(--border-size-s) solid var(--color-neutral-3);
+    border-top: var(--border-size-s) solid var(--color-neutral-3);
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: var(--space-xs) 0;
+}
+
+.multiselect-dropdown-items ul {
+    list-style-type: none;
+    margin: var(--space-none);
+    padding: var(--space-none);
+}
+
+.multiselect-dropdown label {
+    color: var(--color-neutral-10);
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 32px;
+    padding: 0 var(--space-s);
+    line-height: 1;
+}
+
+.multiselect-small .multiselect-dropdown label {
+    height: 24px;
+    padding: 0 var(--space-xs);
+    font-size: var(--font-size-s);
+}
+
+.multiselect-large .multiselect-dropdown label {
+    height: 40px;
+}
+
+.multiselect-dropdown label:hover {
+    background-color: var(--color-selection-0);
+}
+
+.multiselect-dropdown-item.disabled {
+    opacity: .8;
+    pointer-events: none;
+    color: var(--color-neutral-5);
+}
+
+.multiselect-dropdown-footer {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    padding: var(--space-s);
+}
+
+.multiselect-dropdown-selected-count {
+    color: var(--color-neutral-7);
+    flex: 1;
+    font-size: var(--font-size-s);
+}
+
+.multiselect-dropdown-info {
+    font-size: var(--font-size-s);
+    margin: var(--space-s);
+}
+
+.multiselect-dropdown-selectall .checkbox.indeterminate:after {
+    -webkit-transform: rotate(0deg) translateY(-50%);
+            transform: rotate(0deg) translateY(-50%);
+    height: 2px;
+    top: 50%;
+    width: 50%;
+}
+
+.multiselect-dropdown--item-color {
+    border-radius: var(--border-radius-soft);
+    height: 16px;
+    margin-right: var(--space-s);
+    min-width: 16px;
+    width: 16px;
+}
+
+.multiselect-dropdown label .checkbox {
+    display: block;
+    margin-right: var(--space-s);
+}
+
+.multiselect-dropdown-items::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ 
+.multiselect-dropdown-items::-webkit-scrollbar-track {
+    background-color: var(--color-neutral-2);
+}
+ 
+.multiselect-dropdown-items::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-4);
+    border-radius: 6px;
+    border: 1px solid var(--color-neutral-2);
+}
+
+.multiselect-dropdown-items::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-5);
+}
+
+
+/*  =============================================================================  */
+/*  $5.15 - Patterns - File Upload                                                 */
+/*  =============================================================================  */
+
+[data-upload] {
+    background-color: transparent;
+    border: 1px dashed var(--color-neutral-4);
+    font-size: var(--font-size-base);
+    padding: var(--space-s);
+    position: relative;
+}
+
+.upload-image-withoverlay {
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+}
+
+[data-upload] img {
+    border-radius: 20px;
+    height: 96px;
+    object-fit: cover;
+    width: 96px;
+}
+
+[data-upload].upload-image-withoverlay .change-image {
+    color: var(--color-selection-5);
+    margin-top: var(--space-xs);
+}
+
+.upload-remove {
+    height: 16px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.upload-remove svg {
+    display: block;
+}
+
+.upload-label {
+    display: grid;
+    flex: 1;
+    max-width: 100%;
+}
+
+.upload-btn {
+    pointer-events: auto;
+}
+
+.upload-label span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+[data-upload] input {
+    bottom: 0;
+    display: block !important;
+    left: 0;
+    opacity: 0;
+    pointer-events: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.upload-image-withoverlay:hover  .change-image  {
+    pointer-events: auto;
+}
+
+.upload-image-withoverlay .change-image:hover  {
+    pointer-events: none;
+}
+
+.upload-image-withoverlay .change-image-remove {
+    pointer-events: auto;    
+}
+
+
+/*  =============================================================================  */
+/*  $5.16 - Patterns - Input Search                                                */
+/*  =============================================================================  */
+
+.search .form-control[data-input] {
+    padding-left: 28px;
+}
+
+.search-input:after {
+    background-image: url('/ProductDesignSystem/img/ProductDesignSystem.ic_search.svg');
+    background-size: cover;
+    content: '';
+    height: 16px;
+    left: 8px;
+    margin-top: -8px;
+    top: 50%;
+    width: 16px;
+}
+
+.input-clear-search {
+    position: relative;
+    width: 100%;
+}
+
+.input-clear-search-icon-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+}
+
+.input-clear-search-input .form-control[data-input] {
+    padding: 0 28px;
+}
+
+.input-clear-search [data-block*="ProductDesignSystem.SVGCustom"] {
+    display: flex;
+}
+
+.clear-search {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    cursor: pointer;
+}
+
+.show-clear-search {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.clear-search svg:hover path {
+    fill: var(--color-neutral-9);
+}
+
+/*  =============================================================================  */
+/*  $5.17 - Patterns - Loading                                                     */
+/*  =============================================================================  */
+
+[data-block*="ProductDesignSystem.Loading"] > div {
+    display: flex;
+}
+
+svg.loading-spinner {
+    display: block;
+}
+
+.loading-spinner {
+    animation: rotate 1200ms linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);    
+  }
+
+  50% {
+    transform: rotate(220deg);    
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*  =============================================================================  */
+/*  $5.18 - Patterns - Multi level Menu                                            */
+/*  =============================================================================  */
+
+.multi-level-item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    padding: 0 var(--space-s);
+    text-align: left;
+    width: 100%;
+}
+
+.multi-level-item:hover {
+    background-color: var(--color-selection-0);
+}
+
+.tooltip-wrapper .multi-level-item a,
+.tooltip-wrapper .multi-level-item a:hover {
+    color: var(--color-neutral-10);
+}
+
+.multi-level > .tooltip-wrapper {
+    animation: popupanimationTopBottom 550ms var( --ease-out);
+    background-color: var(--color-neutral-0);
+    border: 1px solid var(--color-neutral-3);
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-base);
+    max-width: 350px;
+    padding: var(--space-xs) 0;
+    right: calc(100% - var(--space-l));
+}
+
+.multi-level > .tooltip-wrapper:after {
+    content: none;
+}
+
+.multi-level > .tooltip-wrapper.bottom-left {
+    top: calc(100% + var(--space-xs));
+}
+
+.multi-level-item-text {
+    width: 100%;
+}
+
+.multi-level-item-text a:hover,
+.multi-level-item-text a:focus {
+    text-decoration: none;
+}
+
+.multi-level-second-item {
+    animation: popupanimationMultiLevel 550ms var( --ease-out);
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-3);
+    box-shadow: var(--shadow-level-2);
+    display: none;
+    padding: 4px 0;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    min-width: max-content;
+}
+
+.multi-level-wrapper {
+    display: block;
+    position: relative;
+}
+
+.multi-level-item:hover + .multi-level-second-item,
+.multi-level-second-item:hover  {
+    display: block;
+} 
+
+.multi-level-item:hover + .multi-level-second-item:empty {
+    display: none;
+}
+
+.multi-level .tooltip-content {
+    align-items: center;
+    display: flex;
+    position: relative;
+} 
+
+.multi-level .tooltip-content:before {
+    position: absolute;
+    content: '';
+    left: -8px;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+}
+
+.multi-level-item-icon {
+    padding-left: 40px;
+}
+
+.multi-level-item-icon .svg-code {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.multi-level-item-icon-active .svg-code {
+    opacity: 1;
+}
+
+.multi-level-item-icon-active .svg-code path {
+    fill: var(--color-neutral-9);
+}
+
+
+@keyframes popupanimationMultiLevel {
+    0% {
+        transform: translateY(16px) translateZ(0) scale(1);
+    }
+    100% {
+        transform: translateY(0) translateZ(0) scale(1);
+    }
+}
+
+.pds-header .multi-level .tooltip-wrapper {
+    right: 0;
+}
+
+
+/*  =============================================================================  */
+/*  $5.19 - Patterns - Pagination                                                  */
+/*  =============================================================================  */
+
+.pagination-button {
+    border: 1px solid var(--color-neutral-4);    
+    color: var(--color-neutral-10);
+}
+
+.desktop .pagination-container .pagination-button:not(.is--ellipsis):hover {
+    background-color: var(--color-selection-0);    
+    border: 1px solid var(--color-neutral-4);    
+}
+
+.pagination-container .pagination-button.is--active {
+    background-color: var(--color-selection-3);
+    border: 1px solid var(--color-selection-3);
+    color: var(--color-neutral-0);
+}
+
+.pagination-container .pagination-button[disabled] {
+    background-color: var(--color-neutral-2);
+    border: 1px solid var(--color-neutral-3);
+    color: var(--color-neutral-5);
+    opacity: 1;
+}
+
+
+/*  =============================================================================  */
+/*  $5.20 - Patterns - Popover                                                     */
+/*  =============================================================================  */
+[data-popover] {
+    display: flex;
+    justify-content: flex-start;
+}
+
+[data-popover] > .popover-bottom {
+    background-color: var(--color-neutral-0);
+    box-shadow: var(--shadow-level-2);
+    color: var(--color-neutral-10);
+    border: 1px solid var(--color-neutral-3);
+    padding: var(--space-xs) 0;
+    transform: none !important;
+    max-width: 350px;
+    min-width: 110px;
+    margin-left: 0;
+    top: calc(100% + 4px);
+}
+
+
+/*  =============================================================================  */
+/*  $5.21 - Patterns - Popup                                                       */
+/*  =============================================================================  */
+
+.popup-backdrop {
+    background-color: transparent;
+}
+
+.popup-dialog {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+.popup-dialog .popup-content {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-3);
+    box-shadow: var(--shadow-level-3);
+    max-width: 512px; 
+    overflow: hidden;
+    padding: var(--space-m);
+    width: 100%;
+    will-change: transform, opacity;
+    z-index: 100;    
+}
+
+.popup-dialog-header {
+    display: flex;
+    padding-bottom: var(--space-m);
+    flex-direction: row;
+}
+
+.popup-dialog-header-close {
+    border-radius: var(--border-radius);
+    height: 24px;
+    margin-left: auto;
+    transition: all var(--time-s) linear;
+}
+
+.popup-dialog-header-close:hover {
+    background-color: var(--color-neutral-3);
+}
+
+.popup-dialog-header-close svg path {
+    fill: var(--color-neutral-6);
+    transition: all var(--time-m) linear;
+}
+
+.popup-dialog-header-close:hover svg path {
+    fill: var(--color-neutral-8);
+}
+
+.popup-dialog-header-close a {
+    display: block;
+    height: 24px;
+}
+
+.popup-dialog-header-title {
+    flex: 1;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    padding-right: var(--space-base);
+}
+
+.popup-dialog-header-sub-title {
+    color: var(--color-neutral-7);
+    margin-top: var(--space-s);
+}
+
+.popup-dialog-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space-m);
+}
+
+.popup-dialog-footer .btn + .btn {
+    margin-left: var(--space-s);
+}
+
+.popup-background:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(98, 101, 104, .6);
+    z-index: -1;
+    pointer-events: none;  
+} 
+
+
+/* $5.21.1 -  Patterns - Popup - Sizes  */
+
+.popup-dialog-medium .popup-content {
+     max-width: 768px; 
+}
+
+.popup-dialog-large .popup-content {
+     max-width: 1024px;   
+}
+
+
+/* $5.21.2 -  Patterns - Popup - Scrollable  */
+.popup-dialog-scrollable .popup-content {
+    padding: 0;
+}
+
+.popup-dialog-scrollable .popup-dialog-header {
+    border-bottom: 1px solid var(--color-neutral-3);
+}
+
+.popup-dialog-scrollable .popup-dialog-footer {
+    border-top: 1px solid var(--color-neutral-3);    
+}
+
+.popup-dialog-scrollable .popup-dialog-header,
+.popup-dialog-scrollable .popup-dialog-footer {
+    padding: var(--space-m);
+}
+
+.popup-dialog-scrollable .popup-dialog-content {
+    padding: var(--space-m);
+    max-height: calc(600px - 78px - 80px);
+    overflow-y: auto;
+    scrollbar-color: var(--color-neutral-4) var(--color-neutral-0); /* Firefox only */
+    scrollbar-width: thin; /* Firefox only */
+}
+
+/* Webkit only */
+.popup-dialog-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+ 
+.popup-dialog-content::-webkit-scrollbar-track {
+    background-color: var(--color-neutral-0);
+}
+
+.popup-dialog-content::-webkit-scrollbar-track:hover {
+    background-color: var(--color-neutral-2);    
+}
+ 
+.popup-dialog-content::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-4);
+    border-radius: 6px;
+    border: 1px solid var(--color-neutral-2);
+}
+
+.popup-dialog-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-5);
+}
+
+/* $5.21.3 -  Patterns - Popup - Animations */
+.enter-fade-in .popup-content,
+.enter-fade-in:before,
+.enter-bottom-top:before {
+    animation: popupanimationFade 350ms var( --ease-out);
+}
+
+.enter-bottom-top .popup-content {
+    animation: popupanimationBottomTop 350ms var( --ease-out), popupanimationFade 350ms var( --ease-out);
+}
+
+@keyframes popupanimationFade {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popupanimationBottomTop {
+    0% {
+        transform: translateY(130px) translateZ(0) scale(.95);
+    }
+    100% {
+        transform: translateY(0) translateZ(0) scale(1);
+    }
+}
+
+/*  =============================================================================  */
+/*  $5.22 - Patterns - Scroll Content                                              */
+/*  =============================================================================  */
+
+.pds-scroll-wrapper {
+    position: relative;
+}
+
+.pds-scroll {
+    border: 1px solid var(--color-neutral-4);
+    overflow-y: auto;
+    position: relative;
+    scrollbar-color: var(--color-neutral-4) var(--color-neutral-0); /* Firefox only */
+    scrollbar-width: thin; /* Firefox only */
+}
+
+.pds-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.pds-scroll::-webkit-scrollbar-track:hover {
+    background-color: var(--color-neutral-2);    
+}
+ 
+.pds-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-4);
+    border-radius: 6px;
+    border: 1px solid var(--color-neutral-2);
+}
+
+.pds-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-5);
+}
+
+
+/*  =============================================================================  */
+/*  $5.23 - Patterns - SVG                                                         */
+/*  =============================================================================  */
+
+.svg-code svg {
+    display: block;
+}
+
+
+/*  =============================================================================  */
+/*  $5.24 - Patterns - Table                                                       */
+/*  =============================================================================  */
+
+.table {
+    border-radius: 0;
+    border: 1px solid var(--color-neutral-4);
+}
+
+.table-header th {
+    background-color: var(--color-neutral-1);
+    border-bottom: 1px solid var(--color-neutral-4);
+    color: var(--color-neutral-7);
+    font-weight: var(--font-semi-bold);
+    padding: var(--space-none) var(--space-s);
+}
+
+.desktop .table-header th.sortable:hover {
+    color: var(--color-neutral-10); 
+}
+
+.table-header th.sorted,
+.desktop .table-header th.sortable.sorted:hover {
+    color: var(--color-neutral-10); 
+}
+
+.table-header th:first-child {
+    border-radius: 0;
+}
+
+.table-header th:last-child {
+    border-radius: 0;
+}
+
+.table .table-row:last-child td:first-child {
+    border-radius: 0;
+}
+
+.table .table-row:last-child td:last-child {
+    border-radius: 0;
+}
+
+.table-bulk-selection .table-header th:first-child,
+.table-bulk-selection .table-row td:first-child {
+    padding: 0 var(--space-base);
+    width: 48px;
+}
+
+.table-row td {
+    background-color: var(--color-neutral-0);
+    border-bottom: 1px solid var(--color-neutral-4);
+    height: 48px;
+    padding: 0 var(--space-s);
+}
+
+.table [data-checkbox]:before {
+    height: 100%;
+    width: 100%;
+}
+
+.table [data-checkbox]:checked:after {
+    height: 5px;
+    width: 8px;
+}
+
+.table .checkbox-intermediate:before {
+    background-color: var(--color-selection-3);
+    border-color: var(--color-selection-4);
+}
+
+.table .checkbox-intermediate:hover:before {
+    background-color: var(--color-selection-5);
+    border-color: var(--color-selection-5);
+}
+
+.table .checkbox-intermediate:after,
+.table .checkbox[data-checkbox]:indeterminate:after {
+    border: 1px solid var(--color-neutral-0);
+    opacity: 1;
+}
+
+.table-bulk-selection .table-row:hover td,
+.table-bulk-selection .table-row.table-row-selected:hover td {
+    background-color: var(--color-selection-0);  
+    background-image: none;
+}
+
+.table-row:hover td {
+    background-color: var(--color-neutral-0);  
+    background-image: none;
+}
+
+.table-bulk-selection .table-row.table-row-selected td {
+    background-color: var(--color-neutral-0);  
+    background-image: none;
+}
+
+.table-header th.sortable {
+    position: relative;
+}
+
+.table-multi-select .table-row.table-row-selected td,
+.table-multi-select .table-row.table-row-selected:hover td{
+    background-color: var(--color-selection-1);
+    background-image: none;
+}
+
+.table-multi-select .table-row td {
+    cursor: pointer;
+}
+
+.pds-scroll .table {
+    border: 0;
+}
+
+.table-fixed .table-header th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* $5.24.1 -  Patterns - Table - Sortable Icons */
+
+.sortable-icon {
+     background-image: url('/ProductDesignSystem/img/ProductDesignSystem.ic_import_export.svg');
+     background-repeat: no-repeat;
+     width: 16px;
+     height: 16px;
+     top: 4px;
+}
+
+.sortable-icon:before,
+.sortable-icon:after {
+    content: none;
+}
+
+.desktop .table-header th.sortable:hover .sortable-icon,
+.desktop .table-header th.sortable.sorted:hover .sortable-icon{
+     background-image: url('/ProductDesignSystem/img/ProductDesignSystem.ic_import_export_hover.svg');
+}
+
+/* $5.24.2 -  Patterns - Table - Sizes */
+.table-row-small td {
+    height: 32px;    
+}
+
+.table-row-large td {
+    height: 56px;    
+}
+
+.table-bulk-selection .table-header.table-header-large th:first-child,
+.table-bulk-selection .table-row.table-row-large td:first-child {
+    padding: 0 var(--space-m);
+    width: 48px;
+}
+
+
+/* $5.24.3 -  Patterns - Table - OutSystems UI Overrides */
+
+.table-header-small th {
+    height: 32px;      
+}
+
+.table-header-large th {
+    height: 56px;    
+}
+
+
+/*  =============================================================================  */
+/*  $5.25 - Patterns - Tabs                                                        */
+/*  =============================================================================  */
+
+.tabs .tabs-content {
+    border-top: 0;
+}
+
+.tabs .tabs-header {
+    border-bottom: 1px solid var(--color-neutral-4);
+    width: 100%;
+    overflow: hidden;
+}
+
+.tabs-header-tab {
+    border-bottom: 0;
+    color: var(--color-neutral-7);
+    margin-left: 0;
+    padding: 0 var(--space-base);
+    position: relative;
+}
+
+.tabs-header-tab-disabled {
+    color: var(--color-neutral-5);
+    pointer-events: none;    
+}
+
+
+/* $5.25.1 -  Patterns - Tabs - Tab Line */
+
+.tab-line .tabs-header-tab:after {
+    background-color: var(--color-selection-1);
+    bottom: 0px;
+    content: '';
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(3px);
+    transition: transform 220ms var(--ease-out);
+    width: 100%;
+    z-index: 2;
+}
+
+.tab-line .tabs-header-tab:hover:after {
+    opacity: 1;    
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+}
+
+.tab-line .tabs-header-tab.active:after {
+    background-color: var(--color-selection-3);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+}
+
+.tab-line .tabs-header-tab.active {
+    border-bottom: 0;
+    font-weight: var(--font-regular);
+}
+
+.tab-line .tabs-header-tab.active:hover,
+.tab-line .tabs-header-tab:hover {
+    border-bottom: 0;
+    color: var(--color-neutral-10);
+}
+
+
+/* $5.25.2 -  Patterns - Tabs - Tab Box */
+
+.tab-box .tabs-header-tab {
+    background-color: var(--color-neutral-0);
+    border: 1px solid var(--color-neutral-4);
+    border-bottom: 0;
+    border-left: 0; 
+}
+
+.tab-box  [data-block*="TabsHeaderItem"]:first-child .tabs-header-tab {
+    border-left: 1px solid var(--color-neutral-4);;
+}
+
+.tab-box .tabs-header-tab.active {
+    border-bottom: 0;
+    font-weight: var(--font-regular);
+}
+
+.tab-box .tabs-header-tab.active:hover,
+.tab-box .tabs-header-tab:hover {
+    background-color: var(--color-selection-0);
+    border-bottom: 0;
+    color: var(--color-neutral-10);
+}
+
+
+/* $5.25.3 -  Patterns - Tabs - Sizes */
+
+.tab-medium .tabs-header-tab {
+    height: 32px;
+}
+
+.tab-large .tabs-header-tab {
+    height: 40px;
+}
+
+
+/*  =============================================================================  */
+/*  $5.26 - Patterns - Tags                                                        */
+/*  =============================================================================  */
+
+.tag {
+    background-color: var(--color-neutral-2);
+    border: 1px solid var(--color-neutral-4);
+    color: var(--color-neutral-10);
+    font-weight: var(--font-regular);
+    padding: 0 var(--space-s);
+}
+
+.tag.tag-small {
+    font-size: var(--font-size-s);
+}
+
+.tag svg {
+    display: block;
+}
+
+
+/*  =============================================================================  */
+/*  $5.27 - Patterns - Toast                                                       */
+/*  =============================================================================  */
+
+.popup-toast {
+    align-items: flex-end;
+    animation: popuptoastAnimation 350ms var( --ease-out);
+    color: var(--color-neutral-2);    
+    justify-content: flex-end;
+    padding: var(--space-l) var(--space-xl);
+}
+
+.popup-toast .popup-content {    
+    background-color: var(--color-neutral-10);    
+    font-size: var(--font-size-s);     
+    padding: var(--space-base);
+}
+
+.popup-toast-content {
+    display: flex;
+    align-items: center;
+}
+
+.popup-toast-close {
+    margin-left: var(--space-m);
+}
+
+.popup-toast-close svg {
+    display: block;
+}
+
+.popup-toast-close {
+    border-radius: var(--border-radius);
+    transition: all var(--time-s) linear;
+}
+
+.popup-toast-close a {
+    display: block;
+    height: 24px;
+}
+
+.popup-toast-close:hover {
+    background-color: var(--color-neutral-7);
+}
+
+.popup-toast-close svg path {
+    fill: var(--color-neutral-6);
+    transition: all var(--time-m) linear;
+}
+
+.popup-toast-close:hover svg path {
+    fill: var(--color-neutral-4);
+}
+
+@keyframes popuptoastAnimation {
+    0% {
+        transform: translateY(70%) translateZ(0);
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) translateZ(0);
+    }
+}
+
+.popup-toast-link {
+    margin-left: var(--space-m);
+}
+
+.popup-toast-link a {
+    color: var(--color-selection-2);    
+}
+
+.popup-toast-link a:hover {
+    color: var(--color-selection-1);      
+}
+
+
+/*  =============================================================================  */
+/*  $5.28 - Patterns - Toggle Password                                             */
+/*  =============================================================================  */
+
+.toggle-password .input-with-icon.input-with-icon-right .input-with-icon-content-icon:not(:empty) + .input-with-icon-input input {
+    padding-left: var(--space-s);
+}
+
+.toggle-password .input-with-icon-content-icon a {
+    display: block;
+}
+
+.toggle-password .input-with-icon-content-icon svg {
+    display: block;
+    cursor: pointer;
+}
+
+.toggle-password .input-with-icon-content-icon svg:hover path {
+    fill: var(--color-neutral-9);
+}
+
+
+/*  =============================================================================  */
+/*  $5.29 - Patterns - Tooltip                                                     */
+/*  =============================================================================  */
+
+.tooltip-content {    
+    color: var(--color-neutral-7);
+    cursor: pointer;
+}
+
+.tooltip-content:hover {
+    color: var(--color-neutral-9);
+}
+
+.tooltip-content .svg-code svg {
+    display: block;
+}
+
+.tooltip-wrapper {
+    box-shadow: var(--shadow-level-2);
+    font-size: var(--font-size-s);
+    min-width: max-content;
+    padding: var(--space-s);
+}
+
+.tooltip-wrapper a {
+    color: var(--color-selection-2);    
+}
+
+.tooltip-wrapper a:hover {
+    color: var(--color-selection-1);      
+}
+
+
+/*  =============================================================================  */
+/*  $5.30 - Patterns - Wizard                                                      */
+/*  =============================================================================  */
+
+.wizard-item-icon {
+    background-color: var(--color-neutral-0);
+    border: 2px solid var(--color-neutral-4);
+    position: relative;
+}
+
+.wizard-item-icon:empty {
+    width: 24px;
+    height: 24px;
+}
+
+.wizard-wrapper-item.active .wizard-item-icon {
+    border-color: var(--color-selection-3);
+    color: var(--color-selection-3);
+}
+
+.wizard-wrapper-item.past .wizard-item-icon {
+    background-color: var(--color-selection-3);    
+    border-color: var(--color-selection-3);
+}
+
+.wizard-wrapper-item.next .wizard-item-icon-wrapper:before {
+    background-color: var(--color-neutral-4);
+}
+
+.wizard-wrapper-item.active .wizard-item-icon-wrapper:before,
+.wizard-wrapper-item.past .wizard-item-icon-wrapper:before {
+    background-color: var(--color-selection-3);
+}
+
+.wizard-wrapper-item.active .wizard-item-icon:after {
+    background-color: var(--color-selection-3);
+    border-radius: var(--border-radius-circle);
+    content: '';
+    height: 8px;
+    width: 8px;
+}
+
+.wizard-wrapper-item.past .wizard-item-icon:after {
+    border-bottom: 2px solid var(--color-neutral-0);
+    border-left: 2px solid var(--color-neutral-0);
+    border-right: 0;
+    border-top: 0;
+    content: '';
+    height: 4px;
+    position: relative;
+    top: -1px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 8px;
+}
+
+
+.wizard-item-label {
+    color: var(--color-neutral-7);
+    font-weight: var(--font-semi-bold);    
+}
+
+.wizard-wrapper-item.past .wizard-item-label {
+    color: var(--color-neutral-7);  
+}
+
+.wizard-wrapper-item.active .wizard-item-label {
+    color: var(--color-neutral-10);    
+}
+
+
+/* $5.30.1 -  Patterns - Wizard - Vertical */
+
+.wizard-vertical .wizard-item-icon-wrapper {
+    margin: var(--space-none) var(--space-base) var(--space-none) var(--space-none);
+}
+
+.wizard-wrapper.wizard-vertical .wizard-wrapper-item {
+    align-items: flex-start;
+}
+
+.wizard-vertical .wizard-item-label {
+    margin-top: 4px;
+}
+
+.wizard-vertical .wizard-item-icon {
+    font-weight: var(--font-semi-bold);
+    line-height: 1;
+}
+
+.wizard-vertical .wizard-wrapper-item.active .wizard-item-icon:after {
+    content: none;
+}
+
+.wizard-vertical .wizard-wrapper-item.past .wizard-item-icon {
+    font-size: 0;
+}
+
+.wizard-vertical [data-block*="WizardItem"]:last-child .wizard-wrapper-item {
+    margin-bottom: 0;
+}
+
+
+/*  =============================================================================  */
+/*  $6 - Styles                                                                    */
+/*  =============================================================================  */
+
+/*  =============================================================================  */
+/*  $6.1 - Styles - Border                                                         */
+/*  =============================================================================  */
+
+.border-radius {
+  border-radius: var(--border-radius);
+}
+
+.border-radius-rounded {
+  border-radius: var(--border-radius-rounded);
+}
+
+.border-radius-circle {
+  border-radius: var(--border-radius-circle);
+}
+
+
+/*  =============================================================================  */
+/*  $6.2 - Styles - Color                                                          */
+/*  =============================================================================  */
+
+/* $6.2.1 - Styles - Color - Brand */
+
+.background-brand-light { background-color: var(--color-brand-light); }
+.background-brand { background-color: var(--color-brand); }
+.background-brand-dark { background-color: var(--color-brand-dark); }
+
+.text-brand-light { color: var(--color-brand-light); }
+.text-brand { color: var(--color-brand); }
+.text-brand-dark { color: var(--color-brand-dark); }
+
+
+/* $6.2.2 - Styles - Color - Neutral */
+
+.background-neutral-0 { background-color: var(--color-neutral-0); }
+.background-neutral-1 { background-color: var(--color-neutral-1); }
+.background-neutral-2 { background-color: var(--color-neutral-2); }
+.background-neutral-3 { background-color: var(--color-neutral-3); }
+.background-neutral-4 { background-color: var(--color-neutral-4); }
+.background-neutral-5 { background-color: var(--color-neutral-5); }
+.background-neutral-6 { background-color: var(--color-neutral-6); }
+.background-neutral-7 { background-color: var(--color-neutral-7); }
+.background-neutral-8 { background-color: var(--color-neutral-8); }
+.background-neutral-9 { background-color: var(--color-neutral-9); }
+.background-neutral-10 { background-color: var(--color-neutral-10); }
+.background-neutral-11 { background-color: var(--color-neutral-11); }
+
+.text-neutral-0 { color: var(--color-neutral-0); }
+.text-neutral-1 { color: var(--color-neutral-1); }
+.text-neutral-2 { color: var(--color-neutral-2); }
+.text-neutral-3 { color: var(--color-neutral-3); }
+.text-neutral-4 { color: var(--color-neutral-4); }
+.text-neutral-5 { color: var(--color-neutral-5); }
+.text-neutral-6 { color: var(--color-neutral-6); }
+.text-neutral-7 { color: var(--color-neutral-7); }
+.text-neutral-8 { color: var(--color-neutral-8); }
+.text-neutral-9 { color: var(--color-neutral-9); }
+.text-neutral-10 { color: var(--color-neutral-10); }
+.text-neutral-11 { color: var(--color-neutral-11); }
+
+
+/* $6.2.3 - Styles - Color - Selection */
+
+.background-selection-0 { background-color: var(--color-selection-0); }
+.background-selection-1 { background-color: var(--color-selection-1); }
+.background-selection-2 { background-color: var(--color-selection-2); }
+.background-selection-3 { background-color: var(--color-selection-3); }
+.background-selection-4 { background-color: var(--color-selection-4); }
+.background-selection-5 { background-color: var(--color-selection-5); }
+.background-selection-6 { background-color: var(--color-selection-6); }
+.background-selection-7 { background-color: var(--color-selection-7); }
+
+.text-selection-0 { color: var(--color-selection-0); }
+.text-selection-1 { color: var(--color-selection-1); }
+.text-selection-2 { color: var(--color-selection-2); }
+.text-selection-3 { color: var(--color-selection-3); }
+.text-selection-4 { color: var(--color-selection-4); }
+.text-selection-5 { color: var(--color-selection-5); }
+.text-selection-6 { color: var(--color-selection-6); }
+.text-selection-7 { color: var(--color-selection-7); }
+
+
+/* $6.2.4 - Styles - Color - Error */
+
+.background-error-0 { background-color: var(--color-error-0); }
+.background-error-1 { background-color: var(--color-error-1); }
+.background-error-2 { background-color: var(--color-error-2); }
+.background-error-3 { background-color: var(--color-error-3); }
+.background-error-4 { background-color: var(--color-error-4); }
+.background-error-5 { background-color: var(--color-error-5); }
+.background-error-6 { background-color: var(--color-error-6); }
+.background-error-7 { background-color: var(--color-error-7); }
+
+.text-error-0 { color: var(--color-error-0); }
+.text-error-1 { color: var(--color-error-1); }
+.text-error-2 { color: var(--color-error-2); }
+.text-error-3 { color: var(--color-error-3); }
+.text-error-4 { color: var(--color-error-4); }
+.text-error-5 { color: var(--color-error-5); }
+.text-error-6 { color: var(--color-error-6); }
+.text-error-7 { color: var(--color-error-7); }
+
+
+/* $6.2.5 - Styles - Color - Success */
+
+.background-success-0 { background-color: var(--color-success-0); }
+.background-success-1 { background-color: var(--color-success-1); }
+.background-success-2 { background-color: var(--color-success-2); }
+.background-success-3 { background-color: var(--color-success-3); }
+.background-success-4 { background-color: var(--color-success-4); }
+.background-success-5 { background-color: var(--color-success-5); }
+.background-success-6 { background-color: var(--color-success-6); }
+.background-success-7 { background-color: var(--color-success-7); }
+
+.text-success-0 { color: var(--color-success-0); }
+.text-success-1 { color: var(--color-success-1); }
+.text-success-2 { color: var(--color-success-2); }
+.text-success-3 { color: var(--color-success-3); }
+.text-success-4 { color: var(--color-success-4); }
+.text-success-5 { color: var(--color-success-5); }
+.text-success-6 { color: var(--color-success-6); }
+.text-success-7 { color: var(--color-success-7); }
+
+
+/* $6.2.6 - Styles - Color - Warning */
+
+.background-warning-0 { background-color: var(--color-warning-0); }
+.background-warning-1 { background-color: var(--color-warning-1); }
+.background-warning-2 { background-color: var(--color-warning-2); }
+.background-warning-3 { background-color: var(--color-warning-3); }
+.background-warning-4 { background-color: var(--color-warning-4); }
+.background-warning-5 { background-color: var(--color-warning-5); }
+.background-warning-6 { background-color: var(--color-warning-6); }
+.background-warning-7 { background-color: var(--color-warning-7); }
+
+.text-warning-0 { color: var(--color-warning-0); }
+.text-warning-1 { color: var(--color-warning-1); }
+.text-warning-2 { color: var(--color-warning-2); }
+.text-warning-3 { color: var(--color-warning-3); }
+.text-warning-4 { color: var(--color-warning-4); }
+.text-warning-5 { color: var(--color-warning-5); }
+.text-warning-6 { color: var(--color-warning-6); }
+.text-warning-7 { color: var(--color-warning-7); }
+
+
+/*  =============================================================================  */
+/*  $6.3 - Styles - Shadow                                                         */
+/*  =============================================================================  */
+
+.shadow-level-0 { box-shadow: var(--shadow-level-0); }
+.shadow-level-1 { box-shadow: var(--shadow-level-1); }
+.shadow-level-2 { box-shadow: var(--shadow-level-2); }
+.shadow-level-3 { box-shadow: var(--shadow-level-3); }
+
+
+/*  =============================================================================  */
+/*  $6.4 - Styles - Space                                                          */
+/*  =============================================================================  */
+
+/* $6.4.1 - Styles - Space - Margin */
+.margin-xs { margin: var(--space-xs); }
+.margin-s { margin: var(--space-s); }
+.margin-base { margin: var(--space-base); }
+.margin-m { margin: var(--space-m); }
+.margin-l { margin: var(--space-l); }
+.margin-xl { margin: var(--space-xl); }
+.margin-xxl { margin: var(--space-xxl); }
+
+
+/* $6.4.2 - Styles - Space - Margin Top  */
+.margin-top-xs { margin-top: var(--space-xs); }
+.margin-top-s { margin-top: var(--space-s); }
+.margin-top-base { margin-top: var(--space-base); }
+.margin-top-m { margin-top: var(--space-m); }
+.margin-top-l { margin-top: var(--space-l); }
+.margin-top-xl { margin-top: var(--space-xl); }
+.margin-top-xxl { margin-top: var(--space-xxl); }
+
+
+/* $6.4.3 - Styles - Space - Margin Right */
+.margin-right-xs { margin-right: var(--space-xs); }
+.margin-right-s { margin-right: var(--space-s); }
+.margin-right-base { margin-right: var(--space-base); }
+.margin-right-m { margin-right: var(--space-m); }
+.margin-right-l { margin-right: var(--space-l); }
+.margin-right-xl { margin-right: var(--space-xl); }
+.margin-right-xxl { margin-right: var(--space-xxl); }
+
+
+/* $6.4.4 - Styles - Space - Margin Bottom */
+.margin-bottom-none { margin-bottom: 0; }
+.margin-bottom-xs { margin-bottom: var(--space-xs); }
+.margin-bottom-s { margin-bottom: var(--space-s); }
+.margin-bottom-base { margin-bottom: var(--space-base); }
+.margin-bottom-m { margin-bottom: var(--space-m); }
+.margin-bottom-l { margin-bottom: var(--space-l); }
+.margin-bottom-xl { margin-bottom: var(--space-xl); }
+.margin-bottom-xxl { margin-bottom: var(--space-xxl); }
+
+
+/* $6.4.5 - Styles - Space - Margin Left */
+.margin-left-xs { margin-left: var(--space-xs); }
+.margin-left-s { margin-left: var(--space-s); }
+.margin-left-base { margin-left: var(--space-base); }
+.margin-left-m { margin-left: var(--space-m); }
+.margin-left-l { margin-left: var(--space-l); }
+.margin-left-xl { margin-left: var(--space-xl); }
+.margin-left-xxl { margin-left: var(--space-xxl); }
+
+
+/* $6.4.6 - Styles - Space - Margin Vertical */
+.margin-y-xs {
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+}
+.margin-y-s {
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-s);
+}
+.margin-y-base {
+    margin-top: var(--space-base);
+    margin-bottom: var(--space-base);
+}
+.margin-y-m {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
+}
+
+.margin-y-l {
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+}
+.margin-y-xl {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+.margin-y-xxl {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+}
+
+
+/* $6.4.7 - Styles - Space - Margin Horizontal */
+.margin-x-xs {
+    margin-left: var(--space-xs);
+    margin-right: var(--space-xs);
+}
+.margin-x-s {
+    margin-left: var(--space-s);
+    margin-right: var(--space-s);
+}
+.margin-x-base {
+    margin-left: var(--space-base);
+    margin-right: var(--space-base);
+}
+.margin-x-m {
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
+}
+.margin-x-l {
+    margin-left: var(--space-l);
+    margin-right: var(--space-l);
+}
+.margin-x-xl {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
+}
+.margin-x-xxl {
+    margin-left: var(--space-xxl);
+    margin-right: var(--space-xxl);
+}
+
+
+/* $6.4.8 - Styles - Space - Padding */
+.padding-xs { padding: var(--space-xs); }
+.padding-s { padding: var(--space-s); }
+.padding-base { padding: var(--space-base); }
+.padding-m { padding: var(--space-m); }
+.padding-l { padding: var(--space-l); }
+.padding-xl { padding: var(--space-xl); }
+.padding-xxl { padding: var(--space-xxl); }
+
+
+/* $6.4.9 - Styles - Space - Padding Top */
+.padding-top-xs { padding-top: var(--space-xs); }
+.padding-top-s { padding-top: var(--space-s); }
+.padding-top-base { padding-top: var(--space-base); }
+.padding-top-m { padding-top: var(--space-m); }
+.padding-top-l { padding-top: var(--space-l); }
+.padding-top-xl { padding-top: var(--space-xl); }
+.padding-top-xxl { padding-top: var(--space-xxl); }
+
+
+/* $6.4.10 - Styles - Space - Padding Right */
+.padding-right-xs { padding-right: var(--space-xs); }
+.padding-right-s { padding-right: var(--space-s); }
+.padding-right-base { padding-right: var(--space-base); }
+.padding-right-m { padding-right: var(--space-m); }
+.padding-right-l { padding-right: var(--space-l); }
+.padding-right-xl { padding-right: var(--space-xl); }
+.padding-right-xxl { padding-right: var(--space-xxl); }
+
+
+/* $6.4.11 - Styles - Space - Padding Bottom */
+.padding-bottom-xs { padding-bottom: var(--space-xs); }
+.padding-bottom-s { padding-bottom: var(--space-s); }
+.padding-bottom-base { padding-bottom: var(--space-base); }
+.padding-bottom-m { padding-bottom: var(--space-m); }
+.padding-bottom-l { padding-bottom: var(--space-l); }
+.padding-bottom-xl { padding-bottom: var(--space-xl); }
+.padding-bottom-xxl { padding-bottom: var(--space-xxl); }
+
+
+/* $6.4.12 - Styles - Space - Padding Left */
+.padding-left-xs { padding-left: var(--space-xs); }
+.padding-left-s { padding-left: var(--space-s); }
+.padding-left-base { padding-left: var(--space-base); }
+.padding-left-m { padding-left: var(--space-m); }
+.padding-left-l { padding-left: var(--space-l); }
+.padding-left-xl { padding-left: var(--space-xl); }
+.padding-left-xxl { padding-left: var(--space-xxl); }
+
+
+/* $6.4.13 - Styles - Space - Padding Vertical */
+.padding-y-xs {
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+}
+.padding-y-s {
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
+}
+.padding-y-base {
+    padding-top: var(--space-base);
+    padding-bottom: var(--space-base);
+}
+.padding-y-m {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+}
+.padding-y-l {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+}
+.padding-y-xl {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+.padding-y-xxl {
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
+}
+
+
+/* $6.4.14 - Styles - Space - Padding Horizontal */
+.padding-x-xs {
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+}
+.padding-x-s {
+    padding-left: var(--space-s);
+    padding-right: var(--space-s);
+}
+.padding-x-base {
+    padding-left: var(--space-base);
+    padding-right: var(--space-base);
+}
+.padding-x-m {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+}
+.padding-x-l {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+}
+.padding-x-xl {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+}
+.padding-x-xxl {
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
+}
+
+
+/*  =============================================================================  */
+/*  $6.5 - Styles - Typography                                                     */
+/*  =============================================================================  */
+
+.noto-sans {
+    font-family: 'noto-sans', sans-serif;  
+}
+
+/* $6.5.1 - Styles - Typography - Sizes */
+
+.font-size-display {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading4 {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading5 {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading6 {
+    font-size: var(--font-size-h6);
+    font-weight: var(--font-semi-bold);
+}
+
+.font-size-base { font-size: var(--font-size-base); }
+.font-size-s { font-size: var(--font-size-s); }
+.font-size-xs { font-size: var(--font-size-xs); }
+
+.source-code-text {
+    font-family: 'Source Code Pro', monospace;
+    font-size: var(--font-size-s);   
+}
+
+/* $6.5.1 - Styles - Typography - Weight */
+.font-regular { font-weight: var(--font-regular); }
+.font-semi-bold { font-weight: var(--font-semi-bold); }
+
+
+/*  =============================================================================  */
+/*  $7 - Service Studio Preview                                                    */
+/*  =============================================================================  */
+
+/* $3.1 - Layout - Screen  */
+.pds-layout .sidebar-right {
+    
+    
+    
+    
+    
+}
+
+.pds-layout .sidebar-left {
+    
+    
+    
+    
+}
+
+.pds-layout .main {
+    
+}
+
+.pds-layout-above-main-content,
+.pds-layout-footer {
+    
+}
+
+
+/* $3.2 - Layout - Login  */
+.pds-login-left {
+    
+}
+
+.pds-login-left-title {
+          
+}
+
+
+.pds-login-left-sub-title {
+     
+}
+
+.pds-login-right {
+    
+}
+
+
+/* $5.8 - Patterns - Button Loading */
+.btn .loading-spinner-preview {
+    
+    
+    
+        
+}
+
+
+/* $5.12 - Patterns - CSAT Emoji */
+.csat-emoji-active-state {
+    
+        
+}
+
+
+/* $5.13 - Patterns - Dropdown MultiSelect */
+.multiselect-dropdown-wrapper {
+    
+    
+}
+
+.multiselect-label:after {
+    
+}
+
+
+/* $5.16 - Patterns - Loading  */
+.loading-spinner-preview {
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+/* $5.20 - Patterns - Popup */
+.popup-background:before {
+        
+} 
+
+.popup-dialog  {
+    
+    
+    
+    
+    
+    
+        
+}
+
+
+
+/* $5.21 - Patterns - SVG */
+.svg-code-preview {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

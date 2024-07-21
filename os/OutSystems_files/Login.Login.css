@@ -1,0 +1,633 @@
+﻿/* ===================================================================== */
+/*  The following CSS was created using Theme Editor.                    */
+/*  To modify this CSS, click "Open Theme Editor".                       */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/*  Root - CSS Variables                                                 */
+/* ===================================================================== */
+
+:root {
+	
+    /* Color - Brand */
+    --color-primary: #f22800;
+    --color-secondary: #f22800;
+
+    --color-primary-hover: #b61e19;
+    --color-primary-selected: rgba(242, 40, 0, .12);
+	
+    /* App Settings */
+    --color-background-body: #ffffff;
+    --color-background-login: #d24d57;
+    --header-color: #ffffff;
+	
+    /* Dark Theme */
+    --background-dark-theme: rgba(255, 255, 255, .1);
+    --background-dark-theme-hover: rgba(255, 255, 255, .2);
+}
+
+/* Login and Splash Color */
+
+.login-screen,
+.layout-native .login-screen {
+    background-color: var(--color-background-login);
+}
+
+.login-form,
+.tablet .layout-native .login-form {
+    background-color: var(--background-dark-theme);
+}
+
+.login-screen .animated-label-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.splash-loading {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.splash-loading-bar {
+    background: var(--color-neutral-0);
+}
+
+.login-screen label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-screen [class*='text-neutral'] {
+    color: var(--color-neutral-0);
+}
+
+:root {
+
+    /* Typography - Size */
+    --font-size-display: 3.75rem; /*60px*/
+    
+    --font-size-h1: 2.25rem; /*36px*/
+    --font-size-h2: 2rem; /*32px*/
+    --font-size-h3: 1.75rem; /*28px*/
+    --font-size-h4: 1.625rem; /*26px*/
+    --font-size-h5: 1.5rem; /*24px*/
+    --font-size-h6: 1.375rem; /*22px*/
+    --font-size-h7: 1.25rem; /*20px*/
+    --font-size-h8: 1.125rem; /*18px*/
+    --font-size-h9: 1rem; /*16px*/
+
+    --font-size-base: 1rem; /*16px*/
+    --font-size-xxl: 1.375rem; /*22px*/
+    --font-size-xl: 1.25rem; /*20px*/
+    --font-size-l: 1.125rem; /*18px*/
+    --font-size-m: 1rem; /*16px*/
+    --font-size-s: 0.875rem; /*14px*/
+    --font-size-xs: 0.75rem; /*12px*/
+    --font-size-xxs: 0.625rem; /*10px*/
+
+    /* Typography - Weight */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+
+   /* Color - Neutral */
+    --color-neutral-0: #f5f6fa;
+    --color-neutral-1: #dedfe4;
+    --color-neutral-2: #c6c9ce;
+    --color-neutral-3: #afb2b8;
+    --color-neutral-4: #979ca2;
+    --color-neutral-5: #80858c;
+    --color-neutral-6: #686e76;
+    --color-neutral-7: #515860;
+    --color-neutral-8: #39414a;
+    --color-neutral-9: #222b34;
+    --color-neutral-10: #0a141e;
+    
+    /* Border Radius */
+    --border-radius-none: 0;
+    --border-radius-soft-rounded: 3px;
+    --border-radius-mid-rounded: 6px;
+    --border-radius-hard-rounded: 100px;
+    --border-radius-circle: 100%;
+    
+    /* Border Size */
+    --border-size-none: 0;
+    --border-size-s: 1px;
+    --border-size-m: 2px;
+    --border-size-l: 3px;
+
+    /* Elevation / Shadow */
+    --shadow-none: none;
+    --shadow-s: 0 3px 8px 0 rgba(10,20,30,0.1);
+    --shadow-m: 0 5px 10px 0 rgba(10,20,30,0.1);
+    --shadow-l: 0 7px 15px 0 rgba(10,20,30,0.1);
+}
+
+/* ================================================================ */
+/*  $2 - Styles                                                     */
+/* ================================================================ */
+
+/* ================================================================ */
+/*  $2.1 - Styles - Typography                                      */
+/* ================================================================ */
+
+/* $2.1.1 - Styles - Typography - Sizes Desktop */
+.font-size-display {
+    color: var(--color-neutral-10);
+    font-family: 'Cabin',Arial,Helvetica,sans-serif;
+    font-size: var(--font-size-display);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+}
+
+h1, .heading1,
+h2, .heading2,
+h3, .heading3,
+h4, .heading4,
+h5, .heading5,
+h6, .heading6,
+h7, .heading7,
+h8, .heading8,
+h9, .heading9 { 
+    font-family: 'Cabin', Arial, Helvetica, sans-serif;
+}
+
+h1,
+.heading1 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h2,
+.heading2 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h3,
+.heading3 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h4,
+.heading4 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h5,
+.heading5 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h6,
+.heading6 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h6);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h7,
+.heading7 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h7);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h8,
+.heading8 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h8);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+h9,
+.heading9 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h9);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6,
+a .heading1,
+a .heading2,
+a .heading3,
+a .heading4,
+a .heading5,
+a .heading6 {
+    color: inherit;
+}
+
+
+body {
+   background-color: transparent;
+}
+
+
+.input.font-size-base,
+.font-size-base { font-size: var(--font-size-base); }
+.input.font-size-xxl,
+.font-size-xxl { font-size: var(--font-size-xxl); }
+.input.font-size-xl,
+.font-size-xl { font-size: var(--font-size-xl); }
+.input.font-size-l,
+.font-size-l { font-size: var(--font-size-l); }
+.input.font-size-m,
+.font-size-m { font-size: var(--font-size-m); }
+.input.font-size-s,
+.font-size-s { font-size: var(--font-size-s); }
+.input.font-size-xs,
+.font-size-xs { font-size: var(--font-size-xs); }
+.input.font-size-xxs,
+.font-size-xxs { font-size: var(--font-size-xxs); }
+
+
+.max-width-initial {
+    max-width: initial;
+}
+
+.Page {
+    overflow: auto;
+}
+
+.login-content .signup-maincontent {
+    margin-top: 130px;
+    max-width: 400px;
+}
+
+
+.signup-maincontent {
+    margin: auto;
+    margin-top: 130px;
+    max-width: 650px;
+}
+
+
+.corporate-link, .header-login div a:first-child {
+    display: none;
+}
+
+a.no-decoration:hover {
+    text-decoration: none;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 450px) {
+    .signup-maincontent {
+        margin-top: 100px;
+        width: 95%;
+    }
+    
+    .provisioning-input {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 764px) {    
+    .signup-maincontent {
+        margin-top: 100px;
+        width: 90%;
+    }
+    
+    .provisioning-input {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 765px) and (max-width: 1023px) {
+    .signup-maincontent {
+        margin-top: 100px;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+   
+}
+
+/* Input */
+
+.signup-maincontent .Form input.ReadOnly[readonly="readonly"] {
+    background: var(--color-neutral-0);
+}
+
+.signup-maincontent .Form input.ReadOnly:not(.Not_Valid), 
+.signup-maincontent .Form textarea.ReadOnly:not(.Not_Valid), 
+.signup-maincontent .Form select.ReadOnly:not(.Not_Valid) {
+    border: var(--border-size-s) solid var(--color-neutral-1);
+}
+
+/* Button */ 
+
+.signup-maincontent .os-btn-cancel, .signup-maincontent a.os-btn-cancel:visited {
+    border: var(--border-size-s) solid var(--color-neutral-6);
+}
+
+.signup-maincontent [class*="os-btn"], .signup-maincontent [class*="os-btn"]:visited {
+    height: var(--space-xxl);
+}
+
+.signup-maincontent [class*="os-btn"].is-running {
+    background-color: var(--color-secondary);
+    pointer-events: none;
+    position: relative;
+}
+
+.signup-maincontent [class*="os-btn"].is-running > * {
+    position: absolute;
+}
+
+.signup-maincontent [class*="os-btn"].is-running > .fa-fw {
+    margin-left: -180px;
+}
+
+.signup-maincontent [class*="os-btn"]:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    width: 0;
+    height: var(--space-xxl);
+    background-color: var(--color-primary);
+    border-top-left-radius: var(--border-radius-mid-rounded);
+    border-bottom-left-radius: var(--border-radius-mid-rounded);
+    transition: width 14s ease-out;
+}
+
+.signup-maincontent [class*="os-btn"].is-running:before {
+    width: 80%;
+}
+
+
+/* Checkbox */
+
+.signup-maincontent .Form input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.signup-maincontent .checkbox:focus:before,
+.signup-maincontent .radio-button:focus:before,
+.signup-maincontent .TableRecords .TableRecords_Header [type="checkbox"]:focus:before {
+    box-shadow: none;
+}
+
+.signup-maincontent .Form input[type="checkbox"].ReadOnly:not(.Not_Valid) {
+    border: none;
+}
+
+/* Costumized classes */
+
+ /* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--color-neutral-4);
+}
+.separator.separator-text::before {
+    margin-right: 1em;
+}
+
+.separator.separator-text::after {
+    margin-left: 1em;
+}
+
+.signup-maincontent .signup-newaccount .card {
+    padding: var(--space-s);
+}
+
+ /* sticky-box */
+.signup-maincontent .sticky-box {
+    overflow-y: auto;
+    height: 340px;
+    max-height: 340px;
+    
+    overflow: auto;
+}
+
+/* Other */
+
+.input.selected {
+    background-color: var(--color-transparent);
+    border-radius: var(--border-radius-soft);
+    box-shadow: inset 0px 0px 0px 2px var(--color-neutral-5);
+    /*border: var(--border-size-s) solid var(--color-green);*/   
+}
+    
+    
+.opacity-light {
+    opacity: 0.3;
+}
+
+.grecaptcha-badge {
+    margin-bottom: 95px;
+}
+
+.largeinput.input {
+    height: 55px;
+
+}
+
+.forgotlkn{
+ float: right; 
+ font-size: 14px;
+ }
+ 
+.DisplayNone {
+    display: none;
+}
+
+[data-input]:disabled {
+    background-color: var(--color-neutral-2);
+    color: var(--color-neutral-6);
+ 
+}
+
+.signup-maincontent select,
+.signup-maincontent select.ReadOnly,
+.signup-maincontent .Form select,
+.signup-maincontent .Form select.ReadOnly {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAOCAYAAAA8E3wEAAAAAXNSR0IArs4c6QAAAgpJREFUOBGlU79LW1EUPvfFPLQOQh06OPgHuKlV82NwqBYsndRSwTUPqVgpJS9DlyyCJFSUYKWR/gVugi46SCXRYNOpmq4OGTq0oKCBp32353vw5PblRtN6lnffOd+Pm7zvCOKy5pJFSTJCQux0PWwfS6fT1+jft1inpfrrYpukHBEkDvK5bNSAaNg0p9jsBwbVn5cf7mvk8z0t1oS258GDEIZHB/tnA9H4ZzacJpKD/UOxWrlULPjE/3lar5M2a6WEoFooZDxdW1o8gY5niMOXw0K1PxKvSClf8OuTvkjs29dSsYLZv1ZiPjnOl8+DZ4SMlx+XM7u+xo0hGuXDQoVNLxk8KoieP47Gd3ARH9zMc+aNPUCu3GRsWBhGKr+S+aTyWLe+EnM2385N4L83w+bg6vuF03pUfWf27btu58op8YUf8W9bX89lrCDKC02w2dX54BUSC6LjOFtWKtURxATfgQHWM0PaoaEprSHWolW2TxCJY/7wPbLmbiDiGr7XwgwYYMEBFxo6vNYQwFwufW6a5rNm1kWNPzjg6szQ+ys0QVDdunCgyqVCUcU1ir+KUc+3GgKIlPYOxb6TpEn+PiPquqjxJ0NM5ZezN/FXTdSzNqUqwD9b83ZSum4Gi8y7NYy++9vdk5LaOP42xz+L3l3VtCGE1HXxhG+JfyPjhqHREdR1uSv+Oj56fwCOW+0Oio0XpwAAAABJRU5ErkJggg==);
+    background-position: center right 16px;
+    background-repeat: no-repeat;
+    background-size: 14px 7px;
+    border-radius: var(--border-radius-soft);
+    background-color: white;
+}
+
+
+.greyedOut {
+    background: var(--color-neutral-0);
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
+
+/* $2.4 - HTML Elements - Inputs and Selectors */
+label.MandatoryLabel:after {
+    color: var(--color-error);
+    content: '*';
+    margin-left: var(--space-xs);
+}
+
+.ValidationMessage {
+    color: var(--color-error);
+    display: block;
+    font-size: var(--font-size-xs);
+    margin-top: var(--space-xs);
+}
+
+input+.ValidationMessage {
+    margin-top: var(--space-xs);
+}
+
+.input, 
+.input-with-icon .input-with-icon-content-icon {
+    background-color: var(--color-white);
+    border-color: var(--color-neutral-4);
+    border-radius: var(--border-radius-mid-rounded);
+   /* border: var(--border-size-s) solid var(--color-neutral-5);*/
+    color: var(--color-neutral-8);
+    font-size: var(--font-size-m);
+    height: 2.5rem;
+    font-family: inherit;
+    line-height: 1.25;
+    appearance: none;
+}
+
+
+.input-with-icon a:focus{
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
+
+.form .input-with-icon .input-with-icon-content-icon{
+  padding-bottom:0;
+}
+
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    border: var(--border-size-s) solid var(--color-neutral-6);
+}
+
+.input,
+.input.Not_Valid {
+    padding: var(--space-none) 0.75rem;
+}
+
+
+
+.input:hover, 
+.textarea:hover, 
+.select:hover {
+    border: var(--border-size-s) solid var(--color-neutral-6);
+}
+
+
+.input.Not_Valid, 
+.textarea.Not_Valid, 
+.select.Not_Valid {
+    border: var(--border-size-s) solid var(--color-error);
+}
+
+.input-small {
+    height: 32px;
+    padding: var(--space-none) var(--space-s);    
+}
+
+.input-large {
+    height: 48px; 
+}
+
+
+h1,
+.heading1 {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.25;
+    margin: 0;
+}
+
+[data-input]:empty {
+    height: 2.5rem;
+}
+
+
+.loginLabel {
+    color: var(--color-neutral-8);
+    font-size: var(--font-size-s);
+    margin-bottom: var(--space-s);
+}
+
+.resetLabel {
+    color: var(--color-neutral-8);
+    font-size: var(--font-size-s);
+}
+
+/*
+.login_confirmpassword_block .input, 
+.input-with-icon .input-with-icon-content-icon {
+    top: 4px;
+    right: 4px !important;
+}*/
+
+.input, .input-with-icon .input-with-icon-content-icon {
+    height: 2.5em;
+}
+
+.input-with-icon span.validation-message {
+    display: block;
+    position: unset;
+}
+
