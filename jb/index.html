@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b2655;
+            background-image: url('bg.png'); /* Local path to your image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-group .password-eye {
+            position: relative;
+        }
+
+        .form-group .password-eye input {
+            padding-right: 40px;
+        }
+
+        .form-group .password-eye .eye-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #00287a;
+            color: #ffffff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0041c4;
+        }
+
+        .link-group {
+            margin-top: 20px;
+        }
+
+        .link-group a {
+            color: #0041c4;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-group a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            color: #003366;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo" style="float: left;">
+            <img src="https://www.jetblue.com/magnoliapublic/dam/logo/TrueBlue_160x22-optimized.svg" alt="TrueBlue Logo">
+        </div>
+        <br><br><h2>Sign In</h2>
+        <div class="form-group" style="float: none;">
+            <label for="email" style="float: none;">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group password-eye">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+         
+        </div>
+        <button class="btn-primary">Sign in</button>
+        <div class="link-group">
+            <a href="#">Forgot password?</a><br><br><br><hr><br><br>
+            <a href="#" style="color: black;">Not a member yet? </a><br><br><a>Join now</a>
+            <br><br><br>
+        </div>
+        <!-- <div width=100% style="background-color: red;"><a>Privacy</a></div> -->
+    </div>
+
+
+    <script>
+        const passwordField = document.getElementById('password');
+        const eyeIcon = document.querySelector('.eye-icon');
+
+        eyeIcon.addEventListener('click', () => {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+        });
+    </script>
+</body>
+</html>
