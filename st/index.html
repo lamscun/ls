@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light;" class="light"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://rsms.me/" rel="preconnect"><link rel="stylesheet" href="streamlit_Sign%20in_files/7eeecd724d4b6762.css" data-precedence="next"><link rel="stylesheet" href="streamlit_Sign%20in_files/9773e2b7eac32e04.css" data-precedence="next"><link rel="stylesheet" href="streamlit_Sign%20in_files/9c76d98f250ad12b.css" data-precedence="next"><link rel="stylesheet" href="streamlit_Sign%20in_files/85c0819d265b1ca4.css" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" href="streamlit_Sign%20in_files/webpack-065532320042cb4a.js"><script src="streamlit_Sign%20in_files/8b504d2e-cfd1140f94cbf861.js" async=""></script><script src="streamlit_Sign%20in_files/3139-81a80a96ad23f571.js" async=""></script><script src="streamlit_Sign%20in_files/main-app-76c98a82a344e617.js" async=""></script><script src="streamlit_Sign%20in_files/cce9da5c-5af1fca77ed50e03.js" async=""></script><script src="streamlit_Sign%20in_files/8083-24b235f15ab9616d.js" async=""></script><script src="streamlit_Sign%20in_files/9706-6f8250d8ca500bd6.js" async=""></script><script src="streamlit_Sign%20in_files/global-error-627953ffba2c87f5.js" async=""></script><script src="streamlit_Sign%20in_files/6568-2e741fe49724f380.js" async=""></script><script src="streamlit_Sign%20in_files/error-bc7da189544e227d.js" async=""></script><script src="streamlit_Sign%20in_files/7120-0efee8be2eca238c.js" async=""></script><script src="streamlit_Sign%20in_files/2208-2b1d71e3b05e60ba.js" async=""></script><script src="streamlit_Sign%20in_files/5556-10de4dadd854243e.js" async=""></script><script src="streamlit_Sign%20in_files/1185-8ddcfbbe64b930c3.js" async=""></script><script src="streamlit_Sign%20in_files/page-c22c869cfd2e2c10.js" async=""></script><script src="streamlit_Sign%20in_files/6298-8ac28212f7be7d6e.js" async=""></script><script src="streamlit_Sign%20in_files/layout-3b978e925683ab78.js" async=""></script><title>Sign in</title><link href="https://workos.imgix.net/app-branding/environment_01EZ8RPVBGBS583V7K99N191R0/01HTHSFTQT004QY7SR1K8PGA07" rel="icon"><link href="https://workos.imgix.net/app-branding/environment_01EZ8RPVBGBS583V7K99N191R0/01HTHSFTQT004QY7SR1K8PGA07" media="(prefers-color-scheme: light)" rel="icon"><script src="streamlit_Sign%20in_files/polyfills-c67a75d1b6f99dc8.js" nomodule=""></script><script id="cf-turnstile-script__cf-turnstile" src="streamlit_Sign%20in_files/api.js" defer="defer" async=""></script></head><body><link href="streamlit_Sign%20in_files/inter.css" rel="stylesheet"><style>
+              
+
+.radix-themes {
+  --cursor-button: pointer;
+  --cursor-disabled: default;
+  --cursor-link: pointer;
+  --cursor-menu-item: pointer;
+  --cursor-slider-thumb: pointer;
+  --cursor-slider-thumb-active: pointer;
+  --cursor-switch: pointer;
+
+  --system-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --default-font-family: Inter, var(--system-font-family);
+  --heading-font-family: InterDisplay, var(--system-font-family);
+  --font-weight-bold: 600;
+
+  --code-padding-top: 0em;
+  --code-padding-bottom: 0.075em;
+  --code-font-family: 'IBM Plex Mono', 'Menlo', monospace, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+
+  --marker-font-size-adjust: 0.97222;
+  --marker-font-weight: 500;
+
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+  .radix-themes {
+    --default-font-family: InterVariable, var(--system-font-family);
+    --heading-font-family: InterVariable, var(--system-font-family);
+  }
+}
+
+
+:root, .light, .light-theme {
+  --branded-link-color: #1C83E1;
+  --branded-link-text-decoration-color: #1c83e166;
+  --branded-button-color: #FFFFFF;
+  --branded-button-background: #262730;
+  --branded-button-hover-background: #3a3b45;
+  --branded-button-active-background: #4b4d57;
+  --branded-button-box-shadow-color: transparent;
+  --branded-page-background: #FCFCFC;
+}
+
+.dark, .dark-theme {
+  --branded-link-color: #1C83E1;
+  --branded-link-text-decoration-color: #1c83e166;
+  --branded-button-color: #262730;
+  --branded-button-background: #FFFFFF;
+  --branded-button-hover-background: #f6f6f6;
+  --branded-button-active-background: #ededed;
+  --branded-button-box-shadow-color: transparent;
+  --branded-page-background: #000000;
+}
+
+.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme) {
+  --accent-1: #fcfcfe;
+  --accent-2: #f9f9fc;
+  --accent-3: #eff0f5;
+  --accent-4: #e7e8ef;
+  --accent-5: #dfe0e9;
+  --accent-6: #d8d9e3;
+  --accent-7: #ccceda;
+  --accent-8: #b9bbcb;
+  --accent-9: #262730;
+  --accent-10: #3a3b45;
+  --accent-11: #626470;
+  --accent-12: #1f2028;
+
+  --accent-a1: #0000aa03;
+  --accent-a2: #00008006;
+  --accent-a3: #00106010;
+  --accent-a4: #000b5518;
+  --accent-a5: #00085020;
+  --accent-a6: #00074827;
+  --accent-a7: #000a4633;
+  --accent-a8: #00084246;
+  --accent-a9: #00010cd9;
+  --accent-a10: #00010ec5;
+  --accent-a11: #0004179d;
+  --accent-a12: #00010ae0;
+
+  --gray-1: #fcfcfc;
+  --gray-2: #f9f9f9;
+  --gray-3: #f0f0f0;
+  --gray-4: #e8e8e8;
+  --gray-5: #e0e0e0;
+  --gray-6: #d9d9d9;
+  --gray-7: #cecece;
+  --gray-8: #bbb;
+  --gray-9: #8d8d8d;
+  --gray-10: #838383;
+  --gray-11: #646464;
+  --gray-12: #202020;
+
+  --gray-a1: #00000003;
+  --gray-a2: #00000006;
+  --gray-a3: #0000000f;
+  --gray-a4: #00000017;
+  --gray-a5: #0000001f;
+  --gray-a6: #00000026;
+  --gray-a7: #00000031;
+  --gray-a8: #00000044;
+  --gray-a9: #00000072;
+  --gray-a10: #0000007c;
+  --gray-a11: #0000009b;
+  --gray-a12: #000000df;
+
+  --accent-track: var(--accent-9);
+  --accent-indicator: var(--accent-9);
+  --accent-contrast: #fff;
+  --gray-surface: #ffffffcc;
+}
+
+.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme), :where(.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme)) [data-accent-color] {
+  --focus-1: #fbfdff;
+  --focus-2: #f5faff;
+  --focus-3: #e9f3fe;
+  --focus-4: #dcedff;
+  --focus-5: #cae3ff;
+  --focus-6: #b5d6fb;
+  --focus-7: #9bc5f4;
+  --focus-8: #73aded;
+  --focus-9: #2591f6;
+  --focus-10: #2589e7;
+  --focus-11: #1f75c6;
+  --focus-12: #08355f;
+
+  --focus-a1: #0080ff04;
+  --focus-a2: #0080ff0a;
+  --focus-a3: #0074f416;
+  --focus-a4: #007cff23;
+  --focus-a5: #0079ff35;
+  --focus-a6: #0172f24a;
+  --focus-a7: #006ce364;
+  --focus-a8: #006adf8c;
+  --focus-a9: #007ef5da;
+  --focus-a10: #0075e3da;
+  --focus-a11: #0062bee0;
+  --focus-a12: #002e5af7;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .radix-themes:not(.dark, .dark-theme),
+    .radix-themes:is(.light, .light-theme) {
+      --accent-a1: color(display-p3 0.0235 0.0235 0.6745 / 0.012);
+      --accent-a2: color(display-p3 0.0235 0.0235 0.5137 / 0.024);
+      --accent-a3: color(display-p3 0.0078 0.0667 0.3804 / 0.063);
+      --accent-a4: color(display-p3 0.0118 0.051 0.302 / 0.095);
+      --accent-a5: color(display-p3 0.0078 0.0353 0.2863 / 0.126);
+      --accent-a6: color(display-p3 0.0039 0.0275 0.2588 / 0.153);
+      --accent-a7: color(display-p3 0 0.0392 0.2549 / 0.2);
+      --accent-a8: color(display-p3 0.0039 0.0314 0.2471 / 0.275);
+      --accent-a9: color(display-p3 0 0.0039 0.0431 / 0.851);
+      --accent-a10: color(display-p3 0 0.0039 0.051 / 0.773);
+      --accent-a11: color(display-p3 0 0.0157 0.0824 / 0.616);
+      --accent-a12: color(display-p3 0 0.0039 0.0353 / 0.879);
+
+      --gray-a1: color(display-p3 0 0 0 / 0.0118);
+      --gray-a2: color(display-p3 0 0 0 / 0.0235);
+      --gray-a3: color(display-p3 0 0 0 / 0.0588);
+      --gray-a4: color(display-p3 0 0 0 / 0.0902);
+      --gray-a5: color(display-p3 0 0 0 / 0.1216);
+      --gray-a6: color(display-p3 0 0 0 / 0.149);
+      --gray-a7: color(display-p3 0 0 0 / 0.1922);
+      --gray-a8: color(display-p3 0 0 0 / 0.2667);
+      --gray-a9: color(display-p3 0 0 0 / 0.4471);
+      --gray-a10: color(display-p3 0 0 0 / 0.4863);
+      --gray-a11: color(display-p3 0 0 0 / 0.6078);
+      --gray-a12: color(display-p3 0 0 0 / 0.8745);
+    }
+
+    .radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme), :where(.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme)) [data-accent-color] {
+      --focus-a1: color(display-p3 0.0235 0.5137 1 / 0.016);
+      --focus-a2: color(display-p3 0.0235 0.4588 0.8941 / 0.036);
+      --focus-a3: color(display-p3 0.0078 0.4078 0.902 / 0.079);
+      --focus-a4: color(display-p3 0.0078 0.4118 0.9412 / 0.126);
+      --focus-a5: color(display-p3 0.0078 0.4 0.9412 / 0.189);
+      --focus-a6: color(display-p3 0.0039 0.3843 0.898 / 0.267);
+      --focus-a7: color(display-p3 0.0039 0.3608 0.8392 / 0.361);
+      --focus-a8: color(display-p3 0.0039 0.3412 0.8196 / 0.499);
+      --focus-a9: color(display-p3 0 0.3882 0.9137 / 0.718);
+      --focus-a10: color(display-p3 0 0.3569 0.8353 / 0.73);
+      --focus-a11: color(display-p3 0 0.2902 0.6784 / 0.773);
+      --focus-a12: color(display-p3 0 0.1255 0.298 / 0.91);
+    }
+  }
+}
+
+:is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme) {
+  --accent-1: #111114;
+  --accent-2: #18191c;
+  --accent-3: #212226;
+  --accent-4: #28292f;
+  --accent-5: #2f3037;
+  --accent-6: #383942;
+  --accent-7: #454751;
+  --accent-8: #5d5f6e;
+  --accent-9: #262730;
+  --accent-10: #3a3b44;
+  --accent-11: #b2b3bd;
+  --accent-12: #edeef1;
+
+  --accent-a1: #d9d9ff14;
+  --accent-a2: #dbe4ff1c;
+  --accent-a3: #dee5ff26;
+  --accent-a4: #dadfff2f;
+  --accent-a5: #dadfff37;
+  --accent-a6: #d9ddff42;
+  --accent-a7: #dae0ff51;
+  --accent-a8: #d8ddff6e;
+  --accent-a9: #cad0ff30;
+  --accent-a10: #dadeff44;
+  --accent-a11: #f0f2ffbd;
+  --accent-a12: #fbfcfff1;
+
+  --gray-1: #000;
+  --gray-2: #191919;
+  --gray-3: #191919;
+  --gray-4: #191919;
+  --gray-5: #1e1e1e;
+  --gray-6: #242424;
+  --gray-7: #2e2e2e;
+  --gray-8: #3f3f3f;
+  --gray-9: #494949;
+  --gray-10: #5d5d5d;
+  --gray-11: #9e9e9e;
+  --gray-12: #eee;
+
+  --gray-a1: #00000000;
+  --gray-a2: #ffffff19;
+  --gray-a3: #ffffff19;
+  --gray-a4: #ffffff19;
+  --gray-a5: #ffffff1e;
+  --gray-a6: #ffffff24;
+  --gray-a7: #ffffff2e;
+  --gray-a8: #ffffff3f;
+  --gray-a9: #ffffff49;
+  --gray-a10: #ffffff5d;
+  --gray-a11: #ffffff9e;
+  --gray-a12: #ffffffee;
+
+  --accent-track: var(--accent-9);
+  --accent-indicator: var(--accent-9);
+  --accent-contrast: #262730;
+  --gray-surface: rgba(0, 0, 0, 0.05);
+}
+
+.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme), :where(.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme)) [data-accent-color] {
+  --focus-1: #0d151e;
+  --focus-2: #101a25;
+  --focus-3: #102943;
+  --focus-4: #0a345c;
+  --focus-5: #13406d;
+  --focus-6: #1d4e7f;
+  --focus-7: #295e95;
+  --focus-8: #3271b3;
+  --focus-9: #3091f1;
+  --focus-10: #4f9ef2;
+  --focus-11: #7eb7f6;
+  --focus-12: #cce3fe;
+
+  --focus-a1: #6fb3ff1e;
+  --focus-a2: #6fb4ff25;
+  --focus-a3: #3d9dff43;
+  --focus-a4: #1c91ff5c;
+  --focus-a5: #2d96ff6d;
+  --focus-a6: #3b9dff7f;
+  --focus-a7: #47a1ff95;
+  --focus-a8: #47a1ffb3;
+  --focus-a9: #3399fff1;
+  --focus-a10: #53a7fff2;
+  --focus-a11: #83befff6;
+  --focus-a12: #cde4fffe;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme) {
+      --accent-a1: color(display-p3 0.8471 0.8471 0.9961 / 0.079);
+      --accent-a2: color(display-p3 0.8588 0.8941 1 / 0.11);
+      --accent-a3: color(display-p3 0.8627 0.8902 0.9961 / 0.15);
+      --accent-a4: color(display-p3 0.8667 0.8902 1 / 0.181);
+      --accent-a5: color(display-p3 0.8706 0.8902 1 / 0.212);
+      --accent-a6: color(display-p3 0.8627 0.8784 1 / 0.255);
+      --accent-a7: color(display-p3 0.8627 0.8902 1 / 0.314);
+      --accent-a8: color(display-p3 0.8549 0.8706 1 / 0.428);
+      --accent-a9: color(display-p3 0.8078 0.8275 1 / 0.185);
+      --accent-a10: color(display-p3 0.8667 0.8824 1 / 0.263);
+      --accent-a11: color(display-p3 0.9451 0.9529 1 / 0.738);
+      --accent-a12: color(display-p3 0.9843 0.9882 1 / 0.946);
+
+      --gray-a1: color(display-p3 0 0 0 / 0);
+      --gray-a2: color(display-p3 1 1 1 / 0.098);
+      --gray-a3: color(display-p3 1 1 1 / 0.098);
+      --gray-a4: color(display-p3 1 1 1 / 0.098);
+      --gray-a5: color(display-p3 1 1 1 / 0.1176);
+      --gray-a6: color(display-p3 1 1 1 / 0.1412);
+      --gray-a7: color(display-p3 1 1 1 / 0.1804);
+      --gray-a8: color(display-p3 1 1 1 / 0.2471);
+      --gray-a9: color(display-p3 1 1 1 / 0.2863);
+      --gray-a10: color(display-p3 1 1 1 / 0.3647);
+      --gray-a11: color(display-p3 1 1 1 / 0.6196);
+      --gray-a12: color(display-p3 1 1 1 / 0.9333);
+    }
+
+    .radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme), :where(.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme)) [data-accent-color] {
+      --focus-a1: color(display-p3 0.5176 0.7255 1 / 0.114);
+      --focus-a2: color(display-p3 0.498 0.7216 0.9961 / 0.142);
+      --focus-a3: color(display-p3 0.3412 0.6157 1 / 0.255);
+      --focus-a4: color(display-p3 0.2588 0.5725 1 / 0.35);
+      --focus-a5: color(display-p3 0.302 0.5961 1 / 0.416);
+      --focus-a6: color(display-p3 0.3412 0.6275 1 / 0.483);
+      --focus-a7: color(display-p3 0.3804 0.6431 1 / 0.569);
+      --focus-a8: color(display-p3 0.3843 0.6431 1 / 0.683);
+      --focus-a9: color(display-p3 0.3294 0.6118 1 / 0.918);
+      --focus-a10: color(display-p3 0.4196 0.6627 1 / 0.922);
+      --focus-a11: color(display-p3 0.5725 0.749 1 / 0.946);
+      --focus-a12: color(display-p3 0.8275 0.898 1 / 0.985);
+    }
+  }
+}
+
+              .radix-themes {
+                --color-background: var(--branded-page-background);
+              }
+              :root body {
+                margin: 0;
+                background-color: var(--branded-page-background);
+              }
+            </style><script>!function(){var d=document.documentElement,c=d.classList;c.remove('light','dark');d.style.colorScheme = 'light';c.add('light')}()</script><div data-is-root-theme="true" data-accent-color="indigo" data-gray-color="slate" data-has-background="true" data-panel-background="translucent" data-radius="small" data-scaling="100%" class="radix-themes"><div style="--grid-template-columns:minmax(0, 440px);--grid-template-rows:repeat(3, min-content);--min-width:320px;--min-height:100dvh;align-content:space-between" class="rt-Grid rt-r-gtc rt-r-gtr rt-r-ai-center rt-r-jc-center rt-r-p-4 rt-r-min-w rt-r-min-h"><div style="grid-row-start:2" class="rt-Flex rt-r-fd-column rt-r-gap-5 rt-r-pt-4 rt-r-pb-9"><div class="rt-Flex rt-r-fd-column rt-r-gap-2"><div class="rt-Flex rt-r-fd-column rt-r-ai-center rt-r-jc-center rt-r-gap-4"><h1 class="rt-Heading rt-r-size-6 rt-r-ta-center rt-r-tw-balance HeaderHeading">Sign in to Streamlit Community Cloud</h1></div></div><div style="display:contents"><div class="rt-reset rt-BaseCard rt-Card rt-r-size-4 xs:rt-r-size-5 rt-variant-surface"><form action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"><input type="hidden" name="state" value="8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4"><input type="hidden" name="redirect_uri" value="https://login.streamlit.io/api/v1/login/share/callback"><input type="hidden" name="authorization_session_id" value="01JDRTTRAYH6CMBH5KCKVYMFB8"><input type="hidden" value="0.ndqwYpdAXZ4pgEE0KPR_XDe_521vK5aq0qkTgJPlpQuKBebRmTugfxq-QOBblp5dcI-lJItLoyOK4VW2wf3_1j58Bm6U6DHe7S6VphxQHcUqaMaJvAxZY3H-QGTS4WPytLpaW7gHNKOGV2u7j2WLkCV7lxSjMbNgueyD73N7wurbWHOgUOEk2FoQqSF-QtKIVncnRlZz7lG0DDPhBUXWffmbyiKnxUyWwiBMQEzEJbEvUBGPIO67wR5cSOx3zP_L9-_egWGlP6fMtSVik8vGj_mDZfbWbKXcaClfKXBB64Io2U0W-ncMRazUuzw9sgunRLuxqICgfPh9YzZ5LYxvIBm2cOEnW47mSkwmaNTgUZj_JZ5EuFniZjjDxEEk9-xK2yLhcjG_htPo0rbMMV9xzu5Z9XOkMmt5i-dZp_vgXf6SpXSoufyWVXM7VS-hCmpx_tzttyr84lLM1kjbUizDZLhN6_TdaMUXQWgcqFPTf6wsI2myTqOyUokRpd7cymtAAUDPvj7Zvg85AR5KOuvxfZnLJmwMIAKSeswbOJfR0STD6GLzmgC05KoznAx63MUnVimtOdLe4LegE1GSNl8BlkWz7hNpgt7pPeKJC1tb-ICcrSRHQaQtY0Ix9n4LLxcvFqAgjbvIjmxjhfkjm4nmImQO-po9mFzVB6RWh_Fh3R4y64JWxxooDsTmosNKpi5Qf0c-GiD-ZGZraQvXqnW9VQ.eq152b8z5QFLqInd_0REiQ.a090611286034bd7bd11bfca5859fcb8ca04059fbd79cc77d2ccb174ae029497" name="bot_detection_token"><div class="rt-Flex rt-r-fd-column rt-r-gap-5"><div class="rt-Flex rt-r-fd-column rt-r-gap-4"><div class="rt-Flex rt-r-fd-column rt-r-gap-2"><div class="rt-Flex"><label for="radix-:R2kr6unleuta:" class="rt-Text rt-r-size-2 rt-r-weight-bold rt-r-lt-start">Email</label></div><div class="rt-TextFieldRoot rt-r-size-3 rt-variant-surface"><input spellcheck="false" autocapitalize="none" autocomplete="username" placeholder="Your email address" type="email" autofocus="" required="" title="" id="radix-:R2kr6unleuta:" class="rt-reset rt-TextFieldInput" name="email"></div></div><button type="submit" class="rt-reset rt-BaseButton rt-Button BrandedButton rt-r-size-3">Continue</button></div><div class="rt-Flex rt-r-ai-center rt-r-jc-center"><span data-accent-color="gray" class="rt-Separator rt-r-orientation-horizontal rt-r-size-4"></span><div class="rt-Flex rt-r-fs-0"><span data-accent-color="gray" style="user-select:none;cursor:default" class="rt-Text rt-r-size-1 rt-r-mx-3">OR</span></div><span data-accent-color="gray" class="rt-Separator rt-r-orientation-horizontal rt-r-size-4"></span></div><div class="rt-Grid rt-r-gap-3"><a href="https://authkit.streamlit.io/api/login?provider=GoogleOAuth&amp;state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4&amp;redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback&amp;client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V&amp;source=signin&amp;authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8" data-accent-color="gray" class="rt-reset rt-BaseButton rt-r-size-3 rt-variant-surface rt-high-contrast rt-Button auth-method-button_AuthMethodButton__irESX"><div style="--width:16px;--height:16px" class="rt-Flex rt-r-ai-center rt-r-jc-center rt-r-w rt-r-h -rt-r-ml-2"><svg fill="none" height="15" viewBox="0 0 16 16" width="15" xmlns="http://www.w3.org/2000/svg"><g><path d="M15.83 8.18C15.83 7.65333 15.7833 7.15333 15.7033 6.66667H8.17V9.67333H12.4833C12.29 10.66 11.7233 11.4933 10.8833 12.06V14.06H13.4567C14.9633 12.6667 15.83 10.6133 15.83 8.18Z" fill="#4285F4"></path><path d="M8.17 16C10.33 16 12.1367 15.28 13.4567 14.06L10.8833 12.06C10.1633 12.54 9.25 12.8333 8.17 12.8333C6.08334 12.8333 4.31667 11.4267 3.68334 9.52667H1.03V11.5867C2.34334 14.2 5.04334 16 8.17 16Z" fill="#34A853"></path><path d="M3.68334 9.52667C3.51667 9.04667 3.43 8.53333 3.43 8C3.43 7.46667 3.52334 6.95334 3.68334 6.47334V4.41334H1.03C0.483335 5.49334 0.170002 6.70667 0.170002 8C0.170002 9.29333 0.483335 10.5067 1.03 11.5867L3.68334 9.52667Z" fill="#FBBC05"></path><path d="M8.17 3.16667C9.35 3.16667 10.4033 3.57334 11.2367 4.36667L13.5167 2.08667C12.1367 0.793334 10.33 0 8.17 0C5.04334 0 2.34334 1.8 1.03 4.41334L3.68334 6.47334C4.31667 4.57334 6.08334 3.16667 8.17 3.16667Z" fill="#EA4335"></path></g></svg></div><span class="rt-Text rt-r-size-2 xs:rt-r-size-3 -rt-r-mr-2">Continue with Google</span></a><a href="https://authkit.streamlit.io/api/login?provider=GitHubOAuth&amp;state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4&amp;redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback&amp;client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V&amp;source=signin&amp;authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8" data-accent-color="gray" class="rt-reset rt-BaseButton rt-r-size-3 rt-variant-surface rt-high-contrast rt-Button auth-method-button_AuthMethodButton__irESX"><div style="--width:16px;--height:16px" class="rt-Flex rt-r-ai-center rt-r-jc-center rt-r-w rt-r-h -rt-r-ml-2"><svg fill="none" height="16" viewBox="0 0 15 15" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z" fill="currentColor" fill-rule="evenodd"></path></svg></div><span class="rt-Text rt-r-size-2 xs:rt-r-size-3 -rt-r-mr-2">Continue with GitHub</span></a></div></div></form><p data-accent-color="gray" class="rt-Text rt-r-size-2 rt-r-ta-center rt-r-lt-end rt-r-mt-5 xs:rt-r-mt-6">Don’t have an account?<!-- --> <a class="rt-Text BrandedLink rt-reset" href="https://authkit.streamlit.io/sign-up?state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4&amp;redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback&amp;authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8">Sign&nbsp;up</a></p></div></div><div aria-hidden="true" style="--width:min-content;--ml:auto;--mr:auto;position:fixed;top:0;left:0;pointer-events:none;opacity:0" class="rt-Box rt-r-w rt-r-mx"><div class="rt-reset rt-BaseCard rt-Card rt-r-size-4 xs:rt-r-size-5 rt-variant-surface"><div class="rt-Flex rt-r-fd-column rt-r-gap-5"><p class="rt-Text rt-r-lt-start">Before continuing, we need to be sure you are human.</p><div style="width:298px;height:63px;overflow:hidden;border-radius:var(--radius-3);border:1px solid rgba(128, 128, 128, 0.3)" class="rt-Box"><div id="cf-turnstile" style="width:fit-content;height:auto;margin-left:-1px;margin-top:-1px"><div></div></div></div></div></div></div></div><small data-accent-color="gray" style="--max-width:320px;--ml:auto;--mr:auto;grid-row-start:3;--line-height:20px" class="rt-Text rt-r-size-2 rt-r-ta-center rt-r-mb-6 rt-Box rt-r-max-w rt-r-mx"><a data-accent-color="gray" href="https://streamlit.io/terms-of-use" rel="noopener noreferrer" target="_blank" class="rt-Text rt-reset rt-Link rt-r-tw-nowrap rt-underline-hover">Terms of Service</a> and <a data-accent-color="gray" href="https://streamlit.io/privacy-policy" rel="noopener noreferrer" target="_blank" class="rt-Text rt-reset rt-Link rt-r-tw-nowrap rt-underline-hover">Privacy Policy</a></small></div></div><script>addEventListener("submit",function(a){if(!a.defaultPrevented){var c=a.target,d=a.submitter,e=c.action,b=d;if(d){var f=d.getAttribute("formAction");null!=f&&(e=f,b=null)}"javascript:throw new Error('A React form was unexpectedly submitted.')"===e&&(a.preventDefault(),b?(a=document.createElement("input"),a.name=b.name,a.value=b.value,b.parentNode.insertBefore(a,b),b=new FormData(c),a.parentNode.removeChild(a)):b=new FormData(c),a=c.getRootNode(),(a.$$reactFormReplay=a.$$reactFormReplay||[]).push(c,
+d,b))}});</script><script src="streamlit_Sign%20in_files/webpack-065532320042cb4a.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/css/7eeecd724d4b6762.css\",\"style\"]\n2:HL[\"/_next/static/css/9773e2b7eac32e04.css\",\"style\"]\n0:\"$L3\"\n"])</script><script>self.__next_f.push([1,"4:HL[\"/_next/static/css/9c76d98f250ad12b.css\",\"style\"]\n5:HL[\"/_next/static/css/85c0819d265b1ca4.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"6:I[52983,[],\"\"]\nd:I[22206,[\"8350\",\"static/chunks/cce9da5c-5af1fca77ed50e03.js\",\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"9706\",\"static/chunks/9706-6f8250d8ca500bd6.js\",\"6470\",\"static/chunks/app/global-error-627953ffba2c87f5.js\"],\"\"]\ne:[]\n"])</script><script>self.__next_f.push([1,"3:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/7eeecd724d4b6762.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/9773e2b7eac32e04.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L6\",null,{\"buildId\":\"eZ3njT1XwK63EkBeD4xWa\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/?client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026response_type=code\u0026state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"initialTree\":[\"\",{\"children\":[\"(root)\",{\"children\":[\"(sign-in)\",{\"children\":[\"__PAGE__?{\\\"client_id\\\":\\\"project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\\\",\\\"redirect_uri\\\":\\\"https://login.streamlit.io/api/v1/login/share/callback\\\",\\\"response_type\\\":\\\"code\\\",\\\"state\\\":\\\"8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\\\",\\\"authorization_session_id\\\":\\\"01JDRTTRAYH6CMBH5KCKVYMFB8\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"(root)\",{\"children\":[\"(sign-in)\",{\"children\":[\"__PAGE__\",{},[\"$L7\",\"$L8\",null]]},[null,\"$L9\",null]]},[null,\"$La\",null]]},[null,\"$Lb\",null]],\"initialHead\":[false,\"$Lc\"],\"globalErrorComponent\":\"$d\",\"missingSlots\":\"$We\"}]]\n"])</script><script>self.__next_f.push([1,"f:I[62073,[],\"\"]\n10:I[72345,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7601\",\"static/chunks/app/error-bc7da189544e227d.js\"],\"\"]\n11:I[44577,[],\"\"]\n12:I[65704,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/chunks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"sta"])</script><script>self.__next_f.push([1,"tic/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"Theme\"]\n13:I[36568,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/chunks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"static/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"\"]\n"])</script><script>self.__next_f.push([1,"b:[\"$\",\"html\",null,{\"suppressHydrationWarning\":true,\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[[\"$\",\"link\",null,{\"href\":\"https://rsms.me/\",\"rel\":\"preconnect\"}],[\"$\",\"link\",null,{\"href\":\"https://rsms.me/inter/inter.css\",\"rel\":\"stylesheet\"}],[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$10\",\"errorStyles\":[],\"errorScripts\":[],\"template\":[\"$\",\"$L11\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$L12\",null,{\"asChild\":true,\"accentColor\":\"gray\",\"grayColor\":\"gray\",\"children\":[\"$\",\"div\",null,{\"style\":{\"--grid-template-columns\":\"minmax(0, 440px)\",\"--grid-template-rows\":\"repeat(3, min-content)\",\"--min-width\":\"320px\",\"--min-height\":\"100dvh\",\"alignContent\":\"space-between\"},\"children\":[\"$\",\"div\",null,{\"style\":{\"gridRowStart\":2},\"children\":[[\"$\",\"h1\",null,{\"children\":\"Page not found\",\"data-accent-color\":\"$undefined\",\"style\":\"$undefined\",\"className\":\"rt-Heading rt-r-size-6 rt-r-ta-center\"}],[\"$\",\"div\",null,{\"children\":[\"$\",\"p\",null,{\"children\":[\"This page doesn't exist. Return to\",\" \",[\"$\",\"$L13\",null,{\"href\":\"/\",\"children\":\"sign-in\",\"data-accent-color\":\"$undefined\",\"style\":\"$undefined\",\"className\":\"rt-Text BrandedLink rt-reset\"}],\".\"],\"data-accent-color\":\"$undefined\",\"style\":\"$undefined\",\"className\":\"rt-Text rt-r-size-3 rt-r-ta-center\"}],\"style\":\"$undefined\",\"className\":\"rt-reset rt-BaseCard rt-Card rt-r-size-4 xs:rt-r-size-5 rt-variant-surface\"}]],\"className\":\"rt-Flex rt-r-fd-column rt-r-gap-5 rt-r-pt-4 rt-r-pb-9\"}],\"className\":\"rt-Grid rt-r-gtc rt-r-gtr rt-r-ai-center rt-r-jc-center rt-r-p-4 rt-r-min-w rt-r-min-h\"}]}],\"notFoundStyles\":[],\"styles\":null}]]}]}]\n"])</script><script>self.__next_f.push([1,"c:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"Sign in\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"15:I[78314,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/chunks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"static/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"Favicon\"]\n16:I[55370,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6298\",\"static/chunks/6298-8ac28212f7be7d6e.js\",\"8332\",\"static/chunks/a"])</script><script>self.__next_f.push([1,"pp/(root)/layout-3b978e925683ab78.js\"],\"PageTracker\"]\n17:I[20684,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6298\",\"static/chunks/6298-8ac28212f7be7d6e.js\",\"8332\",\"static/chunks/app/(root)/layout-3b978e925683ab78.js\"],\"Fingerprint\"]\n18:I[1485,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6298\",\"static/chunks/6298-8ac28212f7be7d6e.js\",\"8332\",\"static/chunks/app/(root)/layout-3b978e925683ab78.js\"],\"ThemeProvider\"]\n"])</script><script>self.__next_f.push([1,"9:[\"$\",\"div\",null,{\"style\":{\"--grid-template-columns\":\"minmax(0, 440px)\",\"--grid-template-rows\":\"repeat(3, min-content)\",\"--min-width\":\"320px\",\"--min-height\":\"100dvh\",\"alignContent\":\"space-between\"},\"children\":[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(root)\",\"children\",\"(sign-in)\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L11\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/85c0819d265b1ca4.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]}],\"className\":\"rt-Grid rt-r-gtc rt-r-gtr rt-r-ai-center rt-r-jc-center rt-r-p-4 rt-r-min-w rt-r-min-h\"}]\n"])</script><script>self.__next_f.push([1,"14:T2c7a,"])</script><script>self.__next_f.push([1,"\n              \n\n.radix-themes {\n  --cursor-button: pointer;\n  --cursor-disabled: default;\n  --cursor-link: pointer;\n  --cursor-menu-item: pointer;\n  --cursor-slider-thumb: pointer;\n  --cursor-slider-thumb-active: pointer;\n  --cursor-switch: pointer;\n\n  --system-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';\n  --default-font-family: Inter, var(--system-font-family);\n  --heading-font-family: InterDisplay, var(--system-font-family);\n  --font-weight-bold: 600;\n\n  --code-padding-top: 0em;\n  --code-padding-bottom: 0.075em;\n  --code-font-family: 'IBM Plex Mono', 'Menlo', monospace, 'Apple Color Emoji',\n    'Segoe UI Emoji';\n\n  --marker-font-size-adjust: 0.97222;\n  --marker-font-weight: 500;\n\n  font-feature-settings: 'liga' 1, 'calt' 1;\n}\n\n@supports (font-variation-settings: normal) {\n  .radix-themes {\n    --default-font-family: InterVariable, var(--system-font-family);\n    --heading-font-family: InterVariable, var(--system-font-family);\n  }\n}\n\n\n:root, .light, .light-theme {\n  --branded-link-color: #1C83E1;\n  --branded-link-text-decoration-color: #1c83e166;\n  --branded-button-color: #FFFFFF;\n  --branded-button-background: #262730;\n  --branded-button-hover-background: #3a3b45;\n  --branded-button-active-background: #4b4d57;\n  --branded-button-box-shadow-color: transparent;\n  --branded-page-background: #FCFCFC;\n}\n\n.dark, .dark-theme {\n  --branded-link-color: #1C83E1;\n  --branded-link-text-decoration-color: #1c83e166;\n  --branded-button-color: #262730;\n  --branded-button-background: #FFFFFF;\n  --branded-button-hover-background: #f6f6f6;\n  --branded-button-active-background: #ededed;\n  --branded-button-box-shadow-color: transparent;\n  --branded-page-background: #000000;\n}\n\n.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme) {\n  --accent-1: #fcfcfe;\n  --accent-2: #f9f9fc;\n  --accent-3: #eff0f5;\n  --accent-4: #e7e8ef;\n  --accent-5: #dfe0e9;\n  --accent-6: #d8d9e3;\n  --accent-7: #ccceda;\n  --accent-8: #b9bbcb;\n  --accent-9: #262730;\n  --accent-10: #3a3b45;\n  --accent-11: #626470;\n  --accent-12: #1f2028;\n\n  --accent-a1: #0000aa03;\n  --accent-a2: #00008006;\n  --accent-a3: #00106010;\n  --accent-a4: #000b5518;\n  --accent-a5: #00085020;\n  --accent-a6: #00074827;\n  --accent-a7: #000a4633;\n  --accent-a8: #00084246;\n  --accent-a9: #00010cd9;\n  --accent-a10: #00010ec5;\n  --accent-a11: #0004179d;\n  --accent-a12: #00010ae0;\n\n  --gray-1: #fcfcfc;\n  --gray-2: #f9f9f9;\n  --gray-3: #f0f0f0;\n  --gray-4: #e8e8e8;\n  --gray-5: #e0e0e0;\n  --gray-6: #d9d9d9;\n  --gray-7: #cecece;\n  --gray-8: #bbb;\n  --gray-9: #8d8d8d;\n  --gray-10: #838383;\n  --gray-11: #646464;\n  --gray-12: #202020;\n\n  --gray-a1: #00000003;\n  --gray-a2: #00000006;\n  --gray-a3: #0000000f;\n  --gray-a4: #00000017;\n  --gray-a5: #0000001f;\n  --gray-a6: #00000026;\n  --gray-a7: #00000031;\n  --gray-a8: #00000044;\n  --gray-a9: #00000072;\n  --gray-a10: #0000007c;\n  --gray-a11: #0000009b;\n  --gray-a12: #000000df;\n\n  --accent-track: var(--accent-9);\n  --accent-indicator: var(--accent-9);\n  --accent-contrast: #fff;\n  --gray-surface: #ffffffcc;\n}\n\n.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme), :where(.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme)) [data-accent-color] {\n  --focus-1: #fbfdff;\n  --focus-2: #f5faff;\n  --focus-3: #e9f3fe;\n  --focus-4: #dcedff;\n  --focus-5: #cae3ff;\n  --focus-6: #b5d6fb;\n  --focus-7: #9bc5f4;\n  --focus-8: #73aded;\n  --focus-9: #2591f6;\n  --focus-10: #2589e7;\n  --focus-11: #1f75c6;\n  --focus-12: #08355f;\n\n  --focus-a1: #0080ff04;\n  --focus-a2: #0080ff0a;\n  --focus-a3: #0074f416;\n  --focus-a4: #007cff23;\n  --focus-a5: #0079ff35;\n  --focus-a6: #0172f24a;\n  --focus-a7: #006ce364;\n  --focus-a8: #006adf8c;\n  --focus-a9: #007ef5da;\n  --focus-a10: #0075e3da;\n  --focus-a11: #0062bee0;\n  --focus-a12: #002e5af7;\n}\n\n@supports (color: color(display-p3 1 1 1)) {\n  @media (color-gamut: p3) {\n    .radix-themes:not(.dark, .dark-theme),\n    .radix-themes:is(.light, .light-theme) {\n      --accent-a1: color(display-p3 0.0235 0.0235 0.6745 / 0.012);\n      --accent-a2: color(display-p3 0.0235 0.0235 0.5137 / 0.024);\n      --accent-a3: color(display-p3 0.0078 0.0667 0.3804 / 0.063);\n      --accent-a4: color(display-p3 0.0118 0.051 0.302 / 0.095);\n      --accent-a5: color(display-p3 0.0078 0.0353 0.2863 / 0.126);\n      --accent-a6: color(display-p3 0.0039 0.0275 0.2588 / 0.153);\n      --accent-a7: color(display-p3 0 0.0392 0.2549 / 0.2);\n      --accent-a8: color(display-p3 0.0039 0.0314 0.2471 / 0.275);\n      --accent-a9: color(display-p3 0 0.0039 0.0431 / 0.851);\n      --accent-a10: color(display-p3 0 0.0039 0.051 / 0.773);\n      --accent-a11: color(display-p3 0 0.0157 0.0824 / 0.616);\n      --accent-a12: color(display-p3 0 0.0039 0.0353 / 0.879);\n\n      --gray-a1: color(display-p3 0 0 0 / 0.0118);\n      --gray-a2: color(display-p3 0 0 0 / 0.0235);\n      --gray-a3: color(display-p3 0 0 0 / 0.0588);\n      --gray-a4: color(display-p3 0 0 0 / 0.0902);\n      --gray-a5: color(display-p3 0 0 0 / 0.1216);\n      --gray-a6: color(display-p3 0 0 0 / 0.149);\n      --gray-a7: color(display-p3 0 0 0 / 0.1922);\n      --gray-a8: color(display-p3 0 0 0 / 0.2667);\n      --gray-a9: color(display-p3 0 0 0 / 0.4471);\n      --gray-a10: color(display-p3 0 0 0 / 0.4863);\n      --gray-a11: color(display-p3 0 0 0 / 0.6078);\n      --gray-a12: color(display-p3 0 0 0 / 0.8745);\n    }\n\n    .radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme), :where(.radix-themes:not(.dark, .dark-theme), .radix-themes:is(.light, .light-theme)) [data-accent-color] {\n      --focus-a1: color(display-p3 0.0235 0.5137 1 / 0.016);\n      --focus-a2: color(display-p3 0.0235 0.4588 0.8941 / 0.036);\n      --focus-a3: color(display-p3 0.0078 0.4078 0.902 / 0.079);\n      --focus-a4: color(display-p3 0.0078 0.4118 0.9412 / 0.126);\n      --focus-a5: color(display-p3 0.0078 0.4 0.9412 / 0.189);\n      --focus-a6: color(display-p3 0.0039 0.3843 0.898 / 0.267);\n      --focus-a7: color(display-p3 0.0039 0.3608 0.8392 / 0.361);\n      --focus-a8: color(display-p3 0.0039 0.3412 0.8196 / 0.499);\n      --focus-a9: color(display-p3 0 0.3882 0.9137 / 0.718);\n      --focus-a10: color(display-p3 0 0.3569 0.8353 / 0.73);\n      --focus-a11: color(display-p3 0 0.2902 0.6784 / 0.773);\n      --focus-a12: color(display-p3 0 0.1255 0.298 / 0.91);\n    }\n  }\n}\n\n:is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme) {\n  --accent-1: #111114;\n  --accent-2: #18191c;\n  --accent-3: #212226;\n  --accent-4: #28292f;\n  --accent-5: #2f3037;\n  --accent-6: #383942;\n  --accent-7: #454751;\n  --accent-8: #5d5f6e;\n  --accent-9: #262730;\n  --accent-10: #3a3b44;\n  --accent-11: #b2b3bd;\n  --accent-12: #edeef1;\n\n  --accent-a1: #d9d9ff14;\n  --accent-a2: #dbe4ff1c;\n  --accent-a3: #dee5ff26;\n  --accent-a4: #dadfff2f;\n  --accent-a5: #dadfff37;\n  --accent-a6: #d9ddff42;\n  --accent-a7: #dae0ff51;\n  --accent-a8: #d8ddff6e;\n  --accent-a9: #cad0ff30;\n  --accent-a10: #dadeff44;\n  --accent-a11: #f0f2ffbd;\n  --accent-a12: #fbfcfff1;\n\n  --gray-1: #000;\n  --gray-2: #191919;\n  --gray-3: #191919;\n  --gray-4: #191919;\n  --gray-5: #1e1e1e;\n  --gray-6: #242424;\n  --gray-7: #2e2e2e;\n  --gray-8: #3f3f3f;\n  --gray-9: #494949;\n  --gray-10: #5d5d5d;\n  --gray-11: #9e9e9e;\n  --gray-12: #eee;\n\n  --gray-a1: #00000000;\n  --gray-a2: #ffffff19;\n  --gray-a3: #ffffff19;\n  --gray-a4: #ffffff19;\n  --gray-a5: #ffffff1e;\n  --gray-a6: #ffffff24;\n  --gray-a7: #ffffff2e;\n  --gray-a8: #ffffff3f;\n  --gray-a9: #ffffff49;\n  --gray-a10: #ffffff5d;\n  --gray-a11: #ffffff9e;\n  --gray-a12: #ffffffee;\n\n  --accent-track: var(--accent-9);\n  --accent-indicator: var(--accent-9);\n  --accent-contrast: #262730;\n  --gray-surface: rgba(0, 0, 0, 0.05);\n}\n\n.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme), :where(.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme)) [data-accent-color] {\n  --focus-1: #0d151e;\n  --focus-2: #101a25;\n  --focus-3: #102943;\n  --focus-4: #0a345c;\n  --focus-5: #13406d;\n  --focus-6: #1d4e7f;\n  --focus-7: #295e95;\n  --focus-8: #3271b3;\n  --focus-9: #3091f1;\n  --focus-10: #4f9ef2;\n  --focus-11: #7eb7f6;\n  --focus-12: #cce3fe;\n\n  --focus-a1: #6fb3ff1e;\n  --focus-a2: #6fb4ff25;\n  --focus-a3: #3d9dff43;\n  --focus-a4: #1c91ff5c;\n  --focus-a5: #2d96ff6d;\n  --focus-a6: #3b9dff7f;\n  --focus-a7: #47a1ff95;\n  --focus-a8: #47a1ffb3;\n  --focus-a9: #3399fff1;\n  --focus-a10: #53a7fff2;\n  --focus-a11: #83befff6;\n  --focus-a12: #cde4fffe;\n}\n\n@supports (color: color(display-p3 1 1 1)) {\n  @media (color-gamut: p3) {\n    :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme) {\n      --accent-a1: color(display-p3 0.8471 0.8471 0.9961 / 0.079);\n      --accent-a2: color(display-p3 0.8588 0.8941 1 / 0.11);\n      --accent-a3: color(display-p3 0.8627 0.8902 0.9961 / 0.15);\n      --accent-a4: color(display-p3 0.8667 0.8902 1 / 0.181);\n      --accent-a5: color(display-p3 0.8706 0.8902 1 / 0.212);\n      --accent-a6: color(display-p3 0.8627 0.8784 1 / 0.255);\n      --accent-a7: color(display-p3 0.8627 0.8902 1 / 0.314);\n      --accent-a8: color(display-p3 0.8549 0.8706 1 / 0.428);\n      --accent-a9: color(display-p3 0.8078 0.8275 1 / 0.185);\n      --accent-a10: color(display-p3 0.8667 0.8824 1 / 0.263);\n      --accent-a11: color(display-p3 0.9451 0.9529 1 / 0.738);\n      --accent-a12: color(display-p3 0.9843 0.9882 1 / 0.946);\n\n      --gray-a1: color(display-p3 0 0 0 / 0);\n      --gray-a2: color(display-p3 1 1 1 / 0.098);\n      --gray-a3: color(display-p3 1 1 1 / 0.098);\n      --gray-a4: color(display-p3 1 1 1 / 0.098);\n      --gray-a5: color(display-p3 1 1 1 / 0.1176);\n      --gray-a6: color(display-p3 1 1 1 / 0.1412);\n      --gray-a7: color(display-p3 1 1 1 / 0.1804);\n      --gray-a8: color(display-p3 1 1 1 / 0.2471);\n      --gray-a9: color(display-p3 1 1 1 / 0.2863);\n      --gray-a10: color(display-p3 1 1 1 / 0.3647);\n      --gray-a11: color(display-p3 1 1 1 / 0.6196);\n      --gray-a12: color(display-p3 1 1 1 / 0.9333);\n    }\n\n    .radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme), :where(.radix-themes:is(.dark, .dark-theme), :is(.dark, .dark-theme) .radix-themes:not(.light, .light-theme)) [data-accent-color] {\n      --focus-a1: color(display-p3 0.5176 0.7255 1 / 0.114);\n      --focus-a2: color(display-p3 0.498 0.7216 0.9961 / 0.142);\n      --focus-a3: color(display-p3 0.3412 0.6157 1 / 0.255);\n      --focus-a4: color(display-p3 0.2588 0.5725 1 / 0.35);\n      --focus-a5: color(display-p3 0.302 0.5961 1 / 0.416);\n      --focus-a6: color(display-p3 0.3412 0.6275 1 / 0.483);\n      --focus-a7: color(display-p3 0.3804 0.6431 1 / 0.569);\n      --focus-a8: color(display-p3 0.3843 0.6431 1 / 0.683);\n      --focus-a9: color(display-p3 0.3294 0.6118 1 / 0.918);\n      --focus-a10: color(display-p3 0.4196 0.6627 1 / 0.922);\n      --focus-a11: color(display-p3 0.5725 0.749 1 / 0.946);\n      --focus-a12: color(display-p3 0.8275 0.898 1 / 0.985);\n    }\n  }\n}\n\n              .radix-themes {\n                --color-background: var(--branded-page-background);\n              }\n              :root body {\n                margin: 0;\n                background-color: var(--branded-page-background);\n              }\n            "])</script><script>self.__next_f.push([1,"a:[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}],[\"$\",\"$L15\",null,{\"darkFaviconPath\":\"$undefined\",\"lightFaviconPath\":\"https://workos.imgix.net/app-branding/environment_01EZ8RPVBGBS583V7K99N191R0/01HTHSFTQT004QY7SR1K8PGA07\"}],[\"$\",\"$L16\",null,{\"children\":[[\"$\",\"$L17\",null,{}],[\"$\",\"$L18\",null,{\"attribute\":\"class\",\"forcedTheme\":\"light\",\"children\":[\"$\",\"$L12\",null,{\"radius\":\"small\",\"children\":[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(root)\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L11\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/9c76d98f250ad12b.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]}]}]}]]}]]\n"])</script><script>self.__next_f.push([1,"8:[[\"$\",\"div\",null,{\"style\":{\"gridRowStart\":2},\"children\":[[\"$\",\"div\",null,{\"children\":[\"$L19\",null],\"style\":\"$undefined\",\"className\":\"rt-Flex rt-r-fd-column rt-r-gap-2\"}],\"$L1a\"],\"className\":\"rt-Flex rt-r-fd-column rt-r-gap-5 rt-r-pt-4 rt-r-pb-9\"}],\"$L1b\"]\n"])</script><script>self.__next_f.push([1,"1c:I[3920,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/chunks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"static/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"BotCheckClient\"]\n1d:I[78795,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/ch"])</script><script>self.__next_f.push([1,"unks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"static/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"SignInForm\"]\n1f:I[84834,[\"8083\",\"static/chunks/8083-24b235f15ab9616d.js\",\"6568\",\"static/chunks/6568-2e741fe49724f380.js\",\"7120\",\"static/chunks/7120-0efee8be2eca238c.js\",\"2208\",\"static/chunks/2208-2b1d71e3b05e60ba.js\",\"5556\",\"static/chunks/5556-10de4dadd854243e.js\",\""])</script><script>self.__next_f.push([1,"1185\",\"static/chunks/1185-8ddcfbbe64b930c3.js\",\"5514\",\"static/chunks/app/(root)/(sign-in)/page-c22c869cfd2e2c10.js\"],\"BotCheckTokenInput\"]\n19:[\"$\",\"div\",null,{\"children\":[null,[\"$\",\"h1\",null,{\"children\":\"Sign in to Streamlit Community Cloud\",\"data-accent-color\":\"$undefined\",\"style\":\"$undefined\",\"className\":\"rt-Heading rt-r-size-6 rt-r-ta-center rt-r-tw-balance HeaderHeading\"}]],\"style\":\"$undefined\",\"className\":\"rt-Flex rt-r-fd-column rt-r-ai-center rt-r-jc-center rt-r-gap-4\"}]\n"])</script><script>self.__next_f.push([1,"1b:[\"$\",\"small\",null,{\"children\":[false,[[\"$\",\"a\",null,{\"children\":\"Terms of Service\",\"data-accent-color\":\"gray\",\"href\":\"https://streamlit.io/terms-of-use\",\"rel\":\"noopener noreferrer\",\"target\":\"_blank\",\"style\":\"$undefined\",\"className\":\"rt-Text rt-reset rt-Link rt-r-tw-nowrap rt-underline-hover\"}],\" and \",[\"$\",\"a\",null,{\"children\":\"Privacy Policy\",\"data-accent-color\":\"gray\",\"href\":\"https://streamlit.io/privacy-policy\",\"rel\":\"noopener noreferrer\",\"target\":\"_blank\",\"style\":\"$undefined\",\"className\":\"rt-Text rt-reset rt-Link rt-r-tw-nowrap rt-underline-hover\"}]]],\"data-accent-color\":\"gray\",\"style\":{\"--max-width\":\"320px\",\"--ml\":\"auto\",\"--mr\":\"auto\",\"gridRowStart\":3,\"--line-height\":\"20px\"},\"className\":\"rt-Text rt-r-size-2 rt-r-ta-center rt-r-mb-6 rt-Box rt-r-max-w rt-r-mx\"}]\n"])</script><script>self.__next_f.push([1,"1e:{\"id\":\"c2e538693a70c633717214cacd5c6fdb8139f98d\",\"bound\":null}\n"])</script><script>self.__next_f.push([1,"1a:[\"$\",\"$L1c\",null,{\"clearanceAvailable\":false,\"cleared\":false,\"siteKey\":\"0x4AAAAAAAMNIvC45A4Wjjln\",\"theme\":\"light\",\"children\":[\"$\",\"div\",null,{\"children\":[null,\"$undefined\",[\"$\",\"$L1d\",null,{\"appleOAuthRoute\":\"api/login?provider=AppleOAuth\u0026state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\u0026source=signin\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"authMethods\":{\"apple_oauth\":false,\"github_oauth\":true,\"google_oauth\":true,\"magic_codes\":true,\"microsoft_oauth\":false,\"password\":false,\"passkey\":false,\"sso\":true},\"githubOAuthRoute\":\"api/login?provider=GitHubOAuth\u0026state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\u0026source=signin\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"googleOAuthRoute\":\"api/login?provider=GoogleOAuth\u0026state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\u0026source=signin\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"initialEmail\":\"$undefined\",\"initialServerErrors\":{\"email\":false},\"microsoftOAuthRoute\":\"api/login?provider=MicrosoftOAuth\u0026state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026client_id=project_01EZ8RPVCZQ40ZGBV6Y87N8V8V\u0026source=signin\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"signInAction\":\"$F1e\",\"children\":[\"$undefined\",[\"$\",\"input\",null,{\"name\":\"state\",\"type\":\"hidden\",\"value\":\"8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\"}],[\"$\",\"input\",null,{\"name\":\"redirect_uri\",\"type\":\"hidden\",\"value\":\"https://login.streamlit.io/api/v1/login/share/callback\"}],[\"$\",\"input\",null,{\"name\":\"authorization_session_id\",\"type\":\"hidden\",\"value\":\"01JDRTTRAYH6CMBH5KCKVYMFB8\"}],\"$undefined\",[\"$\",\"$L1f\",null,{}]]}],[\"$\",\"p\",null,{\"children\":[\"Don’t have an account?\",\" \",[\"$\",\"$L13\",null,{\"href\":\"/sign-up?state=8W1Pwgs_gZETsJ6KmcZDwjolKS8cNFT3DrUnWrEZJFO6NO1E4tCe-Ulf68dcQZNPk7zl-y1vmGAXJrArmKZRLZBWQHCjH5Ve1k0nY8OJpoP55vMv-5ULdp8PZKaQW-Pf0hY0uWZV4cGHvm_jTxPNln5d4NeTOGpl536N5yEMbmHYooRptNCprrzAMQrWNF9dmSWkJZr3gAdya4ZtqJZ-nSd06n56TXg-E43GEN3HY8mSsoUspAuWVuiayipwHFT_l7xGMcAoew2ntjP7KOD5t32e030AtOLhkpnSOuCsqbFAkLhOMFvfUh6dspm8PXJkbIWUJ2TuJ3DeHL7h0pHehmpayT9qSVGJjLL5BHz5N66GI8ud2w6QNwIS-pL9xwV4L2YJmUDyk0SvHeGgtiR4PlFr_nGnuIq4t_BMvn9d_yrhjttvSNksiAOcnEy4\u0026redirect_uri=https%3A%2F%2Flogin.streamlit.io%2Fapi%2Fv1%2Flogin%2Fshare%2Fcallback\u0026authorization_session_id=01JDRTTRAYH6CMBH5KCKVYMFB8\",\"children\":\"Sign up\",\"data-accent-color\":\"$undefined\",\"style\":\"$undefined\",\"className\":\"rt-Text BrandedLink rt-reset\"}]],\"data-accent-color\":\"gray\",\"style\":\"$undefined\",\"className\":\"rt-Text rt-r-size-2 rt-r-ta-center rt-r-lt-end rt-r-mt-5 xs:rt-r-mt-6\"}]],\"style\":\"$undefined\",\"className\":\"rt-reset rt-BaseCard rt-Card rt-r-size-4 xs:rt-r-size-5 rt-variant-surface\"}]}]\n"])</script><script>self.__next_f.push([1,""])</script><next-route-announcer style="position: absolute;"></next-route-announcer><div id="ri3qwrwr" style="font: status-bar !important"><div style="
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	left:-10000px;
+	visibility: hidden;
+"><iframe></iframe></div></div></body></html>
