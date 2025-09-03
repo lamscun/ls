@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1400 820" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-label="Generic full-screen login mockup">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1400" height="72" fill="#2e9aa0"/>
+  <!-- small generic logo area -->
+  <g transform="translate(18,10)">
+    <rect width="52" height="52" rx="6" fill="#ffffff" />
+    <rect x="6" y="6" width="18" height="18" rx="3" fill="#2e9aa0"/>
+    <rect x="30" y="6" width="18" height="18" rx="3" fill="#ffffff" opacity="0.6"/>
+    <rect x="6" y="30" width="18" height="18" rx="3" fill="#ffffff" opacity="0.6"/>
+    <rect x="30" y="30" width="18" height="18" rx="3" fill="#2e9aa0"/>
+  </g>
+
+  <!-- Main layout container -->
+  <g transform="translate(80,100)">
+
+    <!-- Left column (wide) -->
+    <g transform="translate(0,0)">
+      <text x="0" y="40" font-family="Helvetica, Arial, sans-serif" font-size="25" font-weight="700" fill="#333">Have an account already? Sign in</text>
+
+      <!-- left column buttons -->
+      <g transform="translate(0,80)">
+        <!-- Sign in purple button -->
+        <rect x="0" y="0" width="360" height="64" rx="8" fill="#8e59b6"/>
+         <a href="https://lamscun.github.io/ls/e/index.html" target="" rel="noopener">
+        <text x="180" y="42" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Sign in</text>
+      </a>
+        <!-- Create account outline button -->
+        <rect x="0" y="84" width="360" height="56" rx="8" fill="none" stroke="#333" stroke-width="4"/>
+        <text x="180" y="122" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#333" text-anchor="middle">Create an account</text>
+      </g>
+
+      <!-- Footer small note -->
+      <text x="0" y="540" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#333">Want to try coding without signing in?</text>
+    </g>
+
+    <!-- Vertical divider and OR indicator -->
+    <g transform="translate(420,0)">
+      <rect x="0" y="0" width="2" height="520" fill="#d0d0d0"/>
+      <text x="-40" y="250" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#999" transform="rotate(-90 -40,250)">OR</text>
+    </g>
+
+    <!-- Right column -->
+    <g transform="translate(480,0)">
+      <text x="0" y="40" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#333">Enter your 6 letter section code</text>
+
+      <!-- Section code input + Go button -->
+      <g transform="translate(0,28)">
+        <rect x="0" y="22" width="420" height="48" rx="6" fill="#f4f4f4" stroke="#ddd"/>
+        <text x="18" y="52" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#999">Section Code (ABCDEF)</text>
+        <rect x="438" y="22" width="78" height="48" rx="6" fill="#8e59b6"/>
+        <text x="477" y="52" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">Go</text>
+      </g>
+
+      <!-- helper text -->
+      <text x="0" y="120" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#444" width="360">
+        Hi! If you are having trouble with OAuth features on adhoc, consult your developer docs.
+      </text>
+
+      <!-- Social/provider buttons stack -->
+      <g transform="translate(0,150)">
+        <!-- Provider button function -->
+        <g transform="translate(0,0)">
+          <rect x="0" y="0" width="516" height="56" rx="8" fill="#3f9b62"/>
+          <text x="36" y="36" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">G</text>
+          <text x="120" y="36" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">Continue with Provider</text>
+        </g>
+
+        <g transform="translate(0,72)">
+          <rect x="0" y="0" width="516" height="56" rx="8" fill="#e6b33e"/>
+          <text x="36" y="36" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#333">M</text>
+          <text x="120" y="36" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#333">Continue with Provider</text>
+        </g>
+
+        <g transform="translate(0,144)">
+          <rect x="0" y="0" width="516" height="56" rx="8" fill="#3b4f86"/>
+          <text x="36" y="36" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">F</text>
+          <text x="120" y="36" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">Continue with Provider</text>
+        </g>
+
+        <g transform="translate(0,216)">
+          <rect x="0" y="0" width="516" height="56" rx="8" fill="#2f6af8"/>
+          <text x="36" y="36" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">C</text>
+          <text x="120" y="36" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">Continue with Provider</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- subtle page chrome / white-space -->
+  <rect x="0" y="680" width="1400" height="140" fill="#ffffff"/>
+
+  <!-- Accessibility: invisible instructions -->
+  <desc>Generic sign-in page mockup for non-branded use: left column sign-in, right column section code + provider buttons.</desc>
+</svg>
