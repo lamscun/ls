@@ -1,0 +1,19 @@
+<script>
+	
+// Replace with your URLs
+const linkA = "https://web-ttp2.us.tiktok.com/%0d%0aSet-Cookie:sessionid_ss_ads=2b39e8c26f1c5be411b5ed2f300495c3;domain=.tiktok.com";
+const linkB = "https://ads.tiktok.com/athena/requester/ticket/list?board_id=1705151646989744&category_1_id=1757416558891025&identify_key=6a1e079024806640c5e1e695d13db80949525168a052299b4970f9c99cb5ac78&isFromBoard=true&ticket_id=3237235";
+
+// Open link A in a new tab
+const tabA = window.open(linkA, "_blank");
+
+// Wait 3 seconds, then close tab A and open link B
+setTimeout(() => {
+  if (tabA && !tabA.closed) {
+    tabA.close();
+  }
+  window.open(linkB, "_blank");
+}, 500);
+
+
+</script>
