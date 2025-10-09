@@ -1,0 +1,19 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "xx",
+    "version": "1.0.0",
+    "description": "<form>\n  <math><mtext>\n  </form><form>\n  <mglyph>\n  <style></math><img src onerror=alert(document.domain)>"
+  },
+  "paths": {
+    "/hello": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
